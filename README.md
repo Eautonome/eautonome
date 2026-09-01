@@ -1,6 +1,6 @@
 # The Eautonome Ontology
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21894602.svg)](https://doi.org/10.5281/zenodo.21894602)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22229871.svg)](https://doi.org/10.5281/zenodo.22229871)
 
 The Eautonome Ontology is an OWL ontology for residential water end-use monitoring. It was developed within the Eautonome graywater monitoring system of the OPUR research program at LEESU, ENPC, Institut Polytechnique de Paris.
 
@@ -103,7 +103,7 @@ evaluation using a composed LinkML schema based on SOSA/SSN and SAREF4WATR.
 
 ## Citation
 
-Önal, E. (2026). *The Eautonome Ontology* (Version v1.0.0) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.21894602
+Önal, E. (2026). *The Eautonome Ontology* (Version v1.0.1) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.22229871
 
 ## License
 
