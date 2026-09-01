@@ -96,6 +96,11 @@ python analysis/external-hsb/run_hsb_external_reuse.py \
 
 The directory contains a small RDF example, query results, and the applicable constraint checks.
 
+### LinkML compatibility evaluation
+
+The `analysis/linkml-compatibility/` directory contains an interoperability
+evaluation using a composed LinkML schema based on SOSA/SSN and SAREF4WATR.
+
 ## Citation
 
 Önal, E. (2026). *The Eautonome Ontology* (Version v1.0.0) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.21894602

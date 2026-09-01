@@ -1,0 +1,359 @@
+{
+  "shapes": "analysis/linkml-compatibility/generated/eautonome-composed-shapes.ttl",
+  "alignment": "https://github.com/w3c/sdw-sosa-ssn/blob/37fa55298187464b41c3712620dcbf5bd438b1b2/ssn/rdf/ontology/alignments/sosa-saref.ttl",
+  "primary_mode": "semantic_closure_rdfs",
+  "primary_wording": "No violation was attributable to the published Eautonome observation data in the primary compatibility evaluation.",
+  "modes": {
+    "baseline": {
+      "role": "baseline",
+      "inference": "none",
+      "ont_graph": [],
+      "description": "No SOSA-SAREF alignment and no inference."
+    },
+    "alignment_rdfs": {
+      "role": "vocabulary_bridge",
+      "inference": "rdfs",
+      "ont_graph": [
+        "https://github.com/w3c/sdw-sosa-ssn/blob/37fa55298187464b41c3712620dcbf5bd438b1b2/ssn/rdf/ontology/alignments/sosa-saref.ttl"
+      ],
+      "description": "Official W3C SOSA-SAREF alignment with RDFS inference. This mode tests the sosa:observes rdfs:subPropertyOf saref:observes bridge."
+    },
+    "semantic_closure_rdfs": {
+      "role": "primary_compatibility_evaluation",
+      "inference": "rdfs",
+      "ont_graph": [
+        "https://github.com/w3c/sdw-sosa-ssn/blob/37fa55298187464b41c3712620dcbf5bd438b1b2/ssn/rdf/ontology/alignments/sosa-saref.ttl",
+        "https://github.com/NeverBlink-OSS/saref-linkml/blob/5c50930de681afbffcbfd80a58c91eccde7c97de/source/SAREFCore/saref.ttl",
+        "https://github.com/NeverBlink-OSS/saref-linkml/blob/5c50930de681afbffcbfd80a58c91eccde7c97de/source/saref4watr/saref4watr.ttl"
+      ],
+      "description": "W3C SOSA-SAREF alignment together with SAREF Core v4.1.1 and SAREF4WATR v2.1.1 under RDFS inference. This is the primary compatibility evaluation. The required entailments are rdfs:subPropertyOf and rdfs:subClassOf."
+    },
+    "owlrl_sensitivity": {
+      "role": "sensitivity_analysis",
+      "inference": "owlrl",
+      "ont_graph": [
+        "https://github.com/w3c/sdw-sosa-ssn/blob/37fa55298187464b41c3712620dcbf5bd438b1b2/ssn/rdf/ontology/alignments/sosa-saref.ttl",
+        "https://github.com/NeverBlink-OSS/saref-linkml/blob/5c50930de681afbffcbfd80a58c91eccde7c97de/source/SAREFCore/saref.ttl",
+        "https://github.com/NeverBlink-OSS/saref-linkml/blob/5c50930de681afbffcbfd80a58c91eccde7c97de/source/saref4watr/saref4watr.ttl"
+      ],
+      "description": "Same ontology sources as semantic_closure_rdfs, with OWL RL. This is a sensitivity analysis. Materializing owl:equivalentClass and owl:equivalentProperty causes additional SAREF-LinkML generated shapes to target SOSA-native resources. It is not the primary compatibility result. The run uses the ontology and hydrodynamic graphs because OWL RL over the full shower and combined observation payload did not finish in this environment."
+    }
+  },
+  "datasets": {
+    "hydrodynamic": {
+      "files": [
+        "docs/ontology/eautonome.ttl",
+        "docs/data/hydrodynamic-observations.jsonld"
+      ],
+      "baseline": {
+        "conforms": false,
+        "n_results": 13,
+        "eautonome_focus": 13,
+        "third_party_focus": 0
+      },
+      "alignment_rdfs": {
+        "conforms": false,
+        "n_results": 14,
+        "eautonome_focus": 14,
+        "third_party_focus": 0
+      },
+      "semantic_closure_rdfs": {
+        "conforms": false,
+        "n_results": 3,
+        "eautonome_focus": 3,
+        "third_party_focus": 0
+      },
+      "owlrl_sensitivity": {
+        "conforms": false,
+        "n_results": 123,
+        "eautonome_focus": 109,
+        "third_party_focus": 14
+      }
+    },
+    "shower": {
+      "files": [
+        "docs/ontology/eautonome.ttl",
+        "docs/data/shower-observations.jsonld"
+      ],
+      "baseline": {
+        "conforms": false,
+        "n_results": 13,
+        "eautonome_focus": 13,
+        "third_party_focus": 0
+      },
+      "alignment_rdfs": {
+        "conforms": false,
+        "n_results": 14,
+        "eautonome_focus": 14,
+        "third_party_focus": 0
+      },
+      "semantic_closure_rdfs": {
+        "conforms": false,
+        "n_results": 3,
+        "eautonome_focus": 3,
+        "third_party_focus": 0
+      }
+    },
+    "combined": {
+      "files": [
+        "docs/ontology/eautonome.ttl",
+        "docs/data/hydrodynamic-observations.jsonld",
+        "docs/data/shower-observations.jsonld"
+      ],
+      "baseline": {
+        "conforms": false,
+        "n_results": 13,
+        "eautonome_focus": 13,
+        "third_party_focus": 0
+      },
+      "alignment_rdfs": {
+        "conforms": false,
+        "n_results": 14,
+        "eautonome_focus": 14,
+        "third_party_focus": 0
+      },
+      "semantic_closure_rdfs": {
+        "conforms": false,
+        "n_results": 3,
+        "eautonome_focus": 3,
+        "third_party_focus": 0
+      }
+    },
+    "ontology": {
+      "files": [
+        "docs/ontology/eautonome.ttl"
+      ],
+      "semantic_closure_rdfs": {
+        "conforms": false,
+        "n_results": 3,
+        "eautonome_focus": 3,
+        "third_party_focus": 0
+      },
+      "owlrl_sensitivity": {
+        "conforms": false,
+        "n_results": 27,
+        "eautonome_focus": 13,
+        "third_party_focus": 14
+      }
+    }
+  },
+  "versions": {
+    "python": "3.14.7",
+    "platform": "Linux-7.1.8-200.fc44.x86_64-x86_64-with-glibc2.43",
+    "rdflib": "7.6.0",
+    "pyshacl": "0.40.1",
+    "linkml_scala": "0.15.0",
+    "saref_linkml_release": "v4.1.1-2026-08-31",
+    "saref_linkml_commit": "5c50930de681afbffcbfd80a58c91eccde7c97de",
+    "w3c_sosa_ssn_commit": "37fa55298187464b41c3712620dcbf5bd438b1b2"
+  },
+  "classification_counts": [
+    {
+      "dataset": "combined",
+      "mode": "alignment_rdfs",
+      "classification": "linkml_conversion_limitation",
+      "count": 3
+    },
+    {
+      "dataset": "combined",
+      "mode": "alignment_rdfs",
+      "classification": "missing_ontology_closure",
+      "count": 11
+    },
+    {
+      "dataset": "combined",
+      "mode": "baseline",
+      "classification": "linkml_conversion_limitation",
+      "count": 3
+    },
+    {
+      "dataset": "combined",
+      "mode": "baseline",
+      "classification": "missing_entailment_or_alignment",
+      "count": 10
+    },
+    {
+      "dataset": "combined",
+      "mode": "semantic_closure_rdfs",
+      "classification": "linkml_conversion_limitation",
+      "count": 3
+    },
+    {
+      "dataset": "hydrodynamic",
+      "mode": "alignment_rdfs",
+      "classification": "linkml_conversion_limitation",
+      "count": 3
+    },
+    {
+      "dataset": "hydrodynamic",
+      "mode": "alignment_rdfs",
+      "classification": "missing_ontology_closure",
+      "count": 11
+    },
+    {
+      "dataset": "hydrodynamic",
+      "mode": "baseline",
+      "classification": "linkml_conversion_limitation",
+      "count": 3
+    },
+    {
+      "dataset": "hydrodynamic",
+      "mode": "baseline",
+      "classification": "missing_entailment_or_alignment",
+      "count": 10
+    },
+    {
+      "dataset": "hydrodynamic",
+      "mode": "owlrl_sensitivity",
+      "classification": "linkml_conversion_limitation",
+      "count": 3
+    },
+    {
+      "dataset": "hydrodynamic",
+      "mode": "owlrl_sensitivity",
+      "classification": "owlrl_equivalent_unfolding",
+      "count": 106
+    },
+    {
+      "dataset": "hydrodynamic",
+      "mode": "owlrl_sensitivity",
+      "classification": "third_party_ontology_focus",
+      "count": 14
+    },
+    {
+      "dataset": "hydrodynamic",
+      "mode": "semantic_closure_rdfs",
+      "classification": "linkml_conversion_limitation",
+      "count": 3
+    },
+    {
+      "dataset": "ontology",
+      "mode": "owlrl_sensitivity",
+      "classification": "linkml_conversion_limitation",
+      "count": 3
+    },
+    {
+      "dataset": "ontology",
+      "mode": "owlrl_sensitivity",
+      "classification": "owlrl_equivalent_unfolding",
+      "count": 10
+    },
+    {
+      "dataset": "ontology",
+      "mode": "owlrl_sensitivity",
+      "classification": "third_party_ontology_focus",
+      "count": 14
+    },
+    {
+      "dataset": "ontology",
+      "mode": "semantic_closure_rdfs",
+      "classification": "linkml_conversion_limitation",
+      "count": 3
+    },
+    {
+      "dataset": "shower",
+      "mode": "alignment_rdfs",
+      "classification": "linkml_conversion_limitation",
+      "count": 3
+    },
+    {
+      "dataset": "shower",
+      "mode": "alignment_rdfs",
+      "classification": "missing_ontology_closure",
+      "count": 11
+    },
+    {
+      "dataset": "shower",
+      "mode": "baseline",
+      "classification": "linkml_conversion_limitation",
+      "count": 3
+    },
+    {
+      "dataset": "shower",
+      "mode": "baseline",
+      "classification": "missing_entailment_or_alignment",
+      "count": 10
+    },
+    {
+      "dataset": "shower",
+      "mode": "semantic_closure_rdfs",
+      "classification": "linkml_conversion_limitation",
+      "count": 3
+    }
+  ],
+  "eautonome_focus_counts": [
+    {
+      "dataset": "combined",
+      "mode": "alignment_rdfs",
+      "count": 14
+    },
+    {
+      "dataset": "combined",
+      "mode": "baseline",
+      "count": 13
+    },
+    {
+      "dataset": "combined",
+      "mode": "semantic_closure_rdfs",
+      "count": 3
+    },
+    {
+      "dataset": "hydrodynamic",
+      "mode": "alignment_rdfs",
+      "count": 14
+    },
+    {
+      "dataset": "hydrodynamic",
+      "mode": "baseline",
+      "count": 13
+    },
+    {
+      "dataset": "hydrodynamic",
+      "mode": "owlrl_sensitivity",
+      "count": 109
+    },
+    {
+      "dataset": "hydrodynamic",
+      "mode": "semantic_closure_rdfs",
+      "count": 3
+    },
+    {
+      "dataset": "ontology",
+      "mode": "owlrl_sensitivity",
+      "count": 13
+    },
+    {
+      "dataset": "ontology",
+      "mode": "semantic_closure_rdfs",
+      "count": 3
+    },
+    {
+      "dataset": "shower",
+      "mode": "alignment_rdfs",
+      "count": 14
+    },
+    {
+      "dataset": "shower",
+      "mode": "baseline",
+      "count": 13
+    },
+    {
+      "dataset": "shower",
+      "mode": "semantic_closure_rdfs",
+      "count": 3
+    }
+  ],
+  "third_party_focus_counts": [
+    {
+      "dataset": "hydrodynamic",
+      "mode": "owlrl_sensitivity",
+      "count": 14
+    },
+    {
+      "dataset": "ontology",
+      "mode": "owlrl_sensitivity",
+      "count": 14
+    }
+  ],
+  "n_result_rows": 243
+}

@@ -1,0 +1,446 @@
+id: https://w3id.org/eautonome/linkml-sosa-profile
+name: sosa-eautonome
+title: Eautonome SOSA application profile
+description: LinkML application profile for the SOSA terms used in Eautonome. Slots
+  are attached to classes from schema:domainIncludes in the pinned W3C SOSA modules,
+  including subclasses via rdfs:subClassOf. This profile does not replace the Eautonome
+  OWL ontology. LinkML names are prefixed with Sosa or sosa_ so the profile can be
+  composed with SAREF-LinkML. class_uri and slot_uri remain the official SOSA IRIs.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sosa: http://www.w3.org/ns/sosa/
+  eau: https://w3id.org/eautonome/
+default_prefix: sosa
+imports:
+- linkml:types
+slots:
+  sosa_deployed_on_platform:
+    slot_uri: sosa:deployedOnPlatform
+    title: deployed on platform
+    multivalued: true
+    notes:
+    - Attached using schema:domainIncludes from the pinned W3C SOSA modules, including
+      subclasses via rdfs:subClassOf. schema:rangeIncludes is recorded as documentation
+      only. No minCount or maxCount is added.
+    comments:
+    - 'schema:domainIncludes: sosa:Deployment'
+    - 'schema:rangeIncludes: sosa:Platform'
+    - 'rangeIncludes classes used in Eautonome, kept as documentation: Platform'
+  sosa_deployed_system:
+    slot_uri: sosa:deployedSystem
+    title: deployed system
+    multivalued: true
+    notes:
+    - Attached using schema:domainIncludes from the pinned W3C SOSA modules, including
+      subclasses via rdfs:subClassOf. schema:rangeIncludes is recorded as documentation
+      only. No minCount or maxCount is added.
+    comments:
+    - 'schema:domainIncludes: sosa:Deployment'
+    - 'schema:rangeIncludes: sosa:Sensor, sosa:System'
+    - 'rangeIncludes classes used in Eautonome, kept as documentation: Sensor, System'
+  sosa_for_property:
+    slot_uri: sosa:forProperty
+    title: for property
+    multivalued: true
+    notes:
+    - Attached using schema:domainIncludes from the pinned W3C SOSA modules, including
+      subclasses via rdfs:subClassOf. schema:rangeIncludes is recorded as documentation
+      only. No minCount or maxCount is added.
+    comments:
+    - 'schema:domainIncludes: sosa:Procedure, sosa:Sensor, sosa:System'
+    - 'schema:rangeIncludes: sosa:Property'
+    - 'rangeIncludes classes used in Eautonome, kept as documentation: Property'
+    - 'inherited associations: ObservingProcedure via Procedure'
+  sosa_has_deployment:
+    slot_uri: sosa:hasDeployment
+    title: has deployment
+    multivalued: true
+    notes:
+    - Attached using schema:domainIncludes from the pinned W3C SOSA modules, including
+      subclasses via rdfs:subClassOf. schema:rangeIncludes is recorded as documentation
+      only. No minCount or maxCount is added.
+    comments:
+    - 'schema:domainIncludes: sosa:Asset, sosa:Platform, sosa:Sensor, sosa:System'
+    - 'schema:rangeIncludes: sosa:Deployment'
+    - 'rangeIncludes classes used in Eautonome, kept as documentation: Deployment'
+  sosa_has_feature_of_interest:
+    slot_uri: sosa:hasFeatureOfInterest
+    title: has feature of interest
+    multivalued: true
+    notes:
+    - Attached using schema:domainIncludes from the pinned W3C SOSA modules, including
+      subclasses via rdfs:subClassOf. schema:rangeIncludes is recorded as documentation
+      only. No minCount or maxCount is added.
+    comments:
+    - 'schema:domainIncludes: sosa:Deployment, sosa:Execution, sosa:ExecutionCollection, sosa:Observation,
+      sosa:ObservationCollection'
+    - 'schema:rangeIncludes: sosa:FeatureOfInterest'
+    - 'rangeIncludes classes used in Eautonome, kept as documentation: FeatureOfInterest'
+  sosa_has_member:
+    slot_uri: sosa:hasMember
+    title: has member
+    multivalued: true
+    notes:
+    - Attached using schema:domainIncludes from the pinned W3C SOSA modules, including
+      subclasses via rdfs:subClassOf. schema:rangeIncludes is recorded as documentation
+      only. No minCount or maxCount is added.
+    comments:
+    - 'schema:domainIncludes: sosa:ExecutionCollection, sosa:ObservationCollection'
+    - 'schema:rangeIncludes: sosa:Execution, sosa:ExecutionCollection, sosa:Observation, sosa:ObservationCollection'
+    - 'rangeIncludes classes used in Eautonome, kept as documentation: Observation, ObservationCollection'
+  sosa_has_operating_conditions:
+    slot_uri: sosa:hasOperatingConditions
+    title: has operating conditions
+    multivalued: true
+    notes:
+    - Attached using schema:domainIncludes from the pinned W3C SOSA modules, including
+      subclasses via rdfs:subClassOf. schema:rangeIncludes is recorded as documentation
+      only. No minCount or maxCount is added.
+    comments:
+    - 'schema:domainIncludes: sosa:Actuator, sosa:Sampler, sosa:Sensor, sosa:System'
+    - 'schema:rangeIncludes: sosa:Observation, sosa:ObservationCollection, sosa:OperatingConditions'
+    - 'rangeIncludes classes used in Eautonome, kept as documentation: Observation, ObservationCollection'
+  sosa_has_property:
+    slot_uri: sosa:hasProperty
+    title: has property
+    multivalued: true
+    notes:
+    - Attached using schema:domainIncludes from the pinned W3C SOSA modules, including
+      subclasses via rdfs:subClassOf. schema:rangeIncludes is recorded as documentation
+      only. No minCount or maxCount is added.
+    comments:
+    - 'schema:domainIncludes: sosa:FeatureOfInterest'
+    - 'schema:rangeIncludes: sosa:Property'
+    - 'rangeIncludes classes used in Eautonome, kept as documentation: Property'
+  sosa_has_result:
+    slot_uri: sosa:hasResult
+    title: has result
+    multivalued: true
+    notes:
+    - Attached using schema:domainIncludes from the pinned W3C SOSA modules, including
+      subclasses via rdfs:subClassOf. schema:rangeIncludes is recorded as documentation
+      only. No minCount or maxCount is added.
+    comments:
+    - 'schema:domainIncludes: sosa:Execution, sosa:ExecutionCollection, sosa:Observation,
+      sosa:ObservationCollection'
+  sosa_has_simple_result:
+    slot_uri: sosa:hasSimpleResult
+    title: has simple result
+    multivalued: true
+    notes:
+    - Attached using schema:domainIncludes from the pinned W3C SOSA modules, including
+      subclasses via rdfs:subClassOf. schema:rangeIncludes is recorded as documentation
+      only. No minCount or maxCount is added.
+    comments:
+    - 'schema:domainIncludes: sosa:Execution, sosa:ExecutionCollection, sosa:Observation,
+      sosa:ObservationCollection'
+  sosa_has_sub_system:
+    slot_uri: sosa:hasSubSystem
+    title: has sub system
+    multivalued: true
+    notes:
+    - Attached using schema:domainIncludes from the pinned W3C SOSA modules, including
+      subclasses via rdfs:subClassOf. schema:rangeIncludes is recorded as documentation
+      only. No minCount or maxCount is added.
+    comments:
+    - 'schema:domainIncludes: sosa:Sensor, sosa:System'
+    - 'schema:rangeIncludes: sosa:Sensor, sosa:System'
+    - 'rangeIncludes classes used in Eautonome, kept as documentation: Sensor, System'
+  sosa_has_system_capability:
+    slot_uri: sosa:hasSystemCapability
+    title: has system capability
+    multivalued: true
+    notes:
+    - Attached using schema:domainIncludes from the pinned W3C SOSA modules, including
+      subclasses via rdfs:subClassOf. schema:rangeIncludes is recorded as documentation
+      only. No minCount or maxCount is added.
+    comments:
+    - 'schema:domainIncludes: sosa:Actuator, sosa:Sampler, sosa:Sensor, sosa:System'
+    - 'schema:rangeIncludes: sosa:Observation, sosa:ObservationCollection'
+    - 'rangeIncludes classes used in Eautonome, kept as documentation: Observation, ObservationCollection'
+  sosa_has_ultimate_feature_of_interest:
+    slot_uri: sosa:hasUltimateFeatureOfInterest
+    title: has ultimate feature of interest
+    multivalued: true
+    notes:
+    - Attached using schema:domainIncludes from the pinned W3C SOSA modules, including
+      subclasses via rdfs:subClassOf. schema:rangeIncludes is recorded as documentation
+      only. No minCount or maxCount is added.
+    comments:
+    - 'schema:domainIncludes: sosa:Deployment, sosa:Execution, sosa:ExecutionCollection, sosa:Observation,
+      sosa:ObservationCollection'
+    - 'schema:rangeIncludes: sosa:FeatureOfInterest'
+    - 'rangeIncludes classes used in Eautonome, kept as documentation: FeatureOfInterest'
+  sosa_hosts:
+    slot_uri: sosa:hosts
+    title: hosts
+    multivalued: true
+    notes:
+    - Attached using schema:domainIncludes from the pinned W3C SOSA modules, including
+      subclasses via rdfs:subClassOf. schema:rangeIncludes is recorded as documentation
+      only. No minCount or maxCount is added.
+    comments:
+    - 'schema:domainIncludes: sosa:Platform'
+    - 'schema:rangeIncludes: sosa:Asset, sosa:Platform, sosa:Sensor, sosa:System'
+    - 'rangeIncludes classes used in Eautonome, kept as documentation: Platform, Sensor,
+      System'
+  sosa_implemented_by:
+    slot_uri: sosa:implementedBy
+    title: implemented by
+    multivalued: true
+    notes:
+    - Attached using schema:domainIncludes from the pinned W3C SOSA modules, including
+      subclasses via rdfs:subClassOf. schema:rangeIncludes is recorded as documentation
+      only. No minCount or maxCount is added.
+    comments:
+    - 'schema:domainIncludes: sosa:Procedure'
+    - 'schema:rangeIncludes: sosa:Sensor, sosa:System'
+    - 'rangeIncludes classes used in Eautonome, kept as documentation: Sensor, System'
+    - 'inherited associations: ObservingProcedure via Procedure'
+  sosa_implements:
+    slot_uri: sosa:implements
+    title: implements
+    multivalued: true
+    notes:
+    - Attached using schema:domainIncludes from the pinned W3C SOSA modules, including
+      subclasses via rdfs:subClassOf. schema:rangeIncludes is recorded as documentation
+      only. No minCount or maxCount is added.
+    comments:
+    - 'schema:domainIncludes: sosa:Sensor, sosa:System'
+    - 'schema:rangeIncludes: sosa:ObservingProcedure, sosa:Procedure'
+    - 'rangeIncludes classes used in Eautonome, kept as documentation: ObservingProcedure'
+  sosa_in_deployment:
+    slot_uri: sosa:inDeployment
+    title: in deployment
+    multivalued: true
+    notes:
+    - Attached using schema:domainIncludes from the pinned W3C SOSA modules, including
+      subclasses via rdfs:subClassOf. schema:rangeIncludes is recorded as documentation
+      only. No minCount or maxCount is added.
+    comments:
+    - 'schema:domainIncludes: sosa:Platform'
+    - 'schema:rangeIncludes: sosa:Deployment'
+    - 'rangeIncludes classes used in Eautonome, kept as documentation: Deployment'
+  sosa_is_feature_of_interest_of:
+    slot_uri: sosa:isFeatureOfInterestOf
+    title: is feature of interest of
+    multivalued: true
+    notes:
+    - Attached using schema:domainIncludes from the pinned W3C SOSA modules, including
+      subclasses via rdfs:subClassOf. schema:rangeIncludes is recorded as documentation
+      only. No minCount or maxCount is added.
+    comments:
+    - 'schema:domainIncludes: sosa:FeatureOfInterest'
+    - 'schema:rangeIncludes: sosa:Deployment, sosa:Execution, sosa:ExecutionCollection, sosa:Observation,
+      sosa:ObservationCollection'
+    - 'rangeIncludes classes used in Eautonome, kept as documentation: Deployment, Observation,
+      ObservationCollection'
+  sosa_is_hosted_by:
+    slot_uri: sosa:isHostedBy
+    title: is hosted by
+    multivalued: true
+    notes:
+    - Attached using schema:domainIncludes from the pinned W3C SOSA modules, including
+      subclasses via rdfs:subClassOf. schema:rangeIncludes is recorded as documentation
+      only. No minCount or maxCount is added.
+    comments:
+    - 'schema:domainIncludes: sosa:Asset, sosa:Platform, sosa:Sensor, sosa:System'
+    - 'schema:rangeIncludes: sosa:Platform'
+    - 'rangeIncludes classes used in Eautonome, kept as documentation: Platform'
+  sosa_is_observed_by:
+    slot_uri: sosa:isObservedBy
+    title: is observed by
+    multivalued: true
+    notes:
+    - Attached using schema:domainIncludes from the pinned W3C SOSA modules, including
+      subclasses via rdfs:subClassOf. schema:rangeIncludes is recorded as documentation
+      only. No minCount or maxCount is added.
+    comments:
+    - 'schema:domainIncludes: sosa:Property'
+    - 'schema:rangeIncludes: sosa:Sensor'
+    - 'rangeIncludes classes used in Eautonome, kept as documentation: Sensor'
+  sosa_made_by_sensor:
+    slot_uri: sosa:madeBySensor
+    title: made by sensor
+    multivalued: true
+    notes:
+    - Attached using schema:domainIncludes from the pinned W3C SOSA modules, including
+      subclasses via rdfs:subClassOf. schema:rangeIncludes is recorded as documentation
+      only. No minCount or maxCount is added.
+    comments:
+    - 'schema:domainIncludes: sosa:Observation, sosa:ObservationCollection'
+    - 'schema:rangeIncludes: sosa:Sensor'
+    - 'rangeIncludes classes used in Eautonome, kept as documentation: Sensor'
+  sosa_made_observation:
+    slot_uri: sosa:madeObservation
+    title: made observation
+    multivalued: true
+    notes:
+    - Attached using schema:domainIncludes from the pinned W3C SOSA modules, including
+      subclasses via rdfs:subClassOf. schema:rangeIncludes is recorded as documentation
+      only. No minCount or maxCount is added.
+    comments:
+    - 'schema:domainIncludes: sosa:Sensor'
+    - 'schema:rangeIncludes: sosa:Observation, sosa:ObservationCollection'
+    - 'rangeIncludes classes used in Eautonome, kept as documentation: Observation, ObservationCollection'
+  sosa_observed_property:
+    slot_uri: sosa:observedProperty
+    title: observed property
+    multivalued: true
+    notes:
+    - Attached using schema:domainIncludes from the pinned W3C SOSA modules, including
+      subclasses via rdfs:subClassOf. schema:rangeIncludes is recorded as documentation
+      only. No minCount or maxCount is added.
+    comments:
+    - 'schema:domainIncludes: sosa:Observation, sosa:ObservationCollection'
+    - 'schema:rangeIncludes: sosa:Property'
+    - 'rangeIncludes classes used in Eautonome, kept as documentation: Property'
+  sosa_observes:
+    slot_uri: sosa:observes
+    title: observes
+    multivalued: true
+    notes:
+    - Attached using schema:domainIncludes from the pinned W3C SOSA modules, including
+      subclasses via rdfs:subClassOf. schema:rangeIncludes is recorded as documentation
+      only. No minCount or maxCount is added.
+    comments:
+    - 'schema:domainIncludes: sosa:Sensor'
+    - 'schema:rangeIncludes: sosa:Property'
+    - 'rangeIncludes classes used in Eautonome, kept as documentation: Property'
+  sosa_phenomenon_time:
+    slot_uri: sosa:phenomenonTime
+    title: phenomenon time
+    multivalued: true
+    notes:
+    - Attached using schema:domainIncludes from the pinned W3C SOSA modules, including
+      subclasses via rdfs:subClassOf. schema:rangeIncludes is recorded as documentation
+      only. No minCount or maxCount is added.
+    comments:
+    - 'schema:domainIncludes: sosa:Execution, sosa:ExecutionCollection, sosa:Observation,
+      sosa:ObservationCollection'
+    - 'schema:rangeIncludes: sosa:TemporalEntity'
+  sosa_result_time:
+    slot_uri: sosa:resultTime
+    title: result time
+    multivalued: true
+    notes:
+    - Attached using schema:domainIncludes from the pinned W3C SOSA modules, including
+      subclasses via rdfs:subClassOf. schema:rangeIncludes is recorded as documentation
+      only. No minCount or maxCount is added.
+    comments:
+    - 'schema:domainIncludes: sosa:Execution, sosa:ExecutionCollection, sosa:Observation,
+      sosa:ObservationCollection'
+  sosa_start_time:
+    slot_uri: sosa:startTime
+    title: start time
+    multivalued: true
+    notes:
+    - Attached using schema:domainIncludes from the pinned W3C SOSA modules, including
+      subclasses via rdfs:subClassOf. schema:rangeIncludes is recorded as documentation
+      only. No minCount or maxCount is added.
+    comments:
+    - 'schema:domainIncludes: sosa:Deployment, sosa:Execution, sosa:ExecutionCollection, sosa:Observation,
+      sosa:ObservationCollection'
+  sosa_used_procedure:
+    slot_uri: sosa:usedProcedure
+    title: used procedure
+    multivalued: true
+    notes:
+    - Attached using schema:domainIncludes from the pinned W3C SOSA modules, including
+      subclasses via rdfs:subClassOf. schema:rangeIncludes is recorded as documentation
+      only. No minCount or maxCount is added.
+    comments:
+    - 'schema:domainIncludes: sosa:Execution, sosa:ExecutionCollection, sosa:Observation,
+      sosa:ObservationCollection'
+    - 'schema:rangeIncludes: sosa:ObservingProcedure, sosa:Procedure'
+    - 'rangeIncludes classes used in Eautonome, kept as documentation: ObservingProcedure'
+classes:
+  SosaDeployment:
+    class_uri: sosa:Deployment
+    title: Deployment
+    slots:
+    - sosa_deployed_on_platform
+    - sosa_deployed_system
+    - sosa_has_feature_of_interest
+    - sosa_has_ultimate_feature_of_interest
+    - sosa_start_time
+  SosaFeatureOfInterest:
+    class_uri: sosa:FeatureOfInterest
+    title: Feature Of Interest
+    slots:
+    - sosa_has_property
+    - sosa_is_feature_of_interest_of
+  SosaObservation:
+    class_uri: sosa:Observation
+    title: Observation
+    slots:
+    - sosa_has_feature_of_interest
+    - sosa_has_result
+    - sosa_has_simple_result
+    - sosa_has_ultimate_feature_of_interest
+    - sosa_made_by_sensor
+    - sosa_observed_property
+    - sosa_phenomenon_time
+    - sosa_result_time
+    - sosa_start_time
+    - sosa_used_procedure
+  SosaObservationCollection:
+    class_uri: sosa:ObservationCollection
+    title: Observation Collection
+    slots:
+    - sosa_has_feature_of_interest
+    - sosa_has_member
+    - sosa_has_result
+    - sosa_has_simple_result
+    - sosa_has_ultimate_feature_of_interest
+    - sosa_made_by_sensor
+    - sosa_observed_property
+    - sosa_phenomenon_time
+    - sosa_result_time
+    - sosa_start_time
+    - sosa_used_procedure
+  SosaObservingProcedure:
+    class_uri: sosa:ObservingProcedure
+    title: Observing Procedure
+    slots:
+    - sosa_for_property
+    - sosa_implemented_by
+  SosaPlatform:
+    class_uri: sosa:Platform
+    title: Platform
+    slots:
+    - sosa_has_deployment
+    - sosa_hosts
+    - sosa_in_deployment
+    - sosa_is_hosted_by
+  SosaProperty:
+    class_uri: sosa:Property
+    title: Property
+    slots:
+    - sosa_is_observed_by
+  SosaSensor:
+    class_uri: sosa:Sensor
+    title: Sensor
+    mixins:
+    - SosaSystem
+    slots:
+    - sosa_for_property
+    - sosa_has_deployment
+    - sosa_has_operating_conditions
+    - sosa_has_sub_system
+    - sosa_has_system_capability
+    - sosa_implements
+    - sosa_is_hosted_by
+    - sosa_made_observation
+    - sosa_observes
+  SosaSystem:
+    class_uri: sosa:System
+    title: System
+    slots:
+    - sosa_for_property
+    - sosa_has_deployment
+    - sosa_has_operating_conditions
+    - sosa_has_sub_system
+    - sosa_has_system_capability
+    - sosa_implements
+    - sosa_is_hosted_by

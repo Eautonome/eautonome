@@ -1,0 +1,30 @@
+saref_linkml_release: v4.1.1-2026-08-31
+saref_linkml_commit: 5c50930de681afbffcbfd80a58c91eccde7c97de
+saref_linkml_repository: https://github.com/NeverBlink-OSS/saref-linkml
+w3c_sosa_ssn_commit: 37fa55298187464b41c3712620dcbf5bd438b1b2
+w3c_sosa_ssn_repository: https://github.com/w3c/sdw-sosa-ssn
+python: "3.14.7"
+rdflib: "7.6.0"
+pyshacl: "0.40.1"
+linkml_scala: "0.15.0"
+w3c_modules:
+  - ssn/rdf/ontology/core/sosa-common.ttl
+  - ssn/rdf/ontology/core/sosa-observation.ttl
+  - ssn/rdf/ontology/extensions/sosa-system.ttl
+w3c_alignment: ssn/rdf/ontology/alignments/sosa-saref.ttl
+saref_sources:
+  core: source/SAREFCore/saref.ttl
+  saref4watr: source/saref4watr/saref4watr.ttl
+eautonome_inputs:
+  ontology: docs/ontology/eautonome.ttl
+  datasets:
+    - docs/data/hydrodynamic-observations.jsonld
+    - docs/data/shower-observations.jsonld
+composed_schema: schema/eautonome-composed.yaml
+primary_mode: semantic_closure_rdfs
+notes: >-
+  Third party ontologies and SAREF-LinkML schemas are not stored in this
+  directory. Retrieve them from the pinned commits above. SHACL is generated
+  from schema/sosa-eautonome.yaml composed with the released SAREF4WATR-LinkML
+  schema. The primary evaluation is semantic_closure_rdfs.
+  owlrl_sensitivity is a sensitivity analysis only.

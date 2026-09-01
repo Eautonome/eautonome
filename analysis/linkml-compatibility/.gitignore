@@ -1,0 +1,7 @@
+provenance/
+.cache/
+schema/saref-core.yaml
+schema/saref4watr.yaml
+generated/*.raw.ttl
+generated/*-mode-*.txt
+__pycache__/

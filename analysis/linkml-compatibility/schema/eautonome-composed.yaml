@@ -1,0 +1,21 @@
+id: https://w3id.org/eautonome/linkml-compatibility
+name: eautonome-linkml-compatibility
+title: Eautonome SOSA and SAREF4WATR LinkML compatibility schema
+description: >-
+  Composed LinkML schema used to evaluate published Eautonome data against an
+  Eautonome SOSA application profile and the independently developed
+  SAREF4WATR-LinkML conversion. This schema does not replace the Eautonome OWL
+  ontology. Copy saref4watr.yaml and saref-core.yaml from the pinned
+  SAREF-LinkML commit before regenerating SHACL.
+prefixes:
+  eau: https://w3id.org/eautonome/
+  sosa: http://www.w3.org/ns/sosa/
+  s4watr: https://saref.etsi.org/saref4watr/
+  saref: https://saref.etsi.org/core/
+  linkml: https://w3id.org/linkml/
+default_prefix: eau
+default_range: string
+imports:
+  - linkml:types
+  - ./sosa-eautonome
+  - ./saref4watr
