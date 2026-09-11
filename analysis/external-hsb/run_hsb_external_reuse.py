@@ -1,17 +1,14 @@
 #!/usr/bin/env python3
-"""Run the Eautonome external reuse evaluation on the HSB Living Lab dataset."""
+"""Map the HSB Living Lab dataset for the Eautonome external reuse evaluation."""
 from __future__ import annotations
 
 import argparse
 import csv
 import json
-import math
 import re
-import sys
 import time
-from dataclasses import dataclass
 from pathlib import Path
-from typing import Dict, Iterable, List, Tuple
+from typing import Dict, List, Tuple
 
 import pandas as pd
 from rdflib import BNode, Graph, Literal, Namespace, RDF, RDFS, URIRef
@@ -24,7 +21,6 @@ QUDT = Namespace("http://qudt.org/schema/qudt/")
 UNIT = Namespace("http://qudt.org/vocab/unit/")
 SCHEMA = Namespace("http://schema.org/")
 DCTERMS = Namespace("http://purl.org/dc/terms/")
-HSB = EAU
 
 FLOW_VOLUME = S4WATR.FlowVolume
 PROCEDURE = EAU.hsbObservingProcedure
@@ -81,7 +77,7 @@ def water_kind_iri(source_type: str) -> URIRef:
         return COLD_WATER
     if source_type == "hot water consumption":
         return HOT_WATER
-    raise ValueError(f"Unexpected HSB water type: {source_type!r}")
+        raise ValueError(f"Unknown HSB water type: {source_type!r}")
 
 
 def observation_iri(row_index: int) -> URIRef:
@@ -104,7 +100,7 @@ def load_source(path: Path) -> pd.DataFrame:
     ]
     missing = [c for c in required if c not in df.columns]
     if missing:
-        raise ValueError(f"Missing source columns: {missing}")
+        raise ValueError(f"Missing columns: {missing}")
     df = df.copy()
     df["_timestamp"] = pd.to_datetime(df["timestamp"], errors="coerce", utc=True)
     return df
@@ -145,24 +141,24 @@ def source_summary(df: pd.DataFrame) -> dict:
 
 def assert_source_consistency(df: pd.DataFrame) -> None:
     if df["_timestamp"].isna().any():
-        raise ValueError("Source contains timestamps that cannot be parsed as UTC dateTimes")
+        raise ValueError("Could not parse one or more timestamps as UTC")
     if df["sensor_id"].isna().any() or df["room_number"].isna().any() or df["room_type"].isna().any():
-        raise ValueError("Source lacks required sensor or room identifiers")
+        raise ValueError("A sensor or room identifier is missing")
     if df["type"].isna().any() or df["attached_to"].isna().any() or df["value"].isna().any():
-        raise ValueError("Source lacks required water type, fixture, or consumption values")
+        raise ValueError("A water type, fixture, or consumption value is missing")
     if (df["value"] <= 0).any():
-        raise ValueError("Source contains non-positive consumption values")
+        raise ValueError("The source contains a consumption value that is not positive")
 
     stable_cols = ["room_number", "room_type", "type", "attached_to", "apartment", "cluster_name"]
     for col in stable_cols:
         counts = df.groupby("sensor_id", dropna=False)[col].nunique(dropna=False)
         if int(counts.max()) != 1:
-            raise ValueError(f"Source sensor mapping is not stable for {col}")
+            raise ValueError(f"Sensor attributes are not stable for {col}")
 
     for col in ["room_type", "apartment", "cluster_name"]:
         counts = df.groupby("room_number", dropna=False)[col].nunique(dropna=False)
         if int(counts.max()) != 1:
-            raise ValueError(f"Source room mapping is not stable for {col}")
+            raise ValueError(f"Room attributes are not stable for {col}")
 
 
 def static_mapping(df: pd.DataFrame) -> pd.DataFrame:
@@ -193,13 +189,13 @@ def add_static_mapping(g: Graph, static: pd.DataFrame, include_deployment: bool 
     g.add((HOT_WATER, RDFS.label, Literal("Hot water consumption")))
 
     g.add((PROCEDURE, RDF.type, SOSA.ObservingProcedure))
-    g.add((PROCEDURE, RDFS.label, Literal("HSB pulse-counting water meter procedure")))
-    g.add((PROCEDURE, RDFS.comment, Literal("Pulse-counting water meters with 1 L resolution and 10-minute reporting intervals, as documented by the HSB Living Lab dataset.")))
+    g.add((PROCEDURE, RDFS.label, Literal("HSB water meter procedure")))
+    g.add((PROCEDURE, RDFS.comment, Literal(
+        "The HSB Living Lab meters count pulses. Resolution is 1 L. Readings are reported every 10 minutes."
+    )))
 
     rooms_done = set()
     assets_done = set()
-    apartments_done = set()
-    clusters_done = set()
 
     if include_deployment:
         g.add((DEPLOYMENT, RDF.type, SOSA.Deployment))
@@ -230,18 +226,16 @@ def add_static_mapping(g: Graph, static: pd.DataFrame, include_deployment: bool 
         if room not in rooms_done:
             g.add((room, RDF.type, EAU.DomesticRoom))
             g.add((room, RDFS.label, Literal(f"{r.room_number} ({r.room_type})")))
-            g.add((room, RDFS.comment, Literal(f"HSB source room type: {r.room_type}.")))
+            g.add((room, RDFS.comment, Literal(f"Room type in the source data: {r.room_type}.")))
             if pd.notna(r.apartment):
                 apt = EAU[f"hsbApartment{r.apartment}"]
                 g.add((apt, RDF.type, SCHEMA.Place))
                 g.add((apt, RDFS.label, Literal(str(r.apartment))))
                 g.add((room, DCTERMS.isPartOf, apt))
-                apartments_done.add(apt)
             if pd.notna(r.cluster_name):
                 cluster = EAU[f"hsbCluster{r.cluster_name}"]
                 g.add((cluster, RDF.type, SCHEMA.Place))
                 g.add((cluster, RDFS.label, Literal(str(r.cluster_name))))
-                clusters_done.add(cluster)
             if pd.notna(r.apartment) and pd.notna(r.cluster_name):
                 apt = EAU[f"hsbApartment{r.apartment}"]
                 cluster = EAU[f"hsbCluster{r.cluster_name}"]
@@ -278,7 +272,7 @@ _WORK_STATIC_BY_SENSOR = None
 
 
 def build_combined_projection(chunk: pd.DataFrame, static_by_sensor: Dict[str, Tuple[str, str]]) -> Graph:
-    """Build the predicates needed by Q1, Q2, Q4, Q5, Q8, and Q11 for one chunk."""
+    """Build the RDF needed by Q1, Q2, Q4, Q5, Q8, and Q11 for one chunk."""
     g = Graph()
     add_common_prefixes(g)
     for sid in chunk["sensor_id"].unique():
@@ -376,17 +370,16 @@ def execute_static_queries(static: pd.DataFrame) -> List[dict]:
 
 
 def check_applicable_shapes(df: pd.DataFrame, static: pd.DataFrame) -> List[dict]:
-    obs_violations = 0
-    obs_violations += int(df["sensor_id"].isna().sum())
-    obs_violations += 0
-    obs_violations += int(df["value"].isna().sum())
-    obs_violations += int(df["_timestamp"].isna().sum())
-
-    mp_violations = 0
-    mp_violations += int(static["room_number"].isna().sum())
-    mp_violations += int(static["attached_to"].isna().sum())
-    mp_violations += int(static["type"].isna().sum())
-    mp_violations += 0
+    obs_violations = (
+        int(df["sensor_id"].isna().sum())
+        + int(df["value"].isna().sum())
+        + int(df["_timestamp"].isna().sum())
+    )
+    mp_violations = (
+        int(static["room_number"].isna().sum())
+        + int(static["attached_to"].isna().sum())
+        + int(static["type"].isna().sum())
+    )
 
     return [
         {
@@ -421,14 +414,18 @@ def make_example_graph(df: pd.DataFrame, static: pd.DataFrame) -> Graph:
     return g
 
 
-
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("csv", type=Path, help="HSB_Living_Lab_Water_Consumption_Anonymized.csv")
+    parser.add_argument("csv", type=Path, help="HSB Living Lab water consumption CSV")
     parser.add_argument("--output-dir", type=Path, default=Path("hsb-external-results"))
     parser.add_argument("--chunk-size", type=int, default=50000)
     parser.add_argument("--workers", type=int, default=4)
-    parser.add_argument("--batch-records", type=int, default=170000, help="Restart the projection worker pool after this many source rows")
+    parser.add_argument(
+        "--batch-records",
+        type=int,
+        default=170000,
+        help="Recreate the worker pool after this many rows",
+    )
     args = parser.parse_args()
     out = args.output_dir
     out.mkdir(parents=True, exist_ok=True)
@@ -464,7 +461,7 @@ def main() -> int:
             "seconds": round(sum(part[qid]["seconds"] for part in projected_parts), 3),
         }
     if not all(part["Q2"]["row_count"] == 1 for part in projected_parts):
-        raise RuntimeError("Unexpected Q2 distinct-property result across batches")
+        raise RuntimeError("Q2 did not return one observed property in every batch")
     projected["Q2"] = {
         "row_count": 1,
         "seconds": round(sum(part["Q2"]["seconds"] for part in projected_parts), 3),
@@ -474,17 +471,17 @@ def main() -> int:
         query_rows.append({
             "query": qid,
             "row_count": int(projected[qid]["row_count"]),
-            "status": "supported unchanged",
+            "status": "answered",
             "seconds": projected[qid]["seconds"],
         })
-    query_rows.append({"query":"Q3", "row_count":int(static_results["Q3"]["row_count"]), "status":"supported unchanged", "seconds":static_results["Q3"]["seconds"]})
-    query_rows.append({"query":"Q10-HSB", "row_count":int(static_results["Q10-HSB"]["row_count"]), "status":"deployment IRI substituted", "seconds":static_results["Q10-HSB"]["seconds"]})
+    query_rows.append({"query":"Q3", "row_count":int(static_results["Q3"]["row_count"]), "status":"answered", "seconds":static_results["Q3"]["seconds"]})
+    query_rows.append({"query":"Q10-HSB", "row_count":int(static_results["Q10-HSB"]["row_count"]), "status":"answered after substituting the deployment IRI", "seconds":static_results["Q10-HSB"]["seconds"]})
     for qid, reason in [
-        ("Q6", "source does not publish operational status"),
-        ("Q7", "source does not publish consumption-event intervals"),
-        ("Q9", "source does not publish calibration parameters"),
-        ("Q12", "source does not publish operational status"),
-        ("Q13", "source does not publish observation collections and consumption events"),
+        ("Q6", "the source has no operational status"),
+        ("Q7", "the source has no consumption event intervals"),
+        ("Q9", "the source has no calibration parameters"),
+        ("Q12", "the source has no operational status"),
+        ("Q13", "the source has no observation collections or consumption events"),
     ]:
         query_rows.append({"query":qid, "row_count":None, "status":f"not answerable: {reason}", "seconds":None})
 

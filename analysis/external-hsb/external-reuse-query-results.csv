@@ -1,14 +1,14 @@
 query,row_count,status,seconds
-Q1,652315,supported unchanged,17.424
-Q2,1,supported unchanged,17.235
-Q3,214,supported unchanged,0.125
-Q4,652315,supported unchanged,19.461
-Q5,652315,supported unchanged,15.365
-Q6,,not answerable: source does not publish operational status,
-Q7,,not answerable: source does not publish consumption-event intervals,
-Q8,652315,supported unchanged,19.905
-Q9,,not answerable: source does not publish calibration parameters,
-Q10-HSB,214,deployment IRI substituted,0.007
-Q11,652315,supported unchanged,24.179
-Q12,,not answerable: source does not publish operational status,
-Q13,,not answerable: source does not publish observation collections and consumption events,
+Q1,652315,answered,17.424
+Q2,1,answered,17.235
+Q3,214,answered,0.125
+Q4,652315,answered,19.461
+Q5,652315,answered,15.365
+Q6,,not answerable: the source has no operational status,
+Q7,,not answerable: the source has no consumption event intervals,
+Q8,652315,answered,19.905
+Q9,,not answerable: the source has no calibration parameters,
+Q10-HSB,214,answered after substituting the deployment IRI,0.007
+Q11,652315,answered,24.179
+Q12,,not answerable: the source has no operational status,
+Q13,,not answerable: the source has no observation collections or consumption events,

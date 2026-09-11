@@ -177,12 +177,12 @@ eau:hsbClusterCL_H a schema1:Place ;
 eau:hsbRoomR008 a eau:DomesticRoom ;
     rdfs:label "R008 (Living room)" ;
     dcterms:isPartOf eau:hsbApartmentAPT_009 ;
-    rdfs:comment "HSB source room type: Living room." .
+    rdfs:comment "Room type in the source data: Living room." .
 
 eau:hsbRoomR025 a eau:DomesticRoom ;
     rdfs:label "R025 (Bathroom)" ;
     dcterms:isPartOf eau:hsbApartmentAPT_005 ;
-    rdfs:comment "HSB source room type: Bathroom." .
+    rdfs:comment "Room type in the source data: Bathroom." .
 
 eau:hsbMeasurementPointS0012 a eau:MeasurementPoint ;
     rdfs:label "HSB measurement point S0012" ;
@@ -249,12 +249,12 @@ eau:hsbMeasurementPointS0205 a eau:MeasurementPoint ;
 
 eau:hsbRoomR001 a eau:DomesticRoom ;
     rdfs:label "R001 (Laundry studio)" ;
-    rdfs:comment "HSB source room type: Laundry studio." .
+    rdfs:comment "Room type in the source data: Laundry studio." .
 
 eau:hsbRoomR030 a eau:DomesticRoom ;
     rdfs:label "R030 (Bathroom)" ;
     dcterms:isPartOf eau:hsbApartmentAPT_017 ;
-    rdfs:comment "HSB source room type: Bathroom." .
+    rdfs:comment "Room type in the source data: Bathroom." .
 
 eau:hsbSensorS0012 a sosa:Sensor,
         s4watr:WaterMeter ;
@@ -313,7 +313,7 @@ eau:hsbSensorS0205 a sosa:Sensor,
 eau:hsbRoomR046 a eau:DomesticRoom ;
     rdfs:label "R046 (Living room)" ;
     dcterms:isPartOf eau:hsbApartmentAPT_020 ;
-    rdfs:comment "HSB source room type: Living room." .
+    rdfs:comment "Room type in the source data: Living room." .
 
 eau:hsbHotWater a s4watr:WaterKind ;
     rdfs:label "Hot water consumption" .
@@ -322,6 +322,6 @@ eau:hsbColdWater a s4watr:WaterKind ;
     rdfs:label "Cold water consumption" .
 
 eau:hsbObservingProcedure a sosa:ObservingProcedure ;
-    rdfs:label "HSB pulse-counting water meter procedure" ;
-    rdfs:comment "Pulse-counting water meters with 1 L resolution and 10 minute reporting intervals, as documented by the HSB Living Lab dataset." .
+    rdfs:label "HSB water meter procedure" ;
+    rdfs:comment "The HSB Living Lab meters count pulses. Resolution is 1 L. Readings are reported every 10 minutes." .
 
