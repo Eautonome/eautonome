@@ -1,0 +1,209 @@
+# Linked-Data Python language/interface compatibility on the native Eautonome graph.
+# Not independent RDF/SPARQL backend validation: LDpy uses rdflib graphs; s{} uses RDFLib SPARQL.
+
+from __future__ import annotations
+
+import hashlib
+import importlib.metadata as md
+import json
+import platform
+import sys
+from pathlib import Path
+
+from rdflib import Graph, Namespace, RDF, URIRef
+
+ROOT = Path(__file__).resolve().parents[2]
+OUT = Path(__file__).resolve().parent / "results" / "summary.json"
+ONTOLOGY = ROOT / "docs" / "ontology" / "eautonome.ttl"
+HYDRO = ROOT / "docs" / "data" / "hydrodynamic-observations.jsonld"
+SHOWER = ROOT / "docs" / "data" / "shower-observations.jsonld"
+Q01 = ROOT / "queries" / "q01.rq"
+
+SOSA = Namespace("http://www.w3.org/ns/sosa/")
+EXPECTED = {
+    "observations": 742,
+    "made_by_sensor_pairs": 742,
+    "result_time_pairs": 742,
+    "distinct_observed_properties": 3,
+    "q01_rows": 742,
+}
+
+
+def sha256_file(path: Path) -> str:
+    h = hashlib.sha256()
+    with path.open("rb") as fh:
+        for chunk in iter(lambda: fh.read(1024 * 1024), b""):
+            h.update(chunk)
+    return h.hexdigest()
+
+
+def n3(term) -> str:
+    return term.n3()
+
+
+def load_graph() -> Graph:
+    g = Graph()
+    g.parse(ONTOLOGY, format="turtle")
+    g.parse(HYDRO, format="json-ld")
+    g.parse(SHOWER, format="json-ld")
+    return g
+
+
+hashes_before = {
+    "docs/ontology/eautonome.ttl": sha256_file(ONTOLOGY),
+    "docs/data/hydrodynamic-observations.jsonld": sha256_file(HYDRO),
+    "docs/data/shower-observations.jsonld": sha256_file(SHOWER),
+    "queries/q01.rq": sha256_file(Q01),
+}
+
+g = load_graph()
+
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@graph g
+
+errors = []
+
+# --- prefix / term check -------------------------------------------------
+prefix_ok = (
+    sosa:Observation
+    == SOSA.Observation
+    == URIRef("http://www.w3.org/ns/sosa/Observation")
+)
+if not prefix_ok:
+    errors.append("sosa:Observation prefix resolution differs from RDFLib URIRef")
+
+# --- RDFLib baseline -----------------------------------------------------
+typed = [s for s, _, _ in g.triples((None, RDF.type, SOSA.Observation))]
+obs_rdflib = {n3(o) for o in typed}
+made_rdflib = set()
+time_rdflib = set()
+prop_rdflib = set()
+for o in typed:
+    for _, _, sensor in g.triples((o, SOSA.madeBySensor, None)):
+        made_rdflib.add((n3(o), n3(sensor)))
+    for _, _, t in g.triples((o, SOSA.resultTime, None)):
+        time_rdflib.add((n3(o), n3(t)))
+    for _, _, p in g.triples((o, SOSA.observedProperty, None)):
+        prop_rdflib.add(n3(p))
+
+q01_text = Q01.read_text(encoding="utf-8")
+q01_rdflib = {(n3(row[0]), n3(row[1])) for row in g.query(q01_text)}
+
+# --- LDpy m{ } -----------------------------------------------------------
+obs_ldpy = {n3(o) for o in m{ ?observation a sosa:Observation }}
+made_ldpy = {
+    (n3(o), n3(s))
+    for o, s in m{
+        ?observation a sosa:Observation ;
+                     sosa:madeBySensor ?sensor
+    }
+}
+time_ldpy = {
+    (n3(o), n3(t))
+    for o, t in m{
+        ?observation a sosa:Observation ;
+                     sosa:resultTime ?time
+    }
+}
+prop_ldpy = {
+    n3(p)
+    for o, p in m{
+        ?observation a sosa:Observation ;
+                     sosa:observedProperty ?property
+    }
+}
+
+# --- LDpy s{ } (RDFLib SPARQL engine under the hood) ---------------------
+q01_ldpy = {
+    (n3(row[0]), n3(row[1]))
+    for row in s{
+SELECT ?observation ?sensor WHERE {
+  ?observation a sosa:Observation ;
+               sosa:madeBySensor ?sensor .
+}
+ORDER BY ?observation
+}
+}
+
+checks = {
+    "prefix_term_equal": prefix_ok,
+    "observation_set_equal": obs_rdflib == obs_ldpy,
+    "made_by_sensor_set_equal": made_rdflib == made_ldpy,
+    "result_time_set_equal": time_rdflib == time_ldpy,
+    "observed_property_set_equal": prop_rdflib == prop_ldpy,
+    "q01_sparql_result_equal": q01_rdflib == q01_ldpy,
+}
+
+counts = {
+    "observations": len(obs_rdflib),
+    "made_by_sensor_pairs": len(made_rdflib),
+    "result_time_pairs": len(time_rdflib),
+    "distinct_observed_properties": len(prop_rdflib),
+    "q01_rows": len(q01_rdflib),
+}
+
+for key, expected in EXPECTED.items():
+    if counts[key] != expected:
+        errors.append(f"count {key}: got {counts[key]}, expected {expected}")
+
+for name, ok in checks.items():
+    if not ok:
+        errors.append(f"check failed: {name}")
+
+hashes_after = {
+    "docs/ontology/eautonome.ttl": sha256_file(ONTOLOGY),
+    "docs/data/hydrodynamic-observations.jsonld": sha256_file(HYDRO),
+    "docs/data/shower-observations.jsonld": sha256_file(SHOWER),
+    "queries/q01.rq": sha256_file(Q01),
+}
+for key, before in hashes_before.items():
+    if hashes_after.get(key) != before:
+        errors.append(f"input changed during run: {key}")
+
+try:
+    ldpy_pkg = md.version("linked-data-python")
+except md.PackageNotFoundError:
+    ldpy_pkg = None
+    errors.append("linked-data-python package metadata unavailable")
+
+try:
+    rdflib_ver = md.version("rdflib")
+except md.PackageNotFoundError:
+    rdflib_ver = None
+    errors.append("rdflib package metadata unavailable")
+
+summary = {
+    "evaluation": "LDpy language/interface compatibility",
+    "claim_scope": (
+        "LDpy syntax and graph-access compatibility on an RDFLib graph; "
+        "not independent backend validation"
+    ),
+    "versions": {
+        "python": platform.python_version(),
+        "linked_data_python": ldpy_pkg,
+        "rdflib": rdflib_ver,
+    },
+    "input_sha256": hashes_before,
+    "checks": checks,
+    "counts": counts,
+    "ldpy_m_pattern_engine": "graph.triples",
+    "ldpy_sparql_engine": "rdflib",
+    "q01_sparql_note": (
+        "LDpy s{} vs RDFLib graph.query(q01.rq) is syntax/interface compatibility only; "
+        "s{} uses RDFLib SPARQL"
+    ),
+    "validation_errors": errors,
+    "validation_passed": len(errors) == 0,
+}
+
+OUT.parent.mkdir(parents=True, exist_ok=True)
+OUT.write_text(json.dumps(summary, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+print(json.dumps({
+    "validation_passed": summary["validation_passed"],
+    "versions": summary["versions"],
+    "checks": checks,
+    "counts": counts,
+    "errors": errors,
+    "summary": str(OUT),
+}, indent=2))
+sys.exit(0 if summary["validation_passed"] else 1)

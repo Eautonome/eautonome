@@ -1,0 +1,35 @@
+{
+  "evaluation": "LDpy language/interface compatibility",
+  "claim_scope": "LDpy syntax and graph-access compatibility on an RDFLib graph; not independent backend validation",
+  "versions": {
+    "python": "3.14.7",
+    "linked_data_python": "0.2.0",
+    "rdflib": "7.6.0"
+  },
+  "input_sha256": {
+    "docs/ontology/eautonome.ttl": "c7ad59926d840eaccd44c8897f84783d9de7529572c2f38b78163aec2868e004",
+    "docs/data/hydrodynamic-observations.jsonld": "ee8d8babba42789120c6b6d38de1885885b68bebd7385faf6107ce8edc6a5449",
+    "docs/data/shower-observations.jsonld": "0dd1500ace9b3ae31c2edaaf3cead83ea3bd10994d45434f68560e9fbf9fdfe5",
+    "queries/q01.rq": "3ad04f91f80b4d7f522cdfd9f9f1588083d2b256f9084e5f00a3c8790f948cc3"
+  },
+  "checks": {
+    "prefix_term_equal": true,
+    "observation_set_equal": true,
+    "made_by_sensor_set_equal": true,
+    "result_time_set_equal": true,
+    "observed_property_set_equal": true,
+    "q01_sparql_result_equal": true
+  },
+  "counts": {
+    "observations": 742,
+    "made_by_sensor_pairs": 742,
+    "result_time_pairs": 742,
+    "distinct_observed_properties": 3,
+    "q01_rows": 742
+  },
+  "ldpy_m_pattern_engine": "graph.triples",
+  "ldpy_sparql_engine": "rdflib",
+  "q01_sparql_note": "LDpy s{} vs RDFLib graph.query(q01.rq) is syntax/interface compatibility only; s{} uses RDFLib SPARQL",
+  "validation_errors": [],
+  "validation_passed": true
+}
