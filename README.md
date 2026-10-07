@@ -84,7 +84,7 @@ python analysis/run_resource_analysis.py \
 
 ### External reuse checks
 
-HSB Living Lab water data (DOI: https://doi.org/10.5281/zenodo.18971107). 
+HSB Living Lab water data (https://doi.org/10.5281/zenodo.18971107). 
 
 ```bash
 python analysis/external-hsb/run_hsb_external_reuse.py \
@@ -92,7 +92,7 @@ python analysis/external-hsb/run_hsb_external_reuse.py \
   --output-dir analysis/external-hsb/results
 ```
 
-WEUSEDTO (DOI: https://doi.org/10.1016/j.softx.2022.101214, CC BY 4.0). 
+WEUSEDTO (https://doi.org/10.1016/j.softx.2022.101214). 
 
 ```bash
 python analysis/external-weusedto/run_weusedto_external_reuse.py \
