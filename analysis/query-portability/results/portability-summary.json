@@ -1,0 +1,82 @@
+{
+  "queries": 13,
+  "datasets": [
+    "EAUTONOME",
+    "HSB",
+    "WEUSEDTO"
+  ],
+  "expected_combinations": 39,
+  "actual_combinations": 39,
+  "status_counts": {
+    "EAUTONOME": {
+      "NOT_ANSWERABLE_FROM_SOURCE": 0,
+      "PARTIAL": 0,
+      "SUPPORTED_UNCHANGED": 13,
+      "SUPPORTED_WITH_PARAMETERIZATION": 0
+    },
+    "HSB": {
+      "NOT_ANSWERABLE_FROM_SOURCE": 5,
+      "PARTIAL": 0,
+      "SUPPORTED_UNCHANGED": 7,
+      "SUPPORTED_WITH_PARAMETERIZATION": 1
+    },
+    "WEUSEDTO": {
+      "NOT_ANSWERABLE_FROM_SOURCE": 6,
+      "PARTIAL": 4,
+      "SUPPORTED_UNCHANGED": 3,
+      "SUPPORTED_WITH_PARAMETERIZATION": 0
+    }
+  },
+  "native_expected_counts_match": true,
+  "ontology_schema_changed": false,
+  "released_queries_changed": false,
+  "weusedto_full_graph_serialized": false,
+  "input_sha256": {
+    "docs/ontology/eautonome.ttl": "c7ad59926d840eaccd44c8897f84783d9de7529572c2f38b78163aec2868e004",
+    "expected-results.csv": "dadf07afdde332f4c4170eabc3ed192066d9b3750db23d9e4ca3af8fb2857faf",
+    "queries/q01.rq": "3ad04f91f80b4d7f522cdfd9f9f1588083d2b256f9084e5f00a3c8790f948cc3",
+    "queries/q02.rq": "848bb24bb679b20c6e2d4cbb62ebdfdbc992828e6cb7eeb9f64381608fd7499b",
+    "queries/q03.rq": "915d65899789a41f9196663553fec28f16aea32af112c33cc653637e9f4ba1ef",
+    "queries/q04.rq": "79a7c8873de50a19067290cf6cdd191c07b6219717a376ed40943fa9ca4e8178",
+    "queries/q05.rq": "d579fb6869b31e13d81b666c710ab3980111ccff5dce755b9c0f9dfb9e21c984",
+    "queries/q06.rq": "badf4ffd024583fb8bda5b120e0f01bb533b75ba4a63936d68e6f8002c3eca03",
+    "queries/q07.rq": "e457f3350ae077e119828f18552ef91b41a48d835a83c089d0b23993ef8aa7a3",
+    "queries/q08.rq": "37005e9cbed23448093d917d348ba0b457e6b1885ee0498b680fa5395b4f8917",
+    "queries/q09.rq": "efe7613c4ccbfe3a4262623add807ff28a69bb9edead4098a46a534af364f11b",
+    "queries/q10.rq": "869cd7060f6cd3da5fcf034b81c26f915d81db1b60a3761ad9f23ae64babe9ad",
+    "queries/q11.rq": "a470d50f846227205bd568fd2b719978d7ece47d9ba3549df7f1883e48a5e28c",
+    "queries/q12.rq": "1e1b0edbb3ace2348773f3df7aed47d91cf84ffef311eadd213c48c74441b856",
+    "queries/q13.rq": "9b0d76466346f800b7242807b3b5200c605ae4bb08c5cde9b200655e3e1381a9"
+  },
+  "external_input_sha256": {
+    "hsb_query_evidence": "6d6e304a4e537b5136182197679d18a41cb7a19b77f00e5ee0fd821a7e821098",
+    "weusedto_mapper": "c1d1df856c9098859decae32c18edd1c9678598d3ea8a1b32d78a31cfa963b8c",
+    "weusedto_source_files": {
+      "feed.Toilet.csv": "5961906f22d52f3497285aea3124337399917a22fa3679899f9622a503d104cc",
+      "feed_Bidet.MYD.csv": "d76807aee3920280883a8401d798d7d65252a2580ca5abde6a8cabcc7c7ed616",
+      "feed_Dishwasher30.MYD.csv": "5d501a63655f7704f2a6039791d0278ba7ae8b822c85e094a68592b3ad0dad52",
+      "feed_Kitchenfaucet.MYD.csv": "29e5f73bf96cad5e0dc2da2dd3022e1b885be309f864e89d1675c848bb85d922",
+      "feed_Shower.MYD.csv": "d4d8bd234c870f118b49d9da03c4bcc120cbfd7d5dc6137fa95d81e6fac5effe",
+      "feed_Washbasin.MYD.csv": "4d9475a13654645b2f525fb9ba64909ad2164d6954a390632ea162664b363f4d",
+      "feed_Washingmachine.MYD.csv": "faf784455954caddbd08ab5c884bb6f15a26ba65ad530ab49f81c0dd5654415f",
+      "feed_WholeHouse.MYD.csv": "8beb8355d9b3ccc541d1c8aeceeebc211990fb75ec268d419e45f60fdae471b2"
+    }
+  },
+  "weusedto_query_row_counts": {
+    "Q1": 438020,
+    "Q2": 1,
+    "Q3": 0,
+    "Q4": 438020,
+    "Q5": 436780,
+    "Q6": 0,
+    "Q7": 1240,
+    "Q8": 0,
+    "Q9": 0,
+    "Q10": 0,
+    "Q11": 0,
+    "Q12": 0,
+    "Q13": 1240
+  },
+  "validation_errors": [],
+  "validation_passed": true
+}

@@ -1,0 +1,40 @@
+query_id,dataset,status,row_count,execution_mode,reason_code,reason
+Q1,EAUTONOME,SUPPORTED_UNCHANGED,742,ORIGINAL,NATIVE_BASELINE,Released query matches expected-results.csv on native instance data.
+Q1,HSB,SUPPORTED_UNCHANGED,652315,ORIGINAL,SOURCE_METADATA_PRESENT,HSB observations link sensors; original query answered.
+Q1,WEUSEDTO,SUPPORTED_UNCHANGED,438020,ORIGINAL,SOURCE_METADATA_PRESENT,Mapped observations assert madeBySensor for all processed series.
+Q2,EAUTONOME,SUPPORTED_UNCHANGED,3,ORIGINAL,NATIVE_BASELINE,Released query matches expected-results.csv on native instance data.
+Q2,HSB,SUPPORTED_UNCHANGED,1,ORIGINAL,SOURCE_METADATA_PRESENT,HSB observations assert observedProperty FlowVolume.
+Q2,WEUSEDTO,SUPPORTED_UNCHANGED,1,ORIGINAL,SOURCE_METADATA_PRESENT,Mapped observations assert observedProperty s4watr:FlowRate.
+Q3,EAUTONOME,SUPPORTED_UNCHANGED,10,ORIGINAL,NATIVE_BASELINE,Released query matches expected-results.csv on native instance data.
+Q3,HSB,SUPPORTED_UNCHANGED,214,ORIGINAL,SOURCE_METADATA_PRESENT,HSB supplies room and fixture asset links for measurement points.
+Q3,WEUSEDTO,NOT_ANSWERABLE_FROM_SOURCE,0,ORIGINAL,SOURCE_METADATA_ABSENT,WEUSEDTO has no room or fixture asset; locatedIn/measuresOnAsset not mapped.
+Q4,EAUTONOME,SUPPORTED_UNCHANGED,742,ORIGINAL,NATIVE_BASELINE,Released query matches expected-results.csv on native instance data.
+Q4,HSB,SUPPORTED_UNCHANGED,652315,ORIGINAL,SOURCE_METADATA_PRESENT,HSB observations assert hasSimpleResult.
+Q4,WEUSEDTO,SUPPORTED_UNCHANGED,438020,ORIGINAL,SOURCE_METADATA_PRESENT,Mapped observations assert hasSimpleResult from source flow values.
+Q5,EAUTONOME,SUPPORTED_UNCHANGED,742,ORIGINAL,NATIVE_BASELINE,Released query matches expected-results.csv on native instance data.
+Q5,HSB,SUPPORTED_UNCHANGED,652315,ORIGINAL,SOURCE_METADATA_PRESENT,HSB observations assert resultTime from source timestamps.
+Q5,WEUSEDTO,PARTIAL,436780,ORIGINAL,MODELLING_ASSUMPTION,Format A sample epoch stored as resultTime; Format B has no resultTime.
+Q6,EAUTONOME,SUPPORTED_UNCHANGED,18,ORIGINAL,NATIVE_BASELINE,Released query matches expected-results.csv on native instance data.
+Q6,HSB,NOT_ANSWERABLE_FROM_SOURCE,,NOT_EXECUTED,SOURCE_METADATA_ABSENT,HSB source has no operational status.
+Q6,WEUSEDTO,NOT_ANSWERABLE_FROM_SOURCE,0,ORIGINAL,SOURCE_METADATA_ABSENT,WEUSEDTO source has no operational status.
+Q7,EAUTONOME,SUPPORTED_UNCHANGED,7,ORIGINAL,NATIVE_BASELINE,Released query matches expected-results.csv on native instance data.
+Q7,HSB,NOT_ANSWERABLE_FROM_SOURCE,,NOT_EXECUTED,SOURCE_METADATA_ABSENT,HSB source has no consumption event intervals.
+Q7,WEUSEDTO,PARTIAL,1240,ORIGINAL,PARTIAL_SOURCE_COVERAGE,Native Format B intervals map to collections/events; Format A has none.
+Q8,EAUTONOME,SUPPORTED_UNCHANGED,742,ORIGINAL,NATIVE_BASELINE,Released query matches expected-results.csv on native instance data.
+Q8,HSB,SUPPORTED_UNCHANGED,652315,ORIGINAL,SOURCE_METADATA_PRESENT,HSB observations assert usedProcedure.
+Q8,WEUSEDTO,NOT_ANSWERABLE_FROM_SOURCE,0,ORIGINAL,SOURCE_METADATA_ABSENT,WEUSEDTO mapping does not assert usedProcedure.
+Q9,EAUTONOME,SUPPORTED_UNCHANGED,6,ORIGINAL,NATIVE_BASELINE,Released query matches expected-results.csv on native instance data.
+Q9,HSB,NOT_ANSWERABLE_FROM_SOURCE,,NOT_EXECUTED,SOURCE_METADATA_ABSENT,HSB source has no calibration parameters.
+Q9,WEUSEDTO,NOT_ANSWERABLE_FROM_SOURCE,0,ORIGINAL,SOURCE_METADATA_ABSENT,WEUSEDTO source has no calibration parameters.
+Q10,EAUTONOME,SUPPORTED_UNCHANGED,14,ORIGINAL,NATIVE_BASELINE,Released query matches expected-results.csv on native instance data.
+Q10,HSB,SUPPORTED_WITH_PARAMETERIZATION,214,PARAMETERIZED,DATASET_SPECIFIC_IRI,Same query with eau:hsbDeployment substituted for eau:eautonomeDeployment.
+Q10,WEUSEDTO,PARTIAL,0,ORIGINAL,PARTIAL_MAPPING,"Source describes a residential monitoring setup, but the mapping does not materialize a deployment or deployedSystem links."
+Q11,EAUTONOME,SUPPORTED_UNCHANGED,742,ORIGINAL,NATIVE_BASELINE,Released query matches expected-results.csv on native instance data.
+Q11,HSB,SUPPORTED_UNCHANGED,652315,ORIGINAL,SOURCE_METADATA_PRESENT,HSB measurement points assert eau:locatedIn.
+Q11,WEUSEDTO,NOT_ANSWERABLE_FROM_SOURCE,0,ORIGINAL,SOURCE_METADATA_ABSENT,WEUSEDTO has no room metadata; eau:locatedIn not mapped.
+Q12,EAUTONOME,SUPPORTED_UNCHANGED,4,ORIGINAL,NATIVE_BASELINE,Released query matches expected-results.csv on native instance data.
+Q12,HSB,NOT_ANSWERABLE_FROM_SOURCE,,NOT_EXECUTED,SOURCE_METADATA_ABSENT,HSB source has no operational status for inactive/planned filter.
+Q12,WEUSEDTO,NOT_ANSWERABLE_FROM_SOURCE,0,ORIGINAL,SOURCE_METADATA_ABSENT,WEUSEDTO source has no operational status.
+Q13,EAUTONOME,SUPPORTED_UNCHANGED,740,ORIGINAL,NATIVE_BASELINE,Released query matches expected-results.csv on native instance data.
+Q13,HSB,NOT_ANSWERABLE_FROM_SOURCE,,NOT_EXECUTED,SOURCE_METADATA_ABSENT,HSB source has no observation collections or consumption events.
+Q13,WEUSEDTO,PARTIAL,1240,ORIGINAL,PARTIAL_SOURCE_COVERAGE,Format B supplies collection/event/member links; Format A has none.
