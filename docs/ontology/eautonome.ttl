@@ -31,16 +31,17 @@
     dcterms:description "The Eautonome Ontology provides an OWL representation of residential water end-use monitoring. It models domestic water uses, quality levels, and greywater reuse processes, specifically describing the monitoring and observations of the system to reduce water consumption."@en ;
     dcterms:description "L'ontologie Eautonome fournit une représentation OWL du suivi des usages résidentiels de l'eau. Elle modélise les usages domestiques de l'eau, les niveaux de qualité et les processus de réutilisation des eaux grises, en décrivant spécifiquement le suivi et les observations du système pour réduire la consommation d'eau."@fr ;
     dcterms:creator erdemonal:me ;
+    dcterms:contributor <https://orcid.org/0000-0001-7633-6318> ;
     dcterms:publisher <https://www.leesu.fr/> ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
     dcterms:created "2026-04-03"^^xsd:date ;
     dcterms:issued "2026-04-04"^^xsd:date ;
-    dcterms:modified "2026-09-01"^^xsd:date ;
+    dcterms:modified "2026-10-07"^^xsd:date ;
     dcterms:source <https://www.leesu.fr/eautonome> ;
     dcterms:identifier <https://doi.org/10.5281/zenodo.22229871> ;
     dcterms:isVersionOf <https://doi.org/10.5281/zenodo.21894601> ;
     bibo:doi "10.5281/zenodo.22229871" ;
-    schema:logo <https://erdemonal.github.io/eautonome/logo.svg> ;
+    schema:logo <https://eautonome.github.io/eautonome/logo.svg> ;
     schema:includedInDataCatalog <https://lov.linkeddata.es/dataset/lov> ;
     mod:status "release" ;
     dcterms:bibliographicCitation "Önal, E. The Eautonome Ontology (Version v1.0.1). https://doi.org/10.5281/zenodo.22229871"@en ;
@@ -49,7 +50,7 @@
     vann:preferredNamespacePrefix "eau" ;
     vann:preferredNamespaceUri "https://w3id.org/eautonome/" ;
     rdfs:seeAlso <https://www.leesu.fr/eautonome> ;
-    owl:imports <http://www.w3.org/ns/sosa/> ,
+    owl:imports <http://www.w3.org/ns/sosa/2023/> ,
                 <https://saref.etsi.org/saref4watr/v2.1.1/> .
                 
 #

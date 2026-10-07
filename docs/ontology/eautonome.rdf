@@ -1,1073 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
-  xmlns:sosa="http://www.w3.org/ns/sosa/"
-  xmlns:schema1="http://schema.org/"
-  xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-  xmlns:eau="https://w3id.org/eautonome/"
-  xmlns:qudt="http://qudt.org/schema/qudt/"
-  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-  xmlns:owl="http://www.w3.org/2002/07/owl#"
-  xmlns:s4watr="https://saref.etsi.org/saref4watr/"
-  xmlns:dcterms="http://purl.org/dc/terms/"
-  xmlns:time="http://www.w3.org/2006/time#"
-  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-  xmlns:vann="http://purl.org/vocab/vann/"
-  xmlns:voaf="http://purl.org/vocommons/voaf#"
-  xmlns:bibo="http://purl.org/ontology/bibo/"
-  xmlns:mod="https://w3id.org/mod#"
+   xmlns:bibo="http://purl.org/ontology/bibo/"
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:eau="https://w3id.org/eautonome/"
+   xmlns:mod="https://w3id.org/mod#"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:qudt="http://qudt.org/schema/qudt/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:s4watr="https://saref.etsi.org/saref4watr/"
+   xmlns:schema1="http://schema.org/"
+   xmlns:sosa="http://www.w3.org/ns/sosa/"
+   xmlns:time="http://www.w3.org/2006/time#"
+   xmlns:vann="http://purl.org/vocab/vann/"
+   xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
 >
-  <eau:PipeConfiguration rdf:about="https://w3id.org/eautonome/pipeConfigurationStraight">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdfs:isDefinedBy>
-      <owl:Ontology rdf:about="https://w3id.org/eautonome/">
-        <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
-        <rdfs:label xml:lang="en">The Eautonome Ontology</rdfs:label>
-        <rdfs:label xml:lang="fr">L'ontologie Eautonome</rdfs:label>
-        <dcterms:title xml:lang="en">The Eautonome Ontology</dcterms:title>
-        <dcterms:title xml:lang="fr">L'ontologie Eautonome</dcterms:title>
-        <dcterms:description xml:lang="en">The Eautonome Ontology provides an OWL representation of residential water end-use monitoring. It models domestic water uses, quality levels, and greywater reuse processes, specifically describing the monitoring and observations of the system to reduce water consumption.</dcterms:description>
-        <dcterms:description xml:lang="fr">L'ontologie Eautonome fournit une représentation OWL du suivi des usages résidentiels de l'eau. Elle modélise les usages domestiques de l'eau, les niveaux de qualité et les processus de réutilisation des eaux grises, en décrivant spécifiquement le suivi et les observations du système pour réduire la consommation d'eau.</dcterms:description>
-        <dcterms:creator rdf:resource="https://w3id.org/people/erdemonal/me"/>
-        <dcterms:publisher rdf:resource="https://www.leesu.fr/"/>
-        <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
-        <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-04-03</dcterms:created>
-        <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-04-04</dcterms:issued>
-        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-01</dcterms:modified>
-        <dcterms:source rdf:resource="https://www.leesu.fr/eautonome"/>
-        <dcterms:identifier rdf:resource="https://doi.org/10.5281/zenodo.22229871"/>
-        <dcterms:isVersionOf rdf:resource="https://doi.org/10.5281/zenodo.21894601"/>
-        <bibo:doi>10.5281/zenodo.22229871</bibo:doi>
-        <schema1:logo rdf:resource="https://erdemonal.github.io/eautonome/logo.svg"/>
-        <schema1:includedInDataCatalog rdf:resource="https://lov.linkeddata.es/dataset/lov"/>
-        <mod:status>release</mod:status>
-        <dcterms:bibliographicCitation xml:lang="en">Önal, E. The Eautonome Ontology (Version v1.0.1). https://doi.org/10.5281/zenodo.22229871</dcterms:bibliographicCitation>
-        <owl:versionInfo>1.0.1</owl:versionInfo>
-        <owl:versionIRI rdf:resource="https://w3id.org/eautonome/1.0.1"/>
-        <vann:preferredNamespacePrefix>eau</vann:preferredNamespacePrefix>
-        <vann:preferredNamespaceUri>https://w3id.org/eautonome/</vann:preferredNamespaceUri>
-        <rdfs:seeAlso rdf:resource="https://www.leesu.fr/eautonome"/>
-        <owl:imports rdf:resource="http://www.w3.org/ns/sosa/"/>
-        <owl:imports rdf:resource="https://saref.etsi.org/saref4watr/v2.1.1/"/>
-      </owl:Ontology>
-    </rdfs:isDefinedBy>
-    <rdfs:label xml:lang="en">Straight pipe configuration</rdfs:label>
-    <rdfs:label xml:lang="fr">Configuration tuyau droit</rdfs:label>
-    <rdfs:comment xml:lang="en">A pipe configuration with a straight section and no bends.</rdfs:comment>
-  </eau:PipeConfiguration>
-  <owl:DatatypeProperty rdf:about="https://w3id.org/eautonome/hasDurationSeconds">
-    <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-    <rdfs:label xml:lang="en">has duration in seconds</rdfs:label>
-    <rdfs:comment xml:lang="en">Duration of the observation in seconds.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-  </owl:DatatypeProperty>
-  <sosa:ObservationCollection rdf:about="https://w3id.org/eautonome/obsColAfternoonShower20260628">
+  <rdf:Description rdf:about="https://w3id.org/eautonome/mpKitchenHot">
+    <rdf:type rdf:resource="https://w3id.org/eautonome/MeasurementPoint"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-    <rdfs:label xml:lang="en">Afternoon shower consumption</rdfs:label>
-    <rdfs:label xml:lang="fr">Consommation douche de l'après-midi</rdfs:label>
-    <rdfs:comment xml:lang="en">Flow observations during the afternoon shower period.</rdfs:comment>
-    <sosa:madeBySensor>
-      <eau:ShowerSensor rdf:about="https://w3id.org/eautonome/hansaActivejetDigital">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-        <rdfs:label xml:lang="en">HANSA Activejet Digital</rdfs:label>
-        <rdfs:comment xml:lang="en">A HANSA Activejet Digital Bluetooth hand shower.</rdfs:comment>
-        <eau:hasOperationalStatus>active</eau:hasOperationalStatus>
-        <eau:monitors rdf:resource="https://w3id.org/eautonome/mpBathroomHot"/>
-        <sosa:observes rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
-        <sosa:observes rdf:resource="https://saref.etsi.org/saref4watr/FlowVolume"/>
-        <sosa:observes rdf:resource="https://saref.etsi.org/saref4watr/FlowTemperature"/>
-        <sosa:hasSystemCapability rdf:resource="https://w3id.org/eautonome/capHansaActivejetDigital"/>
-        <sosa:hasOperatingConditions rdf:resource="https://w3id.org/eautonome/condHansaActivejetDigital"/>
-        <sosa:forProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
-        <sosa:forProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowVolume"/>
-        <sosa:forProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowTemperature"/>
-        <sosa:implements rdf:resource="https://w3id.org/eautonome/showerObservingProcedure"/>
-      </eau:ShowerSensor>
-    </sosa:madeBySensor>
-    <sosa:observedProperty>
-      <rdf:Description rdf:about="https://saref.etsi.org/saref4watr/FlowRate">
-        <sosa:isObservedBy rdf:resource="https://w3id.org/eautonome/flowmeterHeaterOutput"/>
-        <sosa:isObservedBy rdf:resource="https://w3id.org/eautonome/flowmeterBathroomHot"/>
-        <sosa:isObservedBy rdf:resource="https://w3id.org/eautonome/flowmeterBathroomCold"/>
-        <sosa:isObservedBy rdf:resource="https://w3id.org/eautonome/flowmeterWashingMachine"/>
-        <sosa:isObservedBy rdf:resource="https://w3id.org/eautonome/flowmeterBasementCold"/>
-        <sosa:isObservedBy rdf:resource="https://w3id.org/eautonome/flowmeterToiletCold"/>
-        <sosa:isObservedBy rdf:resource="https://w3id.org/eautonome/hansaActivejetDigital"/>
-      </rdf:Description>
-    </sosa:observedProperty>
-    <sosa:usedProcedure>
-      <eau:ShowerObservingProcedure rdf:about="https://w3id.org/eautonome/showerObservingProcedure">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-        <rdfs:label xml:lang="en">Shower observing procedure</rdfs:label>
-        <rdfs:label xml:lang="fr">Procédure d'observation douche</rdfs:label>
-        <rdfs:comment xml:lang="en">Shower data acquisition via Bluetooth.</rdfs:comment>
-        <sosa:implementedBy rdf:resource="https://w3id.org/eautonome/hansaActivejetDigital"/>
-        <sosa:forProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
-        <sosa:forProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowVolume"/>
-        <sosa:forProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowTemperature"/>
-      </eau:ShowerObservingProcedure>
-    </sosa:usedProcedure>
-    <sosa:hasFeatureOfInterest>
-      <eau:MeasurementPoint rdf:about="https://w3id.org/eautonome/mpBathroomHot">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-        <rdfs:label xml:lang="en">Bathroom hot water measurement point</rdfs:label>
-        <rdfs:label xml:lang="fr">Point de mesure d'eau chaude de la salle de bain</rdfs:label>
-        <rdfs:comment xml:lang="en">Measurement point on the bathroom hot water circuit.</rdfs:comment>
-        <eau:measuresWaterKind rdf:resource="https://saref.etsi.org/saref4watr/DrinkingWater"/>
-        <eau:locatedIn rdf:resource="https://w3id.org/eautonome/roomBathroom"/>
-        <eau:measuresOnAsset rdf:resource="https://w3id.org/eautonome/pipeBathroomHot"/>
-        <eau:servesEndpoint rdf:resource="https://w3id.org/eautonome/roomBathroom"/>
-        <sosa:hasProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
-      </eau:MeasurementPoint>
-    </sosa:hasFeatureOfInterest>
-    <sosa:hasUltimateFeatureOfInterest>
-      <s4watr:Water rdf:about="https://w3id.org/eautonome/domesticGreywater">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-        <rdfs:label xml:lang="en">Domestic greywater</rdfs:label>
-        <rdfs:label xml:lang="fr">Eaux grises domestiques</rdfs:label>
-        <rdfs:comment xml:lang="en">Greywater within the system, used as the feature of interest for observations.</rdfs:comment>
-        <sosa:hasProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
-        <sosa:hasProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowVolume"/>
-        <sosa:hasProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowTemperature"/>
-        <sosa:hasProperty rdf:resource="https://saref.etsi.org/saref4watr/Conductivity"/>
-        <sosa:hasProperty rdf:resource="https://saref.etsi.org/saref4watr/Temperature"/>
-      </s4watr:Water>
-    </sosa:hasUltimateFeatureOfInterest>
-    <sosa:phenomenonTime>
-      <time:Interval rdf:nodeID="neafc0a186dcc47bc9e960b290a8eb5ceb34">
-        <time:hasBeginning>
-          <time:Instant rdf:nodeID="neafc0a186dcc47bc9e960b290a8eb5ceb35">
-            <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-06-28T15:49:48+02:00</time:inXSDDateTime>
-          </time:Instant>
-        </time:hasBeginning>
-        <time:hasEnd>
-          <time:Instant rdf:nodeID="neafc0a186dcc47bc9e960b290a8eb5ceb36">
-            <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-06-28T16:03:38+02:00</time:inXSDDateTime>
-          </time:Instant>
-        </time:hasEnd>
-      </time:Interval>
-    </sosa:phenomenonTime>
-    <eau:hasConsumptionEvent>
-      <eau:ConsumptionEvent rdf:about="https://w3id.org/eautonome/eventAfternoonShower20260628">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-        <rdfs:label xml:lang="en">Afternoon shower event</rdfs:label>
-        <rdfs:label xml:lang="fr">Événement de douche de l'après-midi</rdfs:label>
-        <rdfs:comment xml:lang="en">An afternoon water consumption event.</rdfs:comment>
-        <time:hasBeginning>
-          <time:Instant rdf:nodeID="neafc0a186dcc47bc9e960b290a8eb5ceb27">
-            <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-06-28T15:49:48+02:00</time:inXSDDateTime>
-          </time:Instant>
-        </time:hasBeginning>
-        <time:hasEnd>
-          <time:Instant rdf:nodeID="neafc0a186dcc47bc9e960b290a8eb5ceb28">
-            <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-06-28T16:03:38+02:00</time:inXSDDateTime>
-          </time:Instant>
-        </time:hasEnd>
-      </eau:ConsumptionEvent>
-    </eau:hasConsumptionEvent>
-  </sosa:ObservationCollection>
-  <owl:DatatypeProperty rdf:about="https://w3id.org/eautonome/hasOperationalStatus">
-    <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/System"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:label xml:lang="en">has operational status</rdfs:label>
-    <rdfs:comment xml:lang="en">Current status of the system, can be active, inactive, or planned.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-  </owl:DatatypeProperty>
-  <sosa:Observation rdf:about="https://w3id.org/eautonome/obsFlowMainInlet20260627T020617">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-    <rdfs:comment xml:lang="en">Measurement of flow rate at the main inlet.</rdfs:comment>
-    <sosa:madeBySensor>
-      <eau:VortexFlowmeter rdf:about="https://w3id.org/eautonome/flowmeterMainInlet">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-        <rdfs:label xml:lang="en">Main inlet flowmeter</rdfs:label>
-        <rdfs:label xml:lang="fr">Débitmètre entrée principale</rdfs:label>
-        <rdfs:comment xml:lang="en">ifm vortex flowmeter DN10.</rdfs:comment>
-        <eau:hasOperationalStatus>active</eau:hasOperationalStatus>
-        <eau:hasFlowEquation>Q = 2.0 * (I - 4)</eau:hasFlowEquation>
-        <eau:hasAnalogInput>AN3</eau:hasAnalogInput>
-        <eau:monitors rdf:resource="https://w3id.org/eautonome/mpMainInlet"/>
-        <sosa:observes rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
-        <sosa:forProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
-        <sosa:isHostedBy rdf:resource="https://w3id.org/eautonome/adcCard2"/>
-        <sosa:implements rdf:resource="https://w3id.org/eautonome/eautonomeObservingProcedure"/>
-      </eau:VortexFlowmeter>
-    </sosa:madeBySensor>
-    <sosa:observedProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
-    <sosa:hasFeatureOfInterest>
-      <eau:MeasurementPoint rdf:about="https://w3id.org/eautonome/mpMainInlet">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-        <rdfs:label xml:lang="en">Main inlet measurement point</rdfs:label>
-        <rdfs:label xml:lang="fr">Point de mesure entrée principale</rdfs:label>
-        <rdfs:comment xml:lang="en">Measurement point on the main cold water entry.</rdfs:comment>
-        <eau:measuresWaterKind rdf:resource="https://saref.etsi.org/saref4watr/DrinkingWater"/>
-        <eau:locatedIn rdf:resource="https://w3id.org/eautonome/roomBasement"/>
-        <eau:measuresOnAsset rdf:resource="https://w3id.org/eautonome/pipeColdWaterEntry"/>
-        <eau:servesEndpoint rdf:resource="https://w3id.org/eautonome/roomBasement"/>
-        <sosa:hasProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
-        <sosa:hasProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowTemperature"/>
-      </eau:MeasurementPoint>
-    </sosa:hasFeatureOfInterest>
-    <sosa:hasUltimateFeatureOfInterest rdf:resource="https://w3id.org/eautonome/domesticGreywater"/>
-    <sosa:usedProcedure>
-      <eau:EautonomeObservingProcedure rdf:about="https://w3id.org/eautonome/eautonomeObservingProcedure">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-        <rdfs:label xml:lang="en">Eautonome observing procedure</rdfs:label>
-        <rdfs:label xml:lang="fr">Procédure d'observation Eautonome</rdfs:label>
-        <rdfs:comment xml:lang="en">Data acquisition via ADC on the Raspberry Pi.</rdfs:comment>
-        <sosa:implementedBy rdf:resource="https://w3id.org/eautonome/flowmeterHeaterOutput"/>
-        <sosa:implementedBy rdf:resource="https://w3id.org/eautonome/flowmeterBathroomHot"/>
-        <sosa:implementedBy rdf:resource="https://w3id.org/eautonome/flowmeterBathroomCold"/>
-        <sosa:implementedBy rdf:resource="https://w3id.org/eautonome/flowmeterWashingMachine"/>
-        <sosa:implementedBy rdf:resource="https://w3id.org/eautonome/flowmeterBasementCold"/>
-        <sosa:implementedBy rdf:resource="https://w3id.org/eautonome/flowmeterToiletCold"/>
-        <sosa:implementedBy rdf:resource="https://w3id.org/eautonome/flowmeterKitchenCold"/>
-        <sosa:implementedBy rdf:resource="https://w3id.org/eautonome/flowmeterKitchenHot"/>
-        <sosa:implementedBy rdf:resource="https://w3id.org/eautonome/flowmeterToiletSink"/>
-        <sosa:implementedBy rdf:resource="https://w3id.org/eautonome/flowmeterMainInlet"/>
-        <sosa:implementedBy rdf:resource="https://w3id.org/eautonome/tempSensorMainInlet"/>
-        <sosa:implementedBy rdf:resource="https://w3id.org/eautonome/jumoDigiLineBoiler"/>
-        <sosa:implementedBy rdf:resource="https://w3id.org/eautonome/jumoDigiLineShower"/>
-        <sosa:forProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
-        <sosa:forProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowTemperature"/>
-        <sosa:forProperty rdf:resource="https://saref.etsi.org/saref4watr/Conductivity"/>
-        <eau:hasTriggerThreshold rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.05</eau:hasTriggerThreshold>
-        <eau:hasSamplingPeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2</eau:hasSamplingPeriod>
-        <eau:hasTransmissionInterval rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">360</eau:hasTransmissionInterval>
-      </eau:EautonomeObservingProcedure>
-    </sosa:usedProcedure>
-    <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-06-27T02:06:17+02:00</sosa:resultTime>
-    <sosa:hasSimpleResult rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.71</sosa:hasSimpleResult>
-    <sosa:hasResult>
-      <qudt:QuantityValue rdf:nodeID="neafc0a186dcc47bc9e960b290a8eb5ceb29">
-        <qudt:value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.71</qudt:value>
-        <qudt:hasUnit rdf:resource="http://qudt.org/vocab/unit/L-PER-MIN"/>
-      </qudt:QuantityValue>
-    </sosa:hasResult>
-  </sosa:Observation>
-  <owl:DatatypeProperty rdf:about="https://w3id.org/eautonome/hasConductivityEquation">
-    <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:label xml:lang="en">has conductivity equation</rdfs:label>
-    <rdfs:comment xml:lang="en">Equation relating sensor current to measured conductivity.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-  </owl:DatatypeProperty>
-  <eau:PipeConfiguration rdf:about="https://w3id.org/eautonome/pipeConfigurationCurved">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-    <rdfs:label xml:lang="en">Curved pipe configuration</rdfs:label>
-    <rdfs:label xml:lang="fr">Configuration tuyau coudé</rdfs:label>
-    <rdfs:comment xml:lang="en">A pipe configuration that includes a bend or elbow.</rdfs:comment>
-  </eau:PipeConfiguration>
-  <owl:DatatypeProperty rdf:about="https://w3id.org/eautonome/hasCalibrationIntercept">
-    <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-    <rdfs:label xml:lang="en">has calibration intercept</rdfs:label>
-    <rdfs:comment xml:lang="en">Intercept for converting sensor readings to flow values.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-  </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:about="https://w3id.org/eautonome/hasCalibrationSlope">
-    <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-    <rdfs:label xml:lang="en">has calibration slope</rdfs:label>
-    <rdfs:comment xml:lang="en">Numeric slope used to convert sensor readings to flow values.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-  </owl:DatatypeProperty>
-  <sosa:ObservationCollection rdf:about="https://w3id.org/eautonome/obsColEveningShower20260627">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-    <rdfs:label xml:lang="en">Evening shower consumption</rdfs:label>
-    <rdfs:label xml:lang="fr">Consommation douche du soir</rdfs:label>
-    <rdfs:comment xml:lang="en">Flow observations during the evening shower period.</rdfs:comment>
-    <sosa:madeBySensor rdf:resource="https://w3id.org/eautonome/hansaActivejetDigital"/>
-    <sosa:observedProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
-    <sosa:usedProcedure rdf:resource="https://w3id.org/eautonome/showerObservingProcedure"/>
-    <sosa:hasFeatureOfInterest rdf:resource="https://w3id.org/eautonome/mpBathroomHot"/>
-    <sosa:hasUltimateFeatureOfInterest rdf:resource="https://w3id.org/eautonome/domesticGreywater"/>
-    <sosa:phenomenonTime>
-      <time:Interval rdf:nodeID="neafc0a186dcc47bc9e960b290a8eb5ceb31">
-        <time:hasBeginning>
-          <time:Instant rdf:nodeID="neafc0a186dcc47bc9e960b290a8eb5ceb32">
-            <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-06-27T16:52:25+02:00</time:inXSDDateTime>
-          </time:Instant>
-        </time:hasBeginning>
-        <time:hasEnd>
-          <time:Instant rdf:nodeID="neafc0a186dcc47bc9e960b290a8eb5ceb33">
-            <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-06-27T17:02:54+02:00</time:inXSDDateTime>
-          </time:Instant>
-        </time:hasEnd>
-      </time:Interval>
-    </sosa:phenomenonTime>
-    <eau:hasConsumptionEvent>
-      <eau:ConsumptionEvent rdf:about="https://w3id.org/eautonome/eventEveningShower20260627">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-        <rdfs:label xml:lang="en">Evening shower event</rdfs:label>
-        <rdfs:label xml:lang="fr">Événement de douche du soir</rdfs:label>
-        <rdfs:comment xml:lang="en">An evening water consumption event.</rdfs:comment>
-        <time:hasBeginning>
-          <time:Instant rdf:nodeID="neafc0a186dcc47bc9e960b290a8eb5ceb25">
-            <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-06-27T16:52:25+02:00</time:inXSDDateTime>
-          </time:Instant>
-        </time:hasBeginning>
-        <time:hasEnd>
-          <time:Instant rdf:nodeID="neafc0a186dcc47bc9e960b290a8eb5ceb26">
-            <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-06-27T17:02:54+02:00</time:inXSDDateTime>
-          </time:Instant>
-        </time:hasEnd>
-      </eau:ConsumptionEvent>
-    </eau:hasConsumptionEvent>
-  </sosa:ObservationCollection>
-  <owl:DatatypeProperty rdf:about="https://w3id.org/eautonome/hasTransmissionInterval">
-    <rdfs:domain rdf:resource="https://w3id.org/eautonome/EautonomeObservingProcedure"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-    <rdfs:label xml:lang="en">has transmission interval</rdfs:label>
-    <rdfs:comment xml:lang="en">Time interval between consecutive observation recordings, in seconds.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-  </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:about="https://w3id.org/eautonome/hasTemperatureEquation">
-    <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:label xml:lang="en">has temperature equation</rdfs:label>
-    <rdfs:comment xml:lang="en">Equation relating sensor current to measured temperature.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-  </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:about="https://w3id.org/eautonome/hasCalibrationR2">
-    <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
-    <rdfs:range>
-      <rdfs:Datatype rdf:nodeID="neafc0a186dcc47bc9e960b290a8eb5ceb1">
-        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-        <owl:withRestrictions rdf:parseType="Collection">
-          <rdf:Description rdf:nodeID="neafc0a186dcc47bc9e960b290a8eb5ceb2">
-            <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</xsd:minInclusive>
-          </rdf:Description>
-          <rdf:Description rdf:nodeID="neafc0a186dcc47bc9e960b290a8eb5ceb3">
-            <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</xsd:maxInclusive>
-          </rdf:Description>
-        </owl:withRestrictions>
-      </rdfs:Datatype>
-    </rdfs:range>
-    <rdfs:label xml:lang="en">has calibration R2</rdfs:label>
-    <rdfs:comment xml:lang="en">Coefficient of determination for the calibration.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-  </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:about="https://w3id.org/eautonome/hasTriggerThreshold">
-    <rdfs:domain rdf:resource="https://w3id.org/eautonome/EautonomeObservingProcedure"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-    <rdfs:label xml:lang="en">has trigger threshold</rdfs:label>
-    <rdfs:comment xml:lang="en">Minimum change in the measured quantity that triggers an observation.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-  </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:about="https://w3id.org/eautonome/hasAnalogInput">
-    <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:label xml:lang="en">has analog input</rdfs:label>
-    <rdfs:comment xml:lang="en">Identifier of the analog input channel used on the ADC.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-  </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:about="https://w3id.org/eautonome/hasFlowEquation">
-    <rdfs:domain rdf:resource="https://w3id.org/eautonome/VortexFlowmeter"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:label xml:lang="en">has flow equation</rdfs:label>
-    <rdfs:comment xml:lang="en">Equation relating sensor current to measured flow rate.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-  </owl:DatatypeProperty>
-  <eau:DomesticRoom rdf:about="https://w3id.org/eautonome/roomGarden">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-    <rdfs:label xml:lang="en">Garden</rdfs:label>
-    <rdfs:label xml:lang="fr">Jardin</rdfs:label>
-    <rdfs:comment xml:lang="en">An outdoor domestic area that can receive treated greywater for irrigation.</rdfs:comment>
-  </eau:DomesticRoom>
-  <owl:DatatypeProperty rdf:about="https://w3id.org/eautonome/hasSamplingPeriod">
-    <rdfs:domain rdf:resource="https://w3id.org/eautonome/EautonomeObservingProcedure"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-    <rdfs:label xml:lang="en">has sampling period</rdfs:label>
-    <rdfs:comment xml:lang="en">Interval between sensor samples, in seconds.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-  </owl:DatatypeProperty>
-  <rdf:Description rdf:about="https://saref.etsi.org/core/Property">
-    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Property"/>
+    <rdfs:label xml:lang="en">Kitchen hot water measurement point</rdfs:label>
+    <rdfs:label xml:lang="fr">Point de mesure cuisine eau chaude</rdfs:label>
+    <rdfs:comment xml:lang="en">Measurement point on the kitchen hot water circuit.</rdfs:comment>
+    <eau:measuresWaterKind rdf:resource="https://saref.etsi.org/saref4watr/DrinkingWater"/>
+    <eau:locatedIn rdf:resource="https://w3id.org/eautonome/roomKitchen"/>
+    <eau:measuresOnAsset rdf:resource="https://w3id.org/eautonome/pipeKitchenHot"/>
+    <eau:servesEndpoint rdf:resource="https://w3id.org/eautonome/roomKitchen"/>
+    <sosa:hasProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
   </rdf:Description>
-  <owl:AllDisjointClasses rdf:nodeID="neafc0a186dcc47bc9e960b290a8eb5ceb14">
-    <owl:members rdf:parseType="Collection">
-      <rdf:Description rdf:about="https://w3id.org/eautonome/DomesticRoom"/>
-      <rdf:Description rdf:about="https://w3id.org/eautonome/MeasurementPoint"/>
-      <rdf:Description rdf:about="https://w3id.org/eautonome/PipeConfiguration"/>
-      <rdf:Description rdf:about="https://w3id.org/eautonome/ConsumptionEvent"/>
-      <rdf:Description rdf:about="https://w3id.org/eautonome/GreywaterRecyclingSystem"/>
-      <rdf:Description rdf:about="https://w3id.org/eautonome/ADConverter"/>
-      <rdf:Description rdf:about="https://w3id.org/eautonome/EautonomeObservingProcedure"/>
-      <rdf:Description rdf:about="https://w3id.org/eautonome/VortexFlowmeter"/>
-      <rdf:Description rdf:about="https://w3id.org/eautonome/ConductivityTemperatureSensor"/>
-      <rdf:Description rdf:about="https://w3id.org/eautonome/ShowerSensor"/>
-    </owl:members>
-  </owl:AllDisjointClasses>
-  <owl:ObjectProperty rdf:about="https://w3id.org/eautonome/locatedIn">
-    <rdfs:domain rdf:resource="https://w3id.org/eautonome/MeasurementPoint"/>
-    <rdfs:range rdf:resource="https://w3id.org/eautonome/DomesticRoom"/>
-    <owl:inverseOf>
-      <owl:ObjectProperty rdf:about="https://w3id.org/eautonome/isLocationOf">
-        <rdfs:domain rdf:resource="https://w3id.org/eautonome/DomesticRoom"/>
-        <rdfs:range rdf:resource="https://w3id.org/eautonome/MeasurementPoint"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/eautonome/locatedIn"/>
-        <rdfs:label xml:lang="en">is location of</rdfs:label>
-        <rdfs:comment xml:lang="en">Links a domestic room to a measurement point located in that room.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-      </owl:ObjectProperty>
-    </owl:inverseOf>
-    <rdfs:label xml:lang="en">located in</rdfs:label>
-    <rdfs:comment xml:lang="en">The room where the measurement point is located.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-  </owl:ObjectProperty>
-  <owl:Class rdf:about="https://w3id.org/eautonome/DomesticRoom">
-    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
-    <rdfs:label xml:lang="en">Domestic room</rdfs:label>
-    <rdfs:label xml:lang="fr">Pièce domestique</rdfs:label>
-    <rdfs:comment xml:lang="en">A room in a dwelling in which water consumption or collection occurs.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-  </owl:Class>
-  <eau:DomesticRoom rdf:about="https://w3id.org/eautonome/roomToilet">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-    <rdfs:label xml:lang="en">Toilet</rdfs:label>
-    <rdfs:label xml:lang="fr">Toilettes</rdfs:label>
-    <rdfs:comment xml:lang="en">A domestic room where treated greywater is reused.</rdfs:comment>
-  </eau:DomesticRoom>
-  <eau:VortexFlowmeter rdf:about="https://w3id.org/eautonome/flowmeterWashingMachine">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-    <rdfs:label xml:lang="en">Washing machine flowmeter</rdfs:label>
-    <rdfs:label xml:lang="fr">Débitmètre de la machine à laver</rdfs:label>
-    <rdfs:comment xml:lang="en">Measures water supply to the washing machine.</rdfs:comment>
-    <eau:hasOperationalStatus>inactive</eau:hasOperationalStatus>
-    <eau:hasFlowEquation>Q = 0.938 * (I - 4)</eau:hasFlowEquation>
-    <eau:hasCalibrationSlope rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.957</eau:hasCalibrationSlope>
-    <eau:hasCalibrationR2 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.9988</eau:hasCalibrationR2>
-    <eau:hasAnalogInput>AN2</eau:hasAnalogInput>
-    <eau:monitors>
-      <eau:MeasurementPoint rdf:about="https://w3id.org/eautonome/mpWashingMachine">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-        <rdfs:label xml:lang="en">Washing machine measurement point</rdfs:label>
-        <rdfs:label xml:lang="fr">Point de mesure de la machine à laver</rdfs:label>
-        <rdfs:comment xml:lang="en">Measurement point for water to the washing machine.</rdfs:comment>
-        <eau:measuresWaterKind rdf:resource="https://saref.etsi.org/saref4watr/DrinkingWater"/>
-        <eau:locatedIn rdf:resource="https://w3id.org/eautonome/roomBathroom"/>
-        <eau:measuresOnAsset rdf:resource="https://w3id.org/eautonome/pipeWashingMachine"/>
-        <eau:servesEndpoint rdf:resource="https://w3id.org/eautonome/roomBathroom"/>
-        <sosa:hasProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
-      </eau:MeasurementPoint>
-    </eau:monitors>
-    <sosa:observes rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
-    <sosa:forProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
-    <sosa:isHostedBy>
-      <eau:ADConverter rdf:about="https://w3id.org/eautonome/adcCard2">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-        <rdfs:label xml:lang="en">ADC card 2</rdfs:label>
-        <rdfs:label xml:lang="fr">Carte ADC 2</rdfs:label>
-        <rdfs:comment xml:lang="en">MCC 128 ADC on SPI hat index 1.</rdfs:comment>
-        <eau:hasOperationalStatus>active</eau:hasOperationalStatus>
-        <sosa:hasSubSystem rdf:resource="https://w3id.org/eautonome/jumoDigiLineBoiler"/>
-        <sosa:hasSubSystem rdf:resource="https://w3id.org/eautonome/jumoDigiLineShower"/>
-        <sosa:hasSubSystem rdf:resource="https://w3id.org/eautonome/flowmeterWashingMachine"/>
-        <sosa:hasSubSystem rdf:resource="https://w3id.org/eautonome/flowmeterKitchenHot"/>
-        <sosa:hasSubSystem rdf:resource="https://w3id.org/eautonome/flowmeterMainInlet"/>
-        <sosa:hasSubSystem rdf:resource="https://w3id.org/eautonome/flowmeterToiletSink"/>
-        <sosa:hasSubSystem rdf:resource="https://w3id.org/eautonome/tempSensorMainInlet"/>
-        <sosa:isHostedBy rdf:resource="https://w3id.org/eautonome/raspberryPi4"/>
-        <sosa:hosts rdf:resource="https://w3id.org/eautonome/jumoDigiLineBoiler"/>
-        <sosa:hosts rdf:resource="https://w3id.org/eautonome/jumoDigiLineShower"/>
-        <sosa:hosts rdf:resource="https://w3id.org/eautonome/flowmeterWashingMachine"/>
-        <sosa:hosts rdf:resource="https://w3id.org/eautonome/flowmeterKitchenHot"/>
-        <sosa:hosts rdf:resource="https://w3id.org/eautonome/flowmeterMainInlet"/>
-        <sosa:hosts rdf:resource="https://w3id.org/eautonome/flowmeterToiletSink"/>
-        <sosa:hosts rdf:resource="https://w3id.org/eautonome/tempSensorMainInlet"/>
-      </eau:ADConverter>
-    </sosa:isHostedBy>
-    <sosa:implements rdf:resource="https://w3id.org/eautonome/eautonomeObservingProcedure"/>
-  </eau:VortexFlowmeter>
-  <eau:ConductivityTemperatureSensor rdf:about="https://w3id.org/eautonome/jumoDigiLineShower">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-    <rdfs:label xml:lang="en">Shower JUMO conductivity/temperature sensor</rdfs:label>
-    <rdfs:label xml:lang="fr">Capteur JUMO douche conductivité/température</rdfs:label>
-    <rdfs:comment xml:lang="en">JUMO digiLine CR sensor for the shower line.</rdfs:comment>
-    <eau:hasOperationalStatus>active</eau:hasOperationalStatus>
-    <eau:hasConductivityEquation>C = 1.036 * ((I - 4) / 16) * 2000 uS/cm</eau:hasConductivityEquation>
-    <eau:hasTemperatureEquation>T = 1.032 * ((I - 4) / 16) * 100 C</eau:hasTemperatureEquation>
-    <eau:hasAnalogInput>AN5</eau:hasAnalogInput>
-    <eau:monitors rdf:resource="https://w3id.org/eautonome/mpBathroomHot"/>
-    <sosa:observes>
-      <rdf:Description rdf:about="https://saref.etsi.org/saref4watr/FlowTemperature">
-        <sosa:isObservedBy rdf:resource="https://w3id.org/eautonome/flowmeterHeaterOutput"/>
-        <sosa:isObservedBy rdf:resource="https://w3id.org/eautonome/jumoDigiLineBoiler"/>
-        <sosa:isObservedBy rdf:resource="https://w3id.org/eautonome/jumoDigiLineShower"/>
-        <sosa:isObservedBy rdf:resource="https://w3id.org/eautonome/hansaActivejetDigital"/>
-      </rdf:Description>
-    </sosa:observes>
-    <sosa:forProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowTemperature"/>
-    <sosa:isHostedBy rdf:resource="https://w3id.org/eautonome/adcCard2"/>
-    <sosa:implements rdf:resource="https://w3id.org/eautonome/eautonomeObservingProcedure"/>
-  </eau:ConductivityTemperatureSensor>
-  <sosa:Deployment rdf:about="https://w3id.org/eautonome/eautonomeDeployment">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-    <rdfs:label xml:lang="en">Eautonome deployment</rdfs:label>
-    <rdfs:label xml:lang="fr">Déploiement Eautonome</rdfs:label>
-    <rdfs:comment xml:lang="en">The configuration of sensors and platforms within the system.</rdfs:comment>
-    <sosa:startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-07-15T07:30:00+02:00</sosa:startTime>
-    <sosa:deployedOnPlatform>
-      <sosa:Platform rdf:about="https://w3id.org/eautonome/raspberryPi4">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-        <rdfs:label xml:lang="en">Raspberry Pi 4</rdfs:label>
-        <rdfs:label xml:lang="fr">Raspberry Pi 4</rdfs:label>
-        <rdfs:comment xml:lang="en">The computing platform that executes the observing procedure and hosts the analog-to-digital converters.</rdfs:comment>
-        <eau:hasOperationalStatus>active</eau:hasOperationalStatus>
-        <sosa:hasDeployment rdf:resource="https://w3id.org/eautonome/eautonomeDeployment"/>
-        <sosa:hasSubSystem rdf:resource="https://w3id.org/eautonome/adcCard1"/>
-        <sosa:hasSubSystem rdf:resource="https://w3id.org/eautonome/adcCard2"/>
-        <sosa:inDeployment rdf:resource="https://w3id.org/eautonome/eautonomeDeployment"/>
-        <sosa:isHostedBy rdf:resource="https://w3id.org/eautonome/eautonomeSystem"/>
-        <sosa:hosts rdf:resource="https://w3id.org/eautonome/adcCard1"/>
-        <sosa:hosts rdf:resource="https://w3id.org/eautonome/adcCard2"/>
-      </sosa:Platform>
-    </sosa:deployedOnPlatform>
-    <sosa:deployedSystem>
-      <eau:VortexFlowmeter rdf:about="https://w3id.org/eautonome/flowmeterHeaterOutput">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-        <rdfs:label xml:lang="en">Heater output flowmeter</rdfs:label>
-        <rdfs:label xml:lang="fr">Débitmètre de la sortie chaudière</rdfs:label>
-        <rdfs:comment xml:lang="en">Reference flowmeter for data acquisition.</rdfs:comment>
-        <eau:hasOperationalStatus>active</eau:hasOperationalStatus>
-        <eau:hasFlowEquation>Q = 0.938 * (I - 4)</eau:hasFlowEquation>
-        <eau:hasCalibrationSlope rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.957</eau:hasCalibrationSlope>
-        <eau:hasCalibrationR2 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.9988</eau:hasCalibrationR2>
-        <eau:hasAnalogInput>AN4</eau:hasAnalogInput>
-        <eau:monitors rdf:resource="https://w3id.org/eautonome/mpHeaterOutput"/>
-        <sosa:madeObservation rdf:resource="https://w3id.org/eautonome/obsFlowHeaterOutput20260627T034633"/>
-        <sosa:observes rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
-        <sosa:observes rdf:resource="https://saref.etsi.org/saref4watr/FlowTemperature"/>
-        <sosa:hasSystemCapability rdf:resource="https://w3id.org/eautonome/capFlowmeterHeaterOutput"/>
-        <sosa:hasOperatingConditions rdf:resource="https://w3id.org/eautonome/condFlowmeterHeaterOutput"/>
-        <sosa:forProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
-        <sosa:forProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowTemperature"/>
-        <sosa:isHostedBy rdf:resource="https://w3id.org/eautonome/adcCard1"/>
-        <sosa:implements rdf:resource="https://w3id.org/eautonome/eautonomeObservingProcedure"/>
-      </eau:VortexFlowmeter>
-    </sosa:deployedSystem>
-    <sosa:deployedSystem>
-      <eau:VortexFlowmeter rdf:about="https://w3id.org/eautonome/flowmeterBathroomHot">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-        <rdfs:label xml:lang="en">Bathroom hot water flowmeter</rdfs:label>
-        <rdfs:label xml:lang="fr">Débitmètre d'eau chaude de la salle de bain</rdfs:label>
-        <rdfs:comment xml:lang="en">Measures hot water flow to the bathroom circuit.</rdfs:comment>
-        <eau:hasOperationalStatus>active</eau:hasOperationalStatus>
-        <eau:hasFlowEquation>Q = 0.938 * (I - 4)</eau:hasFlowEquation>
-        <eau:hasCalibrationSlope rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.957</eau:hasCalibrationSlope>
-        <eau:hasCalibrationR2 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.9988</eau:hasCalibrationR2>
-        <eau:hasAnalogInput>AN2</eau:hasAnalogInput>
-        <eau:monitors rdf:resource="https://w3id.org/eautonome/mpBathroomHot"/>
-        <sosa:observes rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
-        <sosa:forProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
-        <sosa:isHostedBy rdf:resource="https://w3id.org/eautonome/adcCard1"/>
-        <sosa:implements rdf:resource="https://w3id.org/eautonome/eautonomeObservingProcedure"/>
-      </eau:VortexFlowmeter>
-    </sosa:deployedSystem>
-    <sosa:deployedSystem>
-      <eau:VortexFlowmeter rdf:about="https://w3id.org/eautonome/flowmeterBathroomCold">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-        <rdfs:label xml:lang="en">Bathroom cold water flowmeter</rdfs:label>
-        <rdfs:label xml:lang="fr">Débitmètre d'eau froide de la salle de bain</rdfs:label>
-        <rdfs:comment xml:lang="en">Measures cold water flow to the bathroom circuit.</rdfs:comment>
-        <eau:hasOperationalStatus>inactive</eau:hasOperationalStatus>
-        <eau:hasFlowEquation>Q = 0.938 * (I - 4)</eau:hasFlowEquation>
-        <eau:hasCalibrationSlope rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.957</eau:hasCalibrationSlope>
-        <eau:hasCalibrationR2 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.9988</eau:hasCalibrationR2>
-        <eau:hasAnalogInput>AN0</eau:hasAnalogInput>
-        <eau:monitors rdf:resource="https://w3id.org/eautonome/mpBathroomCold"/>
-        <sosa:observes rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
-        <sosa:forProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
-        <sosa:isHostedBy rdf:resource="https://w3id.org/eautonome/adcCard1"/>
-        <sosa:implements rdf:resource="https://w3id.org/eautonome/eautonomeObservingProcedure"/>
-      </eau:VortexFlowmeter>
-    </sosa:deployedSystem>
-    <sosa:deployedSystem rdf:resource="https://w3id.org/eautonome/flowmeterWashingMachine"/>
-    <sosa:deployedSystem>
-      <eau:VortexFlowmeter rdf:about="https://w3id.org/eautonome/flowmeterBasementCold">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-        <rdfs:label xml:lang="en">Basement flowmeter</rdfs:label>
-        <rdfs:label xml:lang="fr">Débitmètre de la cave</rdfs:label>
-        <rdfs:comment xml:lang="en">Flowmeter connected to the main cold water supply via an extended cable.</rdfs:comment>
-        <eau:hasOperationalStatus>inactive</eau:hasOperationalStatus>
-        <eau:hasFlowEquation>Q = 0.938 * (I - 4)</eau:hasFlowEquation>
-        <eau:hasCalibrationSlope rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.957</eau:hasCalibrationSlope>
-        <eau:hasCalibrationR2 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.9988</eau:hasCalibrationR2>
-        <eau:hasAnalogInput>AN3</eau:hasAnalogInput>
-        <eau:monitors rdf:resource="https://w3id.org/eautonome/mpBasementCold"/>
-        <sosa:observes rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
-        <sosa:forProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
-        <sosa:isHostedBy rdf:resource="https://w3id.org/eautonome/adcCard1"/>
-        <sosa:implements rdf:resource="https://w3id.org/eautonome/eautonomeObservingProcedure"/>
-      </eau:VortexFlowmeter>
-    </sosa:deployedSystem>
-    <sosa:deployedSystem>
-      <eau:VortexFlowmeter rdf:about="https://w3id.org/eautonome/flowmeterToiletCold">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-        <rdfs:label xml:lang="en">Toilet flowmeter</rdfs:label>
-        <rdfs:label xml:lang="fr">Débitmètre des toilettes</rdfs:label>
-        <rdfs:comment xml:lang="en">Measures flow to the toilet.</rdfs:comment>
-        <eau:hasOperationalStatus>inactive</eau:hasOperationalStatus>
-        <eau:hasFlowEquation>Q = 0.938 * (I - 4)</eau:hasFlowEquation>
-        <eau:hasCalibrationSlope rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.957</eau:hasCalibrationSlope>
-        <eau:hasCalibrationR2 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.9988</eau:hasCalibrationR2>
-        <eau:hasAnalogInput>AN1</eau:hasAnalogInput>
-        <eau:monitors rdf:resource="https://w3id.org/eautonome/mpToiletCold"/>
-        <sosa:observes rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
-        <sosa:forProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
-        <sosa:isHostedBy rdf:resource="https://w3id.org/eautonome/adcCard1"/>
-        <sosa:implements rdf:resource="https://w3id.org/eautonome/eautonomeObservingProcedure"/>
-      </eau:VortexFlowmeter>
-    </sosa:deployedSystem>
-    <sosa:deployedSystem>
-      <eau:VortexFlowmeter rdf:about="https://w3id.org/eautonome/flowmeterKitchenCold">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-        <rdfs:label xml:lang="en">Kitchen cold water flowmeter</rdfs:label>
-        <rdfs:label xml:lang="fr">Débitmètre cuisine eau froide</rdfs:label>
-        <rdfs:comment xml:lang="en">Measures cold water flow to the kitchen circuit.</rdfs:comment>
-        <eau:hasOperationalStatus>active</eau:hasOperationalStatus>
-        <eau:hasFlowEquation>Q = 0.938 * (I - 4)</eau:hasFlowEquation>
-        <eau:hasAnalogInput>AN7</eau:hasAnalogInput>
-        <eau:monitors rdf:resource="https://w3id.org/eautonome/mpKitchenCold"/>
-        <sosa:observes rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
-        <sosa:forProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
-        <sosa:isHostedBy rdf:resource="https://w3id.org/eautonome/adcCard1"/>
-        <sosa:implements rdf:resource="https://w3id.org/eautonome/eautonomeObservingProcedure"/>
-      </eau:VortexFlowmeter>
-    </sosa:deployedSystem>
-    <sosa:deployedSystem>
-      <eau:VortexFlowmeter rdf:about="https://w3id.org/eautonome/flowmeterKitchenHot">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-        <rdfs:label xml:lang="en">Kitchen hot water flowmeter</rdfs:label>
-        <rdfs:label xml:lang="fr">Débitmètre cuisine eau chaude</rdfs:label>
-        <rdfs:comment xml:lang="en">Measures hot water flow to the kitchen circuit.</rdfs:comment>
-        <eau:hasOperationalStatus>active</eau:hasOperationalStatus>
-        <eau:hasFlowEquation>Q = 0.938 * (I - 4)</eau:hasFlowEquation>
-        <eau:hasAnalogInput>AN6</eau:hasAnalogInput>
-        <eau:monitors rdf:resource="https://w3id.org/eautonome/mpKitchenHot"/>
-        <sosa:observes rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
-        <sosa:forProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
-        <sosa:isHostedBy rdf:resource="https://w3id.org/eautonome/adcCard2"/>
-        <sosa:implements rdf:resource="https://w3id.org/eautonome/eautonomeObservingProcedure"/>
-      </eau:VortexFlowmeter>
-    </sosa:deployedSystem>
-    <sosa:deployedSystem>
-      <eau:VortexFlowmeter rdf:about="https://w3id.org/eautonome/flowmeterToiletSink">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-        <rdfs:label xml:lang="en">WC sink flowmeter</rdfs:label>
-        <rdfs:label xml:lang="fr">Débitmètre lavabo WC</rdfs:label>
-        <rdfs:comment xml:lang="en">Measures flow to the toilet sink.</rdfs:comment>
-        <eau:hasOperationalStatus>active</eau:hasOperationalStatus>
-        <eau:hasFlowEquation>Q = 0.938 * (I - 4)</eau:hasFlowEquation>
-        <eau:hasAnalogInput>AN7</eau:hasAnalogInput>
-        <eau:monitors rdf:resource="https://w3id.org/eautonome/mpToiletSink"/>
-        <sosa:observes rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
-        <sosa:forProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
-        <sosa:isHostedBy rdf:resource="https://w3id.org/eautonome/adcCard2"/>
-        <sosa:implements rdf:resource="https://w3id.org/eautonome/eautonomeObservingProcedure"/>
-      </eau:VortexFlowmeter>
-    </sosa:deployedSystem>
-    <sosa:deployedSystem rdf:resource="https://w3id.org/eautonome/flowmeterMainInlet"/>
-    <sosa:deployedSystem>
-      <sosa:Sensor rdf:about="https://w3id.org/eautonome/tempSensorMainInlet">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-        <rdfs:label xml:lang="en">Main inlet temperature sensor</rdfs:label>
-        <rdfs:label xml:lang="fr">Capteur température entrée principale</rdfs:label>
-        <rdfs:comment xml:lang="en">Temperature output of the main inlet ifm vortex meter.</rdfs:comment>
-        <eau:hasOperationalStatus>active</eau:hasOperationalStatus>
-        <eau:hasTemperatureEquation>T = 9.375 * (I - 4) - 25</eau:hasTemperatureEquation>
-        <eau:hasAnalogInput>AN4</eau:hasAnalogInput>
-        <eau:monitors rdf:resource="https://w3id.org/eautonome/mpMainInlet"/>
-        <sosa:observes rdf:resource="https://saref.etsi.org/saref4watr/FlowTemperature"/>
-        <sosa:forProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowTemperature"/>
-        <sosa:isHostedBy rdf:resource="https://w3id.org/eautonome/adcCard2"/>
-        <sosa:implements rdf:resource="https://w3id.org/eautonome/eautonomeObservingProcedure"/>
-      </sosa:Sensor>
-    </sosa:deployedSystem>
-    <sosa:deployedSystem>
-      <eau:ConductivityTemperatureSensor rdf:about="https://w3id.org/eautonome/jumoDigiLineBoiler">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-        <rdfs:label xml:lang="en">Boiler JUMO conductivity/temperature sensor</rdfs:label>
-        <rdfs:label xml:lang="fr">Capteur JUMO chaudière conductivité/température</rdfs:label>
-        <rdfs:comment xml:lang="en">JUMO digiLine CR sensor for the boiler line.</rdfs:comment>
-        <eau:hasOperationalStatus>active</eau:hasOperationalStatus>
-        <eau:hasConductivityEquation>C = 1.036 * ((I - 4) / 16) * 2000 uS/cm</eau:hasConductivityEquation>
-        <eau:hasTemperatureEquation>T = 1.032 * ((I - 4) / 16) * 100 C</eau:hasTemperatureEquation>
-        <eau:hasAnalogInput>AN0</eau:hasAnalogInput>
-        <eau:hasAnalogInput>AN1</eau:hasAnalogInput>
-        <eau:monitors rdf:resource="https://w3id.org/eautonome/mpHeaterOutput"/>
-        <sosa:observes rdf:resource="https://saref.etsi.org/saref4watr/Conductivity"/>
-        <sosa:observes rdf:resource="https://saref.etsi.org/saref4watr/FlowTemperature"/>
-        <sosa:forProperty rdf:resource="https://saref.etsi.org/saref4watr/Conductivity"/>
-        <sosa:forProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowTemperature"/>
-        <sosa:isHostedBy rdf:resource="https://w3id.org/eautonome/adcCard2"/>
-        <sosa:implements rdf:resource="https://w3id.org/eautonome/eautonomeObservingProcedure"/>
-      </eau:ConductivityTemperatureSensor>
-    </sosa:deployedSystem>
-    <sosa:deployedSystem rdf:resource="https://w3id.org/eautonome/jumoDigiLineShower"/>
-    <sosa:deployedSystem rdf:resource="https://w3id.org/eautonome/hansaActivejetDigital"/>
-    <sosa:hasFeatureOfInterest>
-      <eau:MeasurementPoint rdf:about="https://w3id.org/eautonome/mpHeaterOutput">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-        <rdfs:label xml:lang="en">Heater output measurement point</rdfs:label>
-        <rdfs:label xml:lang="fr">Point de mesure de la sortie chaudière</rdfs:label>
-        <rdfs:comment xml:lang="en">A reference measurement point.</rdfs:comment>
-        <eau:measuresWaterKind rdf:resource="https://saref.etsi.org/saref4watr/DrinkingWater"/>
-        <eau:locatedIn rdf:resource="https://w3id.org/eautonome/roomBathroom"/>
-        <eau:measuresOnAsset rdf:resource="https://w3id.org/eautonome/pipeHeaterOutput"/>
-        <sosa:isFeatureOfInterestOf rdf:resource="https://w3id.org/eautonome/obsFlowHeaterOutput20260627T034633"/>
-        <sosa:hasProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
-        <sosa:hasProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowTemperature"/>
-        <sosa:hasProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowVolume"/>
-        <sosa:hasProperty rdf:resource="https://saref.etsi.org/saref4watr/Conductivity"/>
-        <sosa:hasProperty rdf:resource="https://saref.etsi.org/saref4watr/Temperature"/>
-      </eau:MeasurementPoint>
-    </sosa:hasFeatureOfInterest>
-    <sosa:hasFeatureOfInterest rdf:resource="https://w3id.org/eautonome/mpBathroomHot"/>
-    <sosa:hasFeatureOfInterest>
-      <eau:MeasurementPoint rdf:about="https://w3id.org/eautonome/mpBathroomCold">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-        <rdfs:label xml:lang="en">Bathroom cold water measurement point</rdfs:label>
-        <rdfs:label xml:lang="fr">Point de mesure d'eau froide de la salle de bain</rdfs:label>
-        <rdfs:comment xml:lang="en">Measurement point on the bathroom cold water circuit.</rdfs:comment>
-        <eau:measuresWaterKind rdf:resource="https://saref.etsi.org/saref4watr/DrinkingWater"/>
-        <eau:locatedIn rdf:resource="https://w3id.org/eautonome/roomBathroom"/>
-        <eau:measuresOnAsset rdf:resource="https://w3id.org/eautonome/pipeBathroomCold"/>
-        <eau:servesEndpoint rdf:resource="https://w3id.org/eautonome/roomBathroom"/>
-        <sosa:hasProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
-      </eau:MeasurementPoint>
-    </sosa:hasFeatureOfInterest>
-    <sosa:hasFeatureOfInterest rdf:resource="https://w3id.org/eautonome/mpWashingMachine"/>
-    <sosa:hasFeatureOfInterest>
-      <eau:MeasurementPoint rdf:about="https://w3id.org/eautonome/mpBasementCold">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-        <rdfs:label xml:lang="en">Basement measurement point</rdfs:label>
-        <rdfs:label xml:lang="fr">Point de mesure de la cave</rdfs:label>
-        <rdfs:comment xml:lang="en">Measurement point on the basement cold water supply.</rdfs:comment>
-        <eau:measuresWaterKind rdf:resource="https://saref.etsi.org/saref4watr/DrinkingWater"/>
-        <eau:locatedIn rdf:resource="https://w3id.org/eautonome/roomBasement"/>
-        <eau:measuresOnAsset rdf:resource="https://w3id.org/eautonome/pipeBasementCold"/>
-        <eau:servesEndpoint rdf:resource="https://w3id.org/eautonome/roomBasement"/>
-        <sosa:hasProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
-      </eau:MeasurementPoint>
-    </sosa:hasFeatureOfInterest>
-    <sosa:hasFeatureOfInterest>
-      <eau:MeasurementPoint rdf:about="https://w3id.org/eautonome/mpToiletCold">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-        <rdfs:label xml:lang="en">Toilet measurement point</rdfs:label>
-        <rdfs:label xml:lang="fr">Point de mesure des toilettes</rdfs:label>
-        <rdfs:comment xml:lang="en">Measurement point for treated greywater reuse.</rdfs:comment>
-        <eau:measuresWaterKind rdf:resource="https://w3id.org/eautonome/TreatedGreywater"/>
-        <eau:locatedIn rdf:resource="https://w3id.org/eautonome/roomToilet"/>
-        <eau:measuresOnAsset rdf:resource="https://w3id.org/eautonome/pipeToiletCold"/>
-        <eau:servesEndpoint rdf:resource="https://w3id.org/eautonome/roomToilet"/>
-        <sosa:hasProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
-      </eau:MeasurementPoint>
-    </sosa:hasFeatureOfInterest>
-    <sosa:hasFeatureOfInterest>
-      <eau:MeasurementPoint rdf:about="https://w3id.org/eautonome/mpKitchenCold">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-        <rdfs:label xml:lang="en">Kitchen cold water measurement point</rdfs:label>
-        <rdfs:label xml:lang="fr">Point de mesure cuisine eau froide</rdfs:label>
-        <rdfs:comment xml:lang="en">Measurement point on the kitchen cold water circuit.</rdfs:comment>
-        <eau:measuresWaterKind rdf:resource="https://saref.etsi.org/saref4watr/DrinkingWater"/>
-        <eau:locatedIn rdf:resource="https://w3id.org/eautonome/roomKitchen"/>
-        <eau:measuresOnAsset rdf:resource="https://w3id.org/eautonome/pipeKitchenCold"/>
-        <eau:servesEndpoint rdf:resource="https://w3id.org/eautonome/roomKitchen"/>
-        <sosa:hasProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
-      </eau:MeasurementPoint>
-    </sosa:hasFeatureOfInterest>
-    <sosa:hasFeatureOfInterest>
-      <eau:MeasurementPoint rdf:about="https://w3id.org/eautonome/mpKitchenHot">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-        <rdfs:label xml:lang="en">Kitchen hot water measurement point</rdfs:label>
-        <rdfs:label xml:lang="fr">Point de mesure cuisine eau chaude</rdfs:label>
-        <rdfs:comment xml:lang="en">Measurement point on the kitchen hot water circuit.</rdfs:comment>
-        <eau:measuresWaterKind rdf:resource="https://saref.etsi.org/saref4watr/DrinkingWater"/>
-        <eau:locatedIn rdf:resource="https://w3id.org/eautonome/roomKitchen"/>
-        <eau:measuresOnAsset rdf:resource="https://w3id.org/eautonome/pipeKitchenHot"/>
-        <eau:servesEndpoint rdf:resource="https://w3id.org/eautonome/roomKitchen"/>
-        <sosa:hasProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
-      </eau:MeasurementPoint>
-    </sosa:hasFeatureOfInterest>
-    <sosa:hasFeatureOfInterest>
-      <eau:MeasurementPoint rdf:about="https://w3id.org/eautonome/mpToiletSink">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-        <rdfs:label xml:lang="en">Toilet sink measurement point</rdfs:label>
-        <rdfs:label xml:lang="fr">Point de mesure lavabo WC</rdfs:label>
-        <rdfs:comment xml:lang="en">Measurement point on the toilet sink water circuit.</rdfs:comment>
-        <eau:measuresWaterKind rdf:resource="https://saref.etsi.org/saref4watr/DrinkingWater"/>
-        <eau:locatedIn rdf:resource="https://w3id.org/eautonome/roomToilet"/>
-        <eau:measuresOnAsset rdf:resource="https://w3id.org/eautonome/pipeToiletSink"/>
-        <eau:servesEndpoint rdf:resource="https://w3id.org/eautonome/roomToilet"/>
-        <sosa:hasProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
-      </eau:MeasurementPoint>
-    </sosa:hasFeatureOfInterest>
-    <sosa:hasFeatureOfInterest rdf:resource="https://w3id.org/eautonome/mpMainInlet"/>
-  </sosa:Deployment>
-  <sosa:Observation rdf:about="https://w3id.org/eautonome/obsFlowHeaterOutput20260627T034633">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-    <rdfs:comment xml:lang="en">Measurement of flow rate at the heater output.</rdfs:comment>
-    <sosa:madeBySensor rdf:resource="https://w3id.org/eautonome/flowmeterHeaterOutput"/>
-    <sosa:observedProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
-    <sosa:hasFeatureOfInterest rdf:resource="https://w3id.org/eautonome/mpHeaterOutput"/>
-    <sosa:hasUltimateFeatureOfInterest rdf:resource="https://w3id.org/eautonome/domesticGreywater"/>
-    <sosa:usedProcedure rdf:resource="https://w3id.org/eautonome/eautonomeObservingProcedure"/>
-    <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-06-27T03:46:33+02:00</sosa:resultTime>
-    <sosa:hasSimpleResult rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.8</sosa:hasSimpleResult>
-    <sosa:hasResult>
-      <qudt:QuantityValue rdf:nodeID="neafc0a186dcc47bc9e960b290a8eb5ceb30">
-        <qudt:value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.8</qudt:value>
-        <qudt:hasUnit rdf:resource="http://qudt.org/vocab/unit/L-PER-MIN"/>
-      </qudt:QuantityValue>
-    </sosa:hasResult>
-  </sosa:Observation>
-  <owl:ObjectProperty rdf:about="https://w3id.org/eautonome/measuresWaterKind">
-    <rdfs:domain rdf:resource="https://w3id.org/eautonome/MeasurementPoint"/>
-    <rdfs:range rdf:resource="https://saref.etsi.org/saref4watr/WaterKind"/>
-    <owl:inverseOf>
-      <owl:ObjectProperty rdf:about="https://w3id.org/eautonome/waterKindMeasuredAt">
-        <rdfs:domain rdf:resource="https://saref.etsi.org/saref4watr/WaterKind"/>
-        <rdfs:range rdf:resource="https://w3id.org/eautonome/MeasurementPoint"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/eautonome/measuresWaterKind"/>
-        <rdfs:label xml:lang="en">water kind measured at</rdfs:label>
-        <rdfs:comment xml:lang="en">Links a water kind to a measurement point where that kind of water is measured.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-      </owl:ObjectProperty>
-    </owl:inverseOf>
-    <rdfs:label xml:lang="en">measures water kind</rdfs:label>
-    <rdfs:comment xml:lang="en">Specifies the type of water measured.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="https://w3id.org/eautonome/isMonitoredBy">
-    <rdfs:domain rdf:resource="https://w3id.org/eautonome/MeasurementPoint"/>
-    <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
-    <owl:inverseOf>
-      <owl:ObjectProperty rdf:about="https://w3id.org/eautonome/monitors">
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
-        <rdfs:range rdf:resource="https://w3id.org/eautonome/MeasurementPoint"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/eautonome/isMonitoredBy"/>
-        <rdfs:label xml:lang="en">monitors</rdfs:label>
-        <rdfs:label xml:lang="fr">surveille</rdfs:label>
-        <rdfs:comment xml:lang="en">Static topology link from a sensor to the measurement point it monitors, independent of any observation.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-      </owl:ObjectProperty>
-    </owl:inverseOf>
-    <rdfs:label xml:lang="en">is monitored by</rdfs:label>
-    <rdfs:label xml:lang="fr">est surveillé par</rdfs:label>
-    <rdfs:comment xml:lang="en">Static topology link from a measurement point to the sensor that monitors it, independent of any observation.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-  </owl:ObjectProperty>
-  <sosa:ObservationCollection rdf:about="https://w3id.org/eautonome/condHansaActivejetDigital">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-    <rdfs:label xml:lang="en">Operating conditions for HANSA Activejet Digital</rdfs:label>
-    <rdfs:comment xml:lang="en">Nominal shower operation with Bluetooth communication and domestic water flow.</rdfs:comment>
-    <sosa:hasFeatureOfInterest rdf:resource="https://w3id.org/eautonome/hansaActivejetDigital"/>
-    <sosa:observedProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
-  </sosa:ObservationCollection>
-  <s4watr:Pipe rdf:about="https://w3id.org/eautonome/pipeBasementCold">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-    <rdfs:label xml:lang="en">Basement pipe</rdfs:label>
-    <rdfs:label xml:lang="fr">Tuyauterie de la cave</rdfs:label>
-    <rdfs:comment xml:lang="en">Cold water pipe in the basement.</rdfs:comment>
-    <s4watr:isDesignedFor rdf:resource="https://saref.etsi.org/saref4watr/DrinkingWater"/>
-  </s4watr:Pipe>
-  <rdf:Description rdf:about="https://saref.etsi.org/saref4watr/WaterDevice">
-    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/System"/>
-  </rdf:Description>
-  <s4watr:Pipe rdf:about="https://w3id.org/eautonome/pipeBathroomHot">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-    <rdfs:label xml:lang="en">Bathroom hot water pipe</rdfs:label>
-    <rdfs:label xml:lang="fr">Tuyauterie SDB eau chaude</rdfs:label>
-    <rdfs:comment xml:lang="en">Hot water pipe for the bathroom.</rdfs:comment>
-    <s4watr:isDesignedFor rdf:resource="https://saref.etsi.org/saref4watr/DrinkingWater"/>
-  </s4watr:Pipe>
-  <owl:NamedIndividual rdf:about="https://w3id.org/eautonome/Greywater">
-    <rdf:type rdf:resource="https://saref.etsi.org/saref4watr/WaterKind"/>
-    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-    <rdfs:label xml:lang="en">Greywater</rdfs:label>
-    <rdfs:label xml:lang="fr">Eaux grises</rdfs:label>
-    <rdfs:comment xml:lang="en">Domestic wastewater excluding blackwater.</rdfs:comment>
-  </owl:NamedIndividual>
-  <s4watr:Pipe rdf:about="https://w3id.org/eautonome/pipeBathroomCold">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-    <rdfs:label xml:lang="en">Bathroom cold water pipe</rdfs:label>
-    <rdfs:label xml:lang="fr">Tuyauterie SDB eau froide</rdfs:label>
-    <rdfs:comment xml:lang="en">Cold water pipe for the bathroom.</rdfs:comment>
-    <s4watr:isDesignedFor rdf:resource="https://saref.etsi.org/saref4watr/DrinkingWater"/>
-  </s4watr:Pipe>
-  <s4watr:Pipe rdf:about="https://w3id.org/eautonome/pipeColdWaterEntry">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-    <rdfs:label xml:lang="en">Cold water main entry</rdfs:label>
-    <rdfs:label xml:lang="fr">Arrivée d'eau froide</rdfs:label>
-    <rdfs:comment xml:lang="en">Entry pipe for cold water.</rdfs:comment>
-    <s4watr:isDesignedFor rdf:resource="https://saref.etsi.org/saref4watr/DrinkingWater"/>
-  </s4watr:Pipe>
-  <s4watr:Pipe rdf:about="https://w3id.org/eautonome/pipeToiletCold">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-    <rdfs:label xml:lang="en">Toilet pipe</rdfs:label>
-    <rdfs:label xml:lang="fr">Tuyauterie des toilettes</rdfs:label>
-    <rdfs:comment xml:lang="en">Pipe supplying cold water to the toilet.</rdfs:comment>
-    <s4watr:isDesignedFor rdf:resource="https://saref.etsi.org/saref4watr/DrinkingWater"/>
-  </s4watr:Pipe>
-  <owl:Class rdf:about="https://w3id.org/eautonome/GreywaterRecyclingSystem">
-    <rdfs:subClassOf rdf:resource="https://saref.etsi.org/saref4watr/WaterInfrastructure"/>
-    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
-    <rdfs:label xml:lang="en">Greywater recycling system</rdfs:label>
-    <rdfs:label xml:lang="fr">Système de recyclage des eaux grises</rdfs:label>
-    <rdfs:comment xml:lang="en">A system for collecting, treating, and redistributing domestic greywater.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-  </owl:Class>
-  <owl:ObjectProperty rdf:about="https://w3id.org/eautonome/hasConsumptionEvent">
-    <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/ObservationCollection"/>
-    <rdfs:range rdf:resource="https://w3id.org/eautonome/ConsumptionEvent"/>
-    <owl:inverseOf>
-      <owl:ObjectProperty rdf:about="https://w3id.org/eautonome/isConsumptionEventOf">
-        <rdfs:domain rdf:resource="https://w3id.org/eautonome/ConsumptionEvent"/>
-        <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/ObservationCollection"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/eautonome/hasConsumptionEvent"/>
-        <rdfs:label xml:lang="en">is consumption event of</rdfs:label>
-        <rdfs:comment xml:lang="en">Links a consumption event to the observation collection that represents it.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-      </owl:ObjectProperty>
-    </owl:inverseOf>
-    <rdfs:label xml:lang="en">has consumption event</rdfs:label>
-    <rdfs:comment xml:lang="en">Links an observation collection to the domestic usage activity it represents.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-  </owl:ObjectProperty>
-  <sosa:ObservationCollection rdf:about="https://w3id.org/eautonome/capFlowmeterHeaterOutput">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-    <rdfs:label xml:lang="en">Capability profile for heater output flowmeter</rdfs:label>
-    <rdfs:comment xml:lang="en">System capability profile for the heater output flowmeter.</rdfs:comment>
-    <sosa:hasFeatureOfInterest rdf:resource="https://w3id.org/eautonome/flowmeterHeaterOutput"/>
-    <sosa:observedProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
-  </sosa:ObservationCollection>
-  <sosa:ObservationCollection rdf:about="https://w3id.org/eautonome/capHansaActivejetDigital">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-    <rdfs:label xml:lang="en">Capability profile for HANSA Activejet Digital</rdfs:label>
-    <rdfs:comment xml:lang="en">System capability profile for the HANSA Activejet Digital hand shower.</rdfs:comment>
-    <sosa:hasFeatureOfInterest rdf:resource="https://w3id.org/eautonome/hansaActivejetDigital"/>
-    <sosa:observedProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
-    <sosa:observedProperty>
-      <rdf:Description rdf:about="https://saref.etsi.org/saref4watr/FlowVolume">
-        <sosa:isObservedBy rdf:resource="https://w3id.org/eautonome/hansaActivejetDigital"/>
-      </rdf:Description>
-    </sosa:observedProperty>
-    <sosa:observedProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowTemperature"/>
-  </sosa:ObservationCollection>
-  <owl:ObjectProperty rdf:about="https://w3id.org/eautonome/servesEndpoint">
-    <rdfs:domain rdf:resource="https://w3id.org/eautonome/MeasurementPoint"/>
-    <rdfs:range rdf:resource="https://w3id.org/eautonome/DomesticRoom"/>
-    <owl:inverseOf>
-      <owl:ObjectProperty rdf:about="https://w3id.org/eautonome/isServedBy">
-        <rdfs:domain rdf:resource="https://w3id.org/eautonome/DomesticRoom"/>
-        <rdfs:range rdf:resource="https://w3id.org/eautonome/MeasurementPoint"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/eautonome/servesEndpoint"/>
-        <rdfs:label xml:lang="en">is served by</rdfs:label>
-        <rdfs:comment xml:lang="en">Links a domestic room to a measurement point that serves it as water use endpoint.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-      </owl:ObjectProperty>
-    </owl:inverseOf>
-    <rdfs:label xml:lang="en">serves endpoint</rdfs:label>
-    <rdfs:comment xml:lang="en">Connects a measurement point to the room where the water is used.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="https://w3id.org/eautonome/isMeasuredAt">
-    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4watr/WaterAsset"/>
-    <rdfs:range rdf:resource="https://w3id.org/eautonome/MeasurementPoint"/>
-    <owl:inverseOf>
-      <owl:ObjectProperty rdf:about="https://w3id.org/eautonome/measuresOnAsset">
-        <rdfs:domain rdf:resource="https://w3id.org/eautonome/MeasurementPoint"/>
-        <rdfs:range rdf:resource="https://saref.etsi.org/saref4watr/WaterAsset"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/eautonome/isMeasuredAt"/>
-        <rdfs:label xml:lang="en">measures on asset</rdfs:label>
-        <rdfs:comment xml:lang="en">The pipe or water asset instrumented at this measurement point.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-      </owl:ObjectProperty>
-    </owl:inverseOf>
-    <rdfs:label xml:lang="en">is measured at</rdfs:label>
-    <rdfs:comment xml:lang="en">Links a water asset to the measurement point that instruments it.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-  </owl:ObjectProperty>
-  <s4watr:Pipe rdf:about="https://w3id.org/eautonome/pipeToiletSink">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-    <rdfs:label xml:lang="en">Toilet sink pipe</rdfs:label>
-    <rdfs:label xml:lang="fr">Tuyauterie lavabo WC</rdfs:label>
-    <rdfs:comment xml:lang="en">Pipe supplying water to the toilet sink.</rdfs:comment>
-    <s4watr:isDesignedFor rdf:resource="https://saref.etsi.org/saref4watr/DrinkingWater"/>
-  </s4watr:Pipe>
-  <owl:Class rdf:about="https://w3id.org/eautonome/EautonomeObservingProcedure">
-    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/ObservingProcedure"/>
-    <rdfs:label xml:lang="en">Eautonome observing procedure</rdfs:label>
-    <rdfs:label xml:lang="fr">Procédure d'observation Eautonome</rdfs:label>
-    <rdfs:comment xml:lang="en">Data acquisition via ADC on the Raspberry Pi.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-  </owl:Class>
-  <owl:Class rdf:about="https://w3id.org/eautonome/ShowerSensor">
+  <rdf:Description rdf:about="https://w3id.org/eautonome/ShowerSensor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
     <rdfs:subClassOf rdf:resource="https://saref.etsi.org/saref4watr/WaterDevice"/>
     <rdfs:label xml:lang="en">Shower sensor</rdfs:label>
     <rdfs:label xml:lang="fr">Capteur de douche</rdfs:label>
     <rdfs:comment xml:lang="en">A sensor attached to a shower head that measures flow rate, volume, temperature, and duration.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-  </owl:Class>
-  <owl:Class rdf:about="https://w3id.org/eautonome/ADConverter">
-    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/System"/>
-    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
-    <rdfs:label xml:lang="en">Analog to digital converter</rdfs:label>
-    <rdfs:label xml:lang="fr">Carte ADC</rdfs:label>
-    <rdfs:comment xml:lang="en">A component for converting analog sensor signals into digital data.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/roomKitchen">
+    <rdf:type rdf:resource="https://w3id.org/eautonome/DomesticRoom"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-  </owl:Class>
-  <eau:ADConverter rdf:about="https://w3id.org/eautonome/adcCard1">
+    <rdfs:label xml:lang="en">Kitchen</rdfs:label>
+    <rdfs:label xml:lang="fr">Cuisine</rdfs:label>
+    <rdfs:comment xml:lang="en">A domestic room primarily used for cooking and dishwashing.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/isLocationOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/eautonome/DomesticRoom"/>
+    <rdfs:range rdf:resource="https://w3id.org/eautonome/MeasurementPoint"/>
+    <owl:inverseOf rdf:resource="https://w3id.org/eautonome/locatedIn"/>
+    <rdfs:label xml:lang="en">is location of</rdfs:label>
+    <rdfs:comment xml:lang="en">Links a domestic room to a measurement point located in that room.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/DomesticRoom">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+    <rdfs:label xml:lang="en">Domestic room</rdfs:label>
+    <rdfs:label xml:lang="fr">Pièce domestique</rdfs:label>
+    <rdfs:comment xml:lang="en">A room in a dwelling in which water consumption or collection occurs.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/mpToiletSink">
+    <rdf:type rdf:resource="https://w3id.org/eautonome/MeasurementPoint"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+    <rdfs:label xml:lang="en">Toilet sink measurement point</rdfs:label>
+    <rdfs:label xml:lang="fr">Point de mesure lavabo WC</rdfs:label>
+    <rdfs:comment xml:lang="en">Measurement point on the toilet sink water circuit.</rdfs:comment>
+    <eau:measuresWaterKind rdf:resource="https://saref.etsi.org/saref4watr/DrinkingWater"/>
+    <eau:locatedIn rdf:resource="https://w3id.org/eautonome/roomToilet"/>
+    <eau:measuresOnAsset rdf:resource="https://w3id.org/eautonome/pipeToiletSink"/>
+    <eau:servesEndpoint rdf:resource="https://w3id.org/eautonome/roomToilet"/>
+    <sosa:hasProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/mpToiletCold">
+    <rdf:type rdf:resource="https://w3id.org/eautonome/MeasurementPoint"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+    <rdfs:label xml:lang="en">Toilet measurement point</rdfs:label>
+    <rdfs:label xml:lang="fr">Point de mesure des toilettes</rdfs:label>
+    <rdfs:comment xml:lang="en">Measurement point for treated greywater reuse.</rdfs:comment>
+    <eau:measuresWaterKind rdf:resource="https://w3id.org/eautonome/TreatedGreywater"/>
+    <eau:locatedIn rdf:resource="https://w3id.org/eautonome/roomToilet"/>
+    <eau:measuresOnAsset rdf:resource="https://w3id.org/eautonome/pipeToiletCold"/>
+    <eau:servesEndpoint rdf:resource="https://w3id.org/eautonome/roomToilet"/>
+    <sosa:hasProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/waterKindMeasuredAt">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4watr/WaterKind"/>
+    <rdfs:range rdf:resource="https://w3id.org/eautonome/MeasurementPoint"/>
+    <owl:inverseOf rdf:resource="https://w3id.org/eautonome/measuresWaterKind"/>
+    <rdfs:label xml:lang="en">water kind measured at</rdfs:label>
+    <rdfs:comment xml:lang="en">Links a water kind to a measurement point where that kind of water is measured.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/adcCard1">
+    <rdf:type rdf:resource="https://w3id.org/eautonome/ADConverter"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
     <rdfs:label xml:lang="en">ADC card 1</rdfs:label>
@@ -1087,16 +118,307 @@
     <sosa:hosts rdf:resource="https://w3id.org/eautonome/flowmeterBasementCold"/>
     <sosa:hosts rdf:resource="https://w3id.org/eautonome/flowmeterToiletCold"/>
     <sosa:hosts rdf:resource="https://w3id.org/eautonome/flowmeterKitchenCold"/>
-  </eau:ADConverter>
-  <s4watr:Pipe rdf:about="https://w3id.org/eautonome/pipeHeaterOutput">
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/flowmeterBathroomCold">
+    <rdf:type rdf:resource="https://w3id.org/eautonome/VortexFlowmeter"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-    <rdfs:label xml:lang="en">Hot water heater output pipe</rdfs:label>
-    <rdfs:label xml:lang="fr">Sortie d'eau chaude de la chaudière</rdfs:label>
-    <rdfs:comment xml:lang="en">Pipe delivering hot water from the heater.</rdfs:comment>
+    <rdfs:label xml:lang="en">Bathroom cold water flowmeter</rdfs:label>
+    <rdfs:label xml:lang="fr">Débitmètre d'eau froide de la salle de bain</rdfs:label>
+    <rdfs:comment xml:lang="en">Measures cold water flow to the bathroom circuit.</rdfs:comment>
+    <eau:hasOperationalStatus>inactive</eau:hasOperationalStatus>
+    <eau:hasFlowEquation>Q = 0.938 * (I - 4)</eau:hasFlowEquation>
+    <eau:hasCalibrationSlope rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.957</eau:hasCalibrationSlope>
+    <eau:hasCalibrationR2 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.9988</eau:hasCalibrationR2>
+    <eau:hasAnalogInput>AN0</eau:hasAnalogInput>
+    <eau:monitors rdf:resource="https://w3id.org/eautonome/mpBathroomCold"/>
+    <sosa:observes rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
+    <sosa:forProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
+    <sosa:isHostedBy rdf:resource="https://w3id.org/eautonome/adcCard1"/>
+    <sosa:implements rdf:resource="https://w3id.org/eautonome/eautonomeObservingProcedure"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/flowmeterHeaterOutput">
+    <rdf:type rdf:resource="https://w3id.org/eautonome/VortexFlowmeter"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+    <rdfs:label xml:lang="en">Heater output flowmeter</rdfs:label>
+    <rdfs:label xml:lang="fr">Débitmètre de la sortie chaudière</rdfs:label>
+    <rdfs:comment xml:lang="en">Reference flowmeter for data acquisition.</rdfs:comment>
+    <eau:hasOperationalStatus>active</eau:hasOperationalStatus>
+    <eau:hasFlowEquation>Q = 0.938 * (I - 4)</eau:hasFlowEquation>
+    <eau:hasCalibrationSlope rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.957</eau:hasCalibrationSlope>
+    <eau:hasCalibrationR2 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.9988</eau:hasCalibrationR2>
+    <eau:hasAnalogInput>AN4</eau:hasAnalogInput>
+    <eau:monitors rdf:resource="https://w3id.org/eautonome/mpHeaterOutput"/>
+    <sosa:madeObservation rdf:resource="https://w3id.org/eautonome/obsFlowHeaterOutput20260627T034633"/>
+    <sosa:observes rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
+    <sosa:observes rdf:resource="https://saref.etsi.org/saref4watr/FlowTemperature"/>
+    <sosa:hasSystemCapability rdf:resource="https://w3id.org/eautonome/capFlowmeterHeaterOutput"/>
+    <sosa:hasOperatingConditions rdf:resource="https://w3id.org/eautonome/condFlowmeterHeaterOutput"/>
+    <sosa:forProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
+    <sosa:forProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowTemperature"/>
+    <sosa:isHostedBy rdf:resource="https://w3id.org/eautonome/adcCard1"/>
+    <sosa:implements rdf:resource="https://w3id.org/eautonome/eautonomeObservingProcedure"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/pipeToiletCold">
+    <rdf:type rdf:resource="https://saref.etsi.org/saref4watr/Pipe"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+    <rdfs:label xml:lang="en">Toilet pipe</rdfs:label>
+    <rdfs:label xml:lang="fr">Tuyauterie des toilettes</rdfs:label>
+    <rdfs:comment xml:lang="en">Pipe supplying cold water to the toilet.</rdfs:comment>
     <s4watr:isDesignedFor rdf:resource="https://saref.etsi.org/saref4watr/DrinkingWater"/>
-  </s4watr:Pipe>
-  <eau:GreywaterRecyclingSystem rdf:about="https://w3id.org/eautonome/eautonomeSystem">
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/flowmeterKitchenHot">
+    <rdf:type rdf:resource="https://w3id.org/eautonome/VortexFlowmeter"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+    <rdfs:label xml:lang="en">Kitchen hot water flowmeter</rdfs:label>
+    <rdfs:label xml:lang="fr">Débitmètre cuisine eau chaude</rdfs:label>
+    <rdfs:comment xml:lang="en">Measures hot water flow to the kitchen circuit.</rdfs:comment>
+    <eau:hasOperationalStatus>active</eau:hasOperationalStatus>
+    <eau:hasFlowEquation>Q = 0.938 * (I - 4)</eau:hasFlowEquation>
+    <eau:hasAnalogInput>AN6</eau:hasAnalogInput>
+    <eau:monitors rdf:resource="https://w3id.org/eautonome/mpKitchenHot"/>
+    <sosa:observes rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
+    <sosa:forProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
+    <sosa:isHostedBy rdf:resource="https://w3id.org/eautonome/adcCard2"/>
+    <sosa:implements rdf:resource="https://w3id.org/eautonome/eautonomeObservingProcedure"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/hasCalibrationSlope">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label xml:lang="en">has calibration slope</rdfs:label>
+    <rdfs:comment xml:lang="en">Numeric slope used to convert sensor readings to flow values.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/flowmeterBasementCold">
+    <rdf:type rdf:resource="https://w3id.org/eautonome/VortexFlowmeter"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+    <rdfs:label xml:lang="en">Basement flowmeter</rdfs:label>
+    <rdfs:label xml:lang="fr">Débitmètre de la cave</rdfs:label>
+    <rdfs:comment xml:lang="en">Flowmeter connected to the main cold water supply via an extended cable.</rdfs:comment>
+    <eau:hasOperationalStatus>inactive</eau:hasOperationalStatus>
+    <eau:hasFlowEquation>Q = 0.938 * (I - 4)</eau:hasFlowEquation>
+    <eau:hasCalibrationSlope rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.957</eau:hasCalibrationSlope>
+    <eau:hasCalibrationR2 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.9988</eau:hasCalibrationR2>
+    <eau:hasAnalogInput>AN3</eau:hasAnalogInput>
+    <eau:monitors rdf:resource="https://w3id.org/eautonome/mpBasementCold"/>
+    <sosa:observes rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
+    <sosa:forProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
+    <sosa:isHostedBy rdf:resource="https://w3id.org/eautonome/adcCard1"/>
+    <sosa:implements rdf:resource="https://w3id.org/eautonome/eautonomeObservingProcedure"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/mpHeaterOutput">
+    <rdf:type rdf:resource="https://w3id.org/eautonome/MeasurementPoint"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+    <rdfs:label xml:lang="en">Heater output measurement point</rdfs:label>
+    <rdfs:label xml:lang="fr">Point de mesure de la sortie chaudière</rdfs:label>
+    <rdfs:comment xml:lang="en">A reference measurement point.</rdfs:comment>
+    <eau:measuresWaterKind rdf:resource="https://saref.etsi.org/saref4watr/DrinkingWater"/>
+    <eau:locatedIn rdf:resource="https://w3id.org/eautonome/roomBathroom"/>
+    <eau:measuresOnAsset rdf:resource="https://w3id.org/eautonome/pipeHeaterOutput"/>
+    <sosa:isFeatureOfInterestOf rdf:resource="https://w3id.org/eautonome/obsFlowHeaterOutput20260627T034633"/>
+    <sosa:hasProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
+    <sosa:hasProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowTemperature"/>
+    <sosa:hasProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowVolume"/>
+    <sosa:hasProperty rdf:resource="https://saref.etsi.org/saref4watr/Conductivity"/>
+    <sosa:hasProperty rdf:resource="https://saref.etsi.org/saref4watr/Temperature"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/mpBathroomCold">
+    <rdf:type rdf:resource="https://w3id.org/eautonome/MeasurementPoint"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+    <rdfs:label xml:lang="en">Bathroom cold water measurement point</rdfs:label>
+    <rdfs:label xml:lang="fr">Point de mesure d'eau froide de la salle de bain</rdfs:label>
+    <rdfs:comment xml:lang="en">Measurement point on the bathroom cold water circuit.</rdfs:comment>
+    <eau:measuresWaterKind rdf:resource="https://saref.etsi.org/saref4watr/DrinkingWater"/>
+    <eau:locatedIn rdf:resource="https://w3id.org/eautonome/roomBathroom"/>
+    <eau:measuresOnAsset rdf:resource="https://w3id.org/eautonome/pipeBathroomCold"/>
+    <eau:servesEndpoint rdf:resource="https://w3id.org/eautonome/roomBathroom"/>
+    <sosa:hasProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/hasFlowEquation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/eautonome/VortexFlowmeter"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">has flow equation</rdfs:label>
+    <rdfs:comment xml:lang="en">Equation relating sensor current to measured flow rate.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/flowmeterMainInlet">
+    <rdf:type rdf:resource="https://w3id.org/eautonome/VortexFlowmeter"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+    <rdfs:label xml:lang="en">Main inlet flowmeter</rdfs:label>
+    <rdfs:label xml:lang="fr">Débitmètre entrée principale</rdfs:label>
+    <rdfs:comment xml:lang="en">ifm vortex flowmeter DN10.</rdfs:comment>
+    <eau:hasOperationalStatus>active</eau:hasOperationalStatus>
+    <eau:hasFlowEquation>Q = 2.0 * (I - 4)</eau:hasFlowEquation>
+    <eau:hasAnalogInput>AN3</eau:hasAnalogInput>
+    <eau:monitors rdf:resource="https://w3id.org/eautonome/mpMainInlet"/>
+    <sosa:observes rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
+    <sosa:forProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
+    <sosa:isHostedBy rdf:resource="https://w3id.org/eautonome/adcCard2"/>
+    <sosa:implements rdf:resource="https://w3id.org/eautonome/eautonomeObservingProcedure"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/jumoDigiLineShower">
+    <rdf:type rdf:resource="https://w3id.org/eautonome/ConductivityTemperatureSensor"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+    <rdfs:label xml:lang="en">Shower JUMO conductivity/temperature sensor</rdfs:label>
+    <rdfs:label xml:lang="fr">Capteur JUMO douche conductivité/température</rdfs:label>
+    <rdfs:comment xml:lang="en">JUMO digiLine CR sensor for the shower line.</rdfs:comment>
+    <eau:hasOperationalStatus>active</eau:hasOperationalStatus>
+    <eau:hasConductivityEquation>C = 1.036 * ((I - 4) / 16) * 2000 uS/cm</eau:hasConductivityEquation>
+    <eau:hasTemperatureEquation>T = 1.032 * ((I - 4) / 16) * 100 C</eau:hasTemperatureEquation>
+    <eau:hasAnalogInput>AN5</eau:hasAnalogInput>
+    <eau:monitors rdf:resource="https://w3id.org/eautonome/mpBathroomHot"/>
+    <sosa:observes rdf:resource="https://saref.etsi.org/saref4watr/FlowTemperature"/>
+    <sosa:forProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowTemperature"/>
+    <sosa:isHostedBy rdf:resource="https://w3id.org/eautonome/adcCard2"/>
+    <sosa:implements rdf:resource="https://w3id.org/eautonome/eautonomeObservingProcedure"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/mpMainInlet">
+    <rdf:type rdf:resource="https://w3id.org/eautonome/MeasurementPoint"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+    <rdfs:label xml:lang="en">Main inlet measurement point</rdfs:label>
+    <rdfs:label xml:lang="fr">Point de mesure entrée principale</rdfs:label>
+    <rdfs:comment xml:lang="en">Measurement point on the main cold water entry.</rdfs:comment>
+    <eau:measuresWaterKind rdf:resource="https://saref.etsi.org/saref4watr/DrinkingWater"/>
+    <eau:locatedIn rdf:resource="https://w3id.org/eautonome/roomBasement"/>
+    <eau:measuresOnAsset rdf:resource="https://w3id.org/eautonome/pipeColdWaterEntry"/>
+    <eau:servesEndpoint rdf:resource="https://w3id.org/eautonome/roomBasement"/>
+    <sosa:hasProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
+    <sosa:hasProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowTemperature"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/adcCard2">
+    <rdf:type rdf:resource="https://w3id.org/eautonome/ADConverter"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+    <rdfs:label xml:lang="en">ADC card 2</rdfs:label>
+    <rdfs:label xml:lang="fr">Carte ADC 2</rdfs:label>
+    <rdfs:comment xml:lang="en">MCC 128 ADC on SPI hat index 1.</rdfs:comment>
+    <eau:hasOperationalStatus>active</eau:hasOperationalStatus>
+    <sosa:hasSubSystem rdf:resource="https://w3id.org/eautonome/jumoDigiLineBoiler"/>
+    <sosa:hasSubSystem rdf:resource="https://w3id.org/eautonome/jumoDigiLineShower"/>
+    <sosa:hasSubSystem rdf:resource="https://w3id.org/eautonome/flowmeterWashingMachine"/>
+    <sosa:hasSubSystem rdf:resource="https://w3id.org/eautonome/flowmeterKitchenHot"/>
+    <sosa:hasSubSystem rdf:resource="https://w3id.org/eautonome/flowmeterMainInlet"/>
+    <sosa:hasSubSystem rdf:resource="https://w3id.org/eautonome/flowmeterToiletSink"/>
+    <sosa:hasSubSystem rdf:resource="https://w3id.org/eautonome/tempSensorMainInlet"/>
+    <sosa:isHostedBy rdf:resource="https://w3id.org/eautonome/raspberryPi4"/>
+    <sosa:hosts rdf:resource="https://w3id.org/eautonome/jumoDigiLineBoiler"/>
+    <sosa:hosts rdf:resource="https://w3id.org/eautonome/jumoDigiLineShower"/>
+    <sosa:hosts rdf:resource="https://w3id.org/eautonome/flowmeterWashingMachine"/>
+    <sosa:hosts rdf:resource="https://w3id.org/eautonome/flowmeterKitchenHot"/>
+    <sosa:hosts rdf:resource="https://w3id.org/eautonome/flowmeterMainInlet"/>
+    <sosa:hosts rdf:resource="https://w3id.org/eautonome/flowmeterToiletSink"/>
+    <sosa:hosts rdf:resource="https://w3id.org/eautonome/tempSensorMainInlet"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/flowmeterWashingMachine">
+    <rdf:type rdf:resource="https://w3id.org/eautonome/VortexFlowmeter"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+    <rdfs:label xml:lang="en">Washing machine flowmeter</rdfs:label>
+    <rdfs:label xml:lang="fr">Débitmètre de la machine à laver</rdfs:label>
+    <rdfs:comment xml:lang="en">Measures water supply to the washing machine.</rdfs:comment>
+    <eau:hasOperationalStatus>inactive</eau:hasOperationalStatus>
+    <eau:hasFlowEquation>Q = 0.938 * (I - 4)</eau:hasFlowEquation>
+    <eau:hasCalibrationSlope rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.957</eau:hasCalibrationSlope>
+    <eau:hasCalibrationR2 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.9988</eau:hasCalibrationR2>
+    <eau:hasAnalogInput>AN2</eau:hasAnalogInput>
+    <eau:monitors rdf:resource="https://w3id.org/eautonome/mpWashingMachine"/>
+    <sosa:observes rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
+    <sosa:forProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
+    <sosa:isHostedBy rdf:resource="https://w3id.org/eautonome/adcCard2"/>
+    <sosa:implements rdf:resource="https://w3id.org/eautonome/eautonomeObservingProcedure"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/VortexFlowmeter">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    <rdfs:subClassOf rdf:resource="https://saref.etsi.org/saref4watr/WaterMeter"/>
+    <rdfs:label xml:lang="en">Vortex flowmeter</rdfs:label>
+    <rdfs:label xml:lang="fr">Débitmètre à effet vortex</rdfs:label>
+    <rdfs:comment xml:lang="en">A sensor measuring water flow rate.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
+    <rdfs:label xml:lang="en">The Eautonome Ontology</rdfs:label>
+    <rdfs:label xml:lang="fr">L'ontologie Eautonome</rdfs:label>
+    <dcterms:title xml:lang="en">The Eautonome Ontology</dcterms:title>
+    <dcterms:title xml:lang="fr">L'ontologie Eautonome</dcterms:title>
+    <dcterms:description xml:lang="en">The Eautonome Ontology provides an OWL representation of residential water end-use monitoring. It models domestic water uses, quality levels, and greywater reuse processes, specifically describing the monitoring and observations of the system to reduce water consumption.</dcterms:description>
+    <dcterms:description xml:lang="fr">L'ontologie Eautonome fournit une représentation OWL du suivi des usages résidentiels de l'eau. Elle modélise les usages domestiques de l'eau, les niveaux de qualité et les processus de réutilisation des eaux grises, en décrivant spécifiquement le suivi et les observations du système pour réduire la consommation d'eau.</dcterms:description>
+    <dcterms:creator rdf:resource="https://w3id.org/people/erdemonal/me"/>
+    <dcterms:contributor rdf:resource="https://orcid.org/0000-0001-7633-6318"/>
+    <dcterms:publisher rdf:resource="https://www.leesu.fr/"/>
+    <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+    <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-04-03</dcterms:created>
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-04-04</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-07</dcterms:modified>
+    <dcterms:source rdf:resource="https://www.leesu.fr/eautonome"/>
+    <dcterms:identifier rdf:resource="https://doi.org/10.5281/zenodo.22229871"/>
+    <dcterms:isVersionOf rdf:resource="https://doi.org/10.5281/zenodo.21894601"/>
+    <bibo:doi>10.5281/zenodo.22229871</bibo:doi>
+    <schema1:logo rdf:resource="https://eautonome.github.io/eautonome/logo.svg"/>
+    <schema1:includedInDataCatalog rdf:resource="https://lov.linkeddata.es/dataset/lov"/>
+    <mod:status>release</mod:status>
+    <dcterms:bibliographicCitation xml:lang="en">Önal, E. The Eautonome Ontology (Version v1.0.1). https://doi.org/10.5281/zenodo.22229871</dcterms:bibliographicCitation>
+    <owl:versionInfo>1.0.1</owl:versionInfo>
+    <owl:versionIRI rdf:resource="https://w3id.org/eautonome/1.0.1"/>
+    <vann:preferredNamespacePrefix>eau</vann:preferredNamespacePrefix>
+    <vann:preferredNamespaceUri>https://w3id.org/eautonome/</vann:preferredNamespaceUri>
+    <rdfs:seeAlso rdf:resource="https://www.leesu.fr/eautonome"/>
+    <owl:imports rdf:resource="http://www.w3.org/ns/sosa/2023/"/>
+    <owl:imports rdf:resource="https://saref.etsi.org/saref4watr/v2.1.1/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/pipeBathroomCold">
+    <rdf:type rdf:resource="https://saref.etsi.org/saref4watr/Pipe"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+    <rdfs:label xml:lang="en">Bathroom cold water pipe</rdfs:label>
+    <rdfs:label xml:lang="fr">Tuyauterie SDB eau froide</rdfs:label>
+    <rdfs:comment xml:lang="en">Cold water pipe for the bathroom.</rdfs:comment>
+    <s4watr:isDesignedFor rdf:resource="https://saref.etsi.org/saref4watr/DrinkingWater"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/mpWashingMachine">
+    <rdf:type rdf:resource="https://w3id.org/eautonome/MeasurementPoint"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+    <rdfs:label xml:lang="en">Washing machine measurement point</rdfs:label>
+    <rdfs:label xml:lang="fr">Point de mesure de la machine à laver</rdfs:label>
+    <rdfs:comment xml:lang="en">Measurement point for water to the washing machine.</rdfs:comment>
+    <eau:measuresWaterKind rdf:resource="https://saref.etsi.org/saref4watr/DrinkingWater"/>
+    <eau:locatedIn rdf:resource="https://w3id.org/eautonome/roomBathroom"/>
+    <eau:measuresOnAsset rdf:resource="https://w3id.org/eautonome/pipeWashingMachine"/>
+    <eau:servesEndpoint rdf:resource="https://w3id.org/eautonome/roomBathroom"/>
+    <sosa:hasProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/hasTemperatureEquation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">has temperature equation</rdfs:label>
+    <rdfs:comment xml:lang="en">Equation relating sensor current to measured temperature.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/ConsumptionEvent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Event"/>
+    <rdfs:label xml:lang="en">Consumption event</rdfs:label>
+    <rdfs:label xml:lang="fr">Événement de consommation</rdfs:label>
+    <rdfs:comment xml:lang="en">A domestic water use activity. It complements sosa:phenomenonTime on observation collections.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/eautonomeSystem">
+    <rdf:type rdf:resource="https://w3id.org/eautonome/GreywaterRecyclingSystem"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
     <rdfs:label xml:lang="en">Eautonome pilot system</rdfs:label>
@@ -1104,167 +426,955 @@
     <rdfs:comment xml:lang="en">A greywater recycling pilot installation located in a residential house in Noisiel.</rdfs:comment>
     <eau:hasOperationalStatus>active</eau:hasOperationalStatus>
     <s4watr:isDesignedFor rdf:resource="https://w3id.org/eautonome/Greywater"/>
-    <s4watr:isDesignedFor>
-      <owl:NamedIndividual rdf:about="https://w3id.org/eautonome/TreatedGreywater">
-        <rdf:type rdf:resource="https://saref.etsi.org/saref4watr/WaterKind"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-        <rdfs:label xml:lang="en">Treated greywater</rdfs:label>
-        <rdfs:label xml:lang="fr">Eaux grises traitées</rdfs:label>
-        <rdfs:comment xml:lang="en">Greywater after treatment.</rdfs:comment>
-      </owl:NamedIndividual>
-    </s4watr:isDesignedFor>
-    <s4watr:isIntendedFor>
-      <owl:NamedIndividual rdf:about="https://w3id.org/eautonome/DomesticReuse">
-        <rdf:type rdf:resource="https://saref.etsi.org/saref4watr/WaterUse"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-        <rdfs:label xml:lang="en">Domestic reuse</rdfs:label>
-        <rdfs:label xml:lang="fr">Réutilisation domestique</rdfs:label>
-        <rdfs:comment xml:lang="en">Water reused in the household.</rdfs:comment>
-      </owl:NamedIndividual>
-    </s4watr:isIntendedFor>
+    <s4watr:isDesignedFor rdf:resource="https://w3id.org/eautonome/TreatedGreywater"/>
+    <s4watr:isIntendedFor rdf:resource="https://w3id.org/eautonome/DomesticReuse"/>
     <s4watr:isIntendedFor rdf:resource="https://saref.etsi.org/saref4watr/Domestic"/>
     <sosa:hasDeployment rdf:resource="https://w3id.org/eautonome/eautonomeDeployment"/>
     <sosa:hosts rdf:resource="https://w3id.org/eautonome/raspberryPi4"/>
-  </eau:GreywaterRecyclingSystem>
-  <eau:DomesticRoom rdf:about="https://w3id.org/eautonome/roomKitchen">
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/isMeasuredAt">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4watr/WaterAsset"/>
+    <rdfs:range rdf:resource="https://w3id.org/eautonome/MeasurementPoint"/>
+    <owl:inverseOf rdf:resource="https://w3id.org/eautonome/measuresOnAsset"/>
+    <rdfs:label xml:lang="en">is measured at</rdfs:label>
+    <rdfs:comment xml:lang="en">Links a water asset to the measurement point that instruments it.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/jumoDigiLineBoiler">
+    <rdf:type rdf:resource="https://w3id.org/eautonome/ConductivityTemperatureSensor"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-    <rdfs:label xml:lang="en">Kitchen</rdfs:label>
-    <rdfs:label xml:lang="fr">Cuisine</rdfs:label>
-    <rdfs:comment xml:lang="en">A domestic room primarily used for cooking and dishwashing.</rdfs:comment>
-  </eau:DomesticRoom>
-  <eau:DomesticRoom rdf:about="https://w3id.org/eautonome/roomBasement">
+    <rdfs:label xml:lang="en">Boiler JUMO conductivity/temperature sensor</rdfs:label>
+    <rdfs:label xml:lang="fr">Capteur JUMO chaudière conductivité/température</rdfs:label>
+    <rdfs:comment xml:lang="en">JUMO digiLine CR sensor for the boiler line.</rdfs:comment>
+    <eau:hasOperationalStatus>active</eau:hasOperationalStatus>
+    <eau:hasConductivityEquation>C = 1.036 * ((I - 4) / 16) * 2000 uS/cm</eau:hasConductivityEquation>
+    <eau:hasTemperatureEquation>T = 1.032 * ((I - 4) / 16) * 100 C</eau:hasTemperatureEquation>
+    <eau:hasAnalogInput>AN0</eau:hasAnalogInput>
+    <eau:hasAnalogInput>AN1</eau:hasAnalogInput>
+    <eau:monitors rdf:resource="https://w3id.org/eautonome/mpHeaterOutput"/>
+    <sosa:observes rdf:resource="https://saref.etsi.org/saref4watr/Conductivity"/>
+    <sosa:observes rdf:resource="https://saref.etsi.org/saref4watr/FlowTemperature"/>
+    <sosa:forProperty rdf:resource="https://saref.etsi.org/saref4watr/Conductivity"/>
+    <sosa:forProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowTemperature"/>
+    <sosa:isHostedBy rdf:resource="https://w3id.org/eautonome/adcCard2"/>
+    <sosa:implements rdf:resource="https://w3id.org/eautonome/eautonomeObservingProcedure"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/showerObservingProcedure">
+    <rdf:type rdf:resource="https://w3id.org/eautonome/ShowerObservingProcedure"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-    <rdfs:label xml:lang="en">Basement</rdfs:label>
-    <rdfs:label xml:lang="fr">Cave</rdfs:label>
-    <rdfs:comment xml:lang="en">A domestic room holding the connection to the cold water supply.</rdfs:comment>
-  </eau:DomesticRoom>
-  <owl:ObjectProperty rdf:about="https://w3id.org/eautonome/hasPipeConfiguration">
-    <rdfs:domain>
-      <owl:Class rdf:nodeID="neafc0a186dcc47bc9e960b290a8eb5ceb6">
-        <owl:unionOf rdf:parseType="Collection">
-          <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Deployment"/>
-          <rdf:Description rdf:about="http://www.w3.org/ns/sosa/ObservingProcedure"/>
-          <rdf:Description rdf:about="http://www.w3.org/ns/sosa/ObservationCollection"/>
-        </owl:unionOf>
-      </owl:Class>
-    </rdfs:domain>
-    <rdfs:range rdf:resource="https://w3id.org/eautonome/PipeConfiguration"/>
-    <owl:inverseOf>
-      <owl:ObjectProperty rdf:about="https://w3id.org/eautonome/isPipeConfigurationOf">
-        <rdfs:domain rdf:resource="https://w3id.org/eautonome/PipeConfiguration"/>
-        <rdfs:range>
-          <owl:Class rdf:nodeID="neafc0a186dcc47bc9e960b290a8eb5ceb10">
-            <owl:unionOf rdf:parseType="Collection">
-              <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Deployment"/>
-              <rdf:Description rdf:about="http://www.w3.org/ns/sosa/ObservingProcedure"/>
-              <rdf:Description rdf:about="http://www.w3.org/ns/sosa/ObservationCollection"/>
-            </owl:unionOf>
-          </owl:Class>
-        </rdfs:range>
-        <owl:inverseOf rdf:resource="https://w3id.org/eautonome/hasPipeConfiguration"/>
-        <rdfs:label xml:lang="en">is pipe configuration of</rdfs:label>
-        <rdfs:label xml:lang="fr">est la configuration de tuyauterie de</rdfs:label>
-        <rdfs:comment xml:lang="en">Relates a pipe configuration to a deployment, observing procedure, or observation collection.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-      </owl:ObjectProperty>
-    </owl:inverseOf>
-    <rdfs:label xml:lang="en">has pipe configuration</rdfs:label>
-    <rdfs:label xml:lang="fr">a pour configuration de tuyauterie</rdfs:label>
-    <rdfs:comment xml:lang="en">Relates a deployment, observing procedure, or observation collection to the pipe configuration.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-  </owl:ObjectProperty>
-  <owl:Class rdf:about="https://w3id.org/eautonome/ShowerObservingProcedure">
-    <rdfs:subClassOf rdf:resource="https://w3id.org/eautonome/EautonomeObservingProcedure"/>
     <rdfs:label xml:lang="en">Shower observing procedure</rdfs:label>
     <rdfs:label xml:lang="fr">Procédure d'observation douche</rdfs:label>
-    <rdfs:comment xml:lang="en">Data acquisition for shower via Bluetooth.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-  </owl:Class>
-  <owl:Class rdf:about="https://w3id.org/eautonome/ConsumptionEvent">
-    <rdfs:subClassOf rdf:resource="http://schema.org/Event"/>
-    <rdfs:label xml:lang="en">Consumption event</rdfs:label>
-    <rdfs:label xml:lang="fr">Événement de consommation</rdfs:label>
-    <rdfs:comment xml:lang="en">A domestic water use activity. It complements sosa:phenomenonTime on observation collections.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-  </owl:Class>
-  <sosa:ObservationCollection rdf:about="https://w3id.org/eautonome/condFlowmeterHeaterOutput">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-    <rdfs:label xml:lang="en">Operating conditions for heater output flowmeter</rdfs:label>
-    <rdfs:comment xml:lang="en">Nominal operation with domestic hot water flow.</rdfs:comment>
-    <sosa:hasFeatureOfInterest rdf:resource="https://w3id.org/eautonome/flowmeterHeaterOutput"/>
-    <sosa:observedProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowTemperature"/>
-  </sosa:ObservationCollection>
-  <owl:Class rdf:about="https://w3id.org/eautonome/ConductivityTemperatureSensor">
-    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
-    <rdfs:subClassOf rdf:resource="https://saref.etsi.org/saref4watr/WaterDevice"/>
-    <rdfs:label xml:lang="en">Conductivity and temperature sensor</rdfs:label>
-    <rdfs:label xml:lang="fr">Capteur de conductivité et de température</rdfs:label>
-    <rdfs:comment xml:lang="en">A sensor measuring both the electrical conductivity and temperature of water.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-  </owl:Class>
-  <owl:Class rdf:about="https://w3id.org/eautonome/VortexFlowmeter">
-    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
-    <rdfs:subClassOf>
-      <rdf:Description rdf:about="https://saref.etsi.org/saref4watr/WaterMeter">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/System"/>
-      </rdf:Description>
-    </rdfs:subClassOf>
-    <rdfs:label xml:lang="en">Vortex flowmeter</rdfs:label>
-    <rdfs:label xml:lang="fr">Débitmètre à effet vortex</rdfs:label>
-    <rdfs:comment xml:lang="en">A sensor measuring water flow rate.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-  </owl:Class>
-  <s4watr:Pipe rdf:about="https://w3id.org/eautonome/pipeWashingMachine">
+    <rdfs:comment xml:lang="en">Shower data acquisition via Bluetooth.</rdfs:comment>
+    <sosa:implementedBy rdf:resource="https://w3id.org/eautonome/hansaActivejetDigital"/>
+    <sosa:forProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
+    <sosa:forProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowVolume"/>
+    <sosa:forProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowTemperature"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/pipeWashingMachine">
+    <rdf:type rdf:resource="https://saref.etsi.org/saref4watr/Pipe"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
     <rdfs:label xml:lang="en">Washing machine pipe</rdfs:label>
     <rdfs:label xml:lang="fr">Tuyauterie de la machine à laver</rdfs:label>
     <rdfs:comment xml:lang="en">Water pipe supplying the washing machine.</rdfs:comment>
     <s4watr:isDesignedFor rdf:resource="https://saref.etsi.org/saref4watr/DrinkingWater"/>
-  </s4watr:Pipe>
-  <owl:Class rdf:about="https://w3id.org/eautonome/MeasurementPoint">
-    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
-    <rdfs:subClassOf rdf:resource="https://saref.etsi.org/saref4watr/WaterAsset"/>
-    <rdfs:label xml:lang="en">Measurement point</rdfs:label>
-    <rdfs:label xml:lang="fr">Point de mesure</rdfs:label>
-    <rdfs:comment xml:lang="en">A location within the water infrastructure at which observations are made.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-  </owl:Class>
-  <eau:DomesticRoom rdf:about="https://w3id.org/eautonome/roomBathroom">
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/pipeBasementCold">
+    <rdf:type rdf:resource="https://saref.etsi.org/saref4watr/Pipe"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-    <rdfs:label xml:lang="en">Bathroom</rdfs:label>
-    <rdfs:label xml:lang="fr">Salle de bain</rdfs:label>
-    <rdfs:comment xml:lang="en">A domestic room primarily used for bathing, sink use, and laundry water consumption.</rdfs:comment>
-  </eau:DomesticRoom>
-  <owl:Class rdf:about="https://w3id.org/eautonome/PipeConfiguration">
-    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
-    <rdfs:label xml:lang="en">Pipe configuration</rdfs:label>
-    <rdfs:label xml:lang="fr">Configuration de tuyauterie</rdfs:label>
-    <rdfs:comment xml:lang="en">A pipe configuration, where geometry affects flow measurements.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-  </owl:Class>
-  <s4watr:Pipe rdf:about="https://w3id.org/eautonome/pipeKitchenCold">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
-    <rdfs:label xml:lang="en">Kitchen cold water pipe</rdfs:label>
-    <rdfs:label xml:lang="fr">Tuyauterie cuisine eau froide</rdfs:label>
-    <rdfs:comment xml:lang="en">Cold water pipe for the kitchen.</rdfs:comment>
+    <rdfs:label xml:lang="en">Basement pipe</rdfs:label>
+    <rdfs:label xml:lang="fr">Tuyauterie de la cave</rdfs:label>
+    <rdfs:comment xml:lang="en">Cold water pipe in the basement.</rdfs:comment>
     <s4watr:isDesignedFor rdf:resource="https://saref.etsi.org/saref4watr/DrinkingWater"/>
-  </s4watr:Pipe>
-  <s4watr:Pipe rdf:about="https://w3id.org/eautonome/pipeKitchenHot">
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b29">
+    <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+    <qudt:value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.71</qudt:value>
+    <qudt:hasUnit rdf:resource="http://qudt.org/vocab/unit/L-PER-MIN"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/mpKitchenCold">
+    <rdf:type rdf:resource="https://w3id.org/eautonome/MeasurementPoint"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+    <rdfs:label xml:lang="en">Kitchen cold water measurement point</rdfs:label>
+    <rdfs:label xml:lang="fr">Point de mesure cuisine eau froide</rdfs:label>
+    <rdfs:comment xml:lang="en">Measurement point on the kitchen cold water circuit.</rdfs:comment>
+    <eau:measuresWaterKind rdf:resource="https://saref.etsi.org/saref4watr/DrinkingWater"/>
+    <eau:locatedIn rdf:resource="https://w3id.org/eautonome/roomKitchen"/>
+    <eau:measuresOnAsset rdf:resource="https://w3id.org/eautonome/pipeKitchenCold"/>
+    <eau:servesEndpoint rdf:resource="https://w3id.org/eautonome/roomKitchen"/>
+    <sosa:hasProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/eautonomeObservingProcedure">
+    <rdf:type rdf:resource="https://w3id.org/eautonome/EautonomeObservingProcedure"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+    <rdfs:label xml:lang="en">Eautonome observing procedure</rdfs:label>
+    <rdfs:label xml:lang="fr">Procédure d'observation Eautonome</rdfs:label>
+    <rdfs:comment xml:lang="en">Data acquisition via ADC on the Raspberry Pi.</rdfs:comment>
+    <sosa:implementedBy rdf:resource="https://w3id.org/eautonome/flowmeterHeaterOutput"/>
+    <sosa:implementedBy rdf:resource="https://w3id.org/eautonome/flowmeterBathroomHot"/>
+    <sosa:implementedBy rdf:resource="https://w3id.org/eautonome/flowmeterBathroomCold"/>
+    <sosa:implementedBy rdf:resource="https://w3id.org/eautonome/flowmeterWashingMachine"/>
+    <sosa:implementedBy rdf:resource="https://w3id.org/eautonome/flowmeterBasementCold"/>
+    <sosa:implementedBy rdf:resource="https://w3id.org/eautonome/flowmeterToiletCold"/>
+    <sosa:implementedBy rdf:resource="https://w3id.org/eautonome/flowmeterKitchenCold"/>
+    <sosa:implementedBy rdf:resource="https://w3id.org/eautonome/flowmeterKitchenHot"/>
+    <sosa:implementedBy rdf:resource="https://w3id.org/eautonome/flowmeterToiletSink"/>
+    <sosa:implementedBy rdf:resource="https://w3id.org/eautonome/flowmeterMainInlet"/>
+    <sosa:implementedBy rdf:resource="https://w3id.org/eautonome/tempSensorMainInlet"/>
+    <sosa:implementedBy rdf:resource="https://w3id.org/eautonome/jumoDigiLineBoiler"/>
+    <sosa:implementedBy rdf:resource="https://w3id.org/eautonome/jumoDigiLineShower"/>
+    <sosa:forProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
+    <sosa:forProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowTemperature"/>
+    <sosa:forProperty rdf:resource="https://saref.etsi.org/saref4watr/Conductivity"/>
+    <eau:hasTriggerThreshold rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.05</eau:hasTriggerThreshold>
+    <eau:hasSamplingPeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2</eau:hasSamplingPeriod>
+    <eau:hasTransmissionInterval rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">360</eau:hasTransmissionInterval>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/ConductivityTemperatureSensor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    <rdfs:subClassOf rdf:resource="https://saref.etsi.org/saref4watr/WaterDevice"/>
+    <rdfs:label xml:lang="en">Conductivity and temperature sensor</rdfs:label>
+    <rdfs:label xml:lang="fr">Capteur de conductivité et de température</rdfs:label>
+    <rdfs:comment xml:lang="en">A sensor measuring both the electrical conductivity and temperature of water.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/monitors">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    <rdfs:range rdf:resource="https://w3id.org/eautonome/MeasurementPoint"/>
+    <owl:inverseOf rdf:resource="https://w3id.org/eautonome/isMonitoredBy"/>
+    <rdfs:label xml:lang="en">monitors</rdfs:label>
+    <rdfs:label xml:lang="fr">surveille</rdfs:label>
+    <rdfs:comment xml:lang="en">Static topology link from a sensor to the measurement point it monitors, independent of any observation.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/isServedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/eautonome/DomesticRoom"/>
+    <rdfs:range rdf:resource="https://w3id.org/eautonome/MeasurementPoint"/>
+    <owl:inverseOf rdf:resource="https://w3id.org/eautonome/servesEndpoint"/>
+    <rdfs:label xml:lang="en">is served by</rdfs:label>
+    <rdfs:comment xml:lang="en">Links a domestic room to a measurement point that serves it as water use endpoint.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://saref.etsi.org/saref4watr/FlowTemperature">
+    <sosa:isObservedBy rdf:resource="https://w3id.org/eautonome/flowmeterHeaterOutput"/>
+    <sosa:isObservedBy rdf:resource="https://w3id.org/eautonome/jumoDigiLineBoiler"/>
+    <sosa:isObservedBy rdf:resource="https://w3id.org/eautonome/jumoDigiLineShower"/>
+    <sosa:isObservedBy rdf:resource="https://w3id.org/eautonome/hansaActivejetDigital"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/ShowerObservingProcedure">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eautonome/EautonomeObservingProcedure"/>
+    <rdfs:label xml:lang="en">Shower observing procedure</rdfs:label>
+    <rdfs:label xml:lang="fr">Procédure d'observation douche</rdfs:label>
+    <rdfs:comment xml:lang="en">Data acquisition for shower via Bluetooth.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://saref.etsi.org/saref4watr/WaterMeter">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/System"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/hasTransmissionInterval">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/eautonome/EautonomeObservingProcedure"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label xml:lang="en">has transmission interval</rdfs:label>
+    <rdfs:comment xml:lang="en">Time interval between consecutive observation recordings, in seconds.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b11">
+    <rdf:first rdf:resource="http://www.w3.org/ns/sosa/Deployment"/>
+    <rdf:rest rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b12"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/pipeColdWaterEntry">
+    <rdf:type rdf:resource="https://saref.etsi.org/saref4watr/Pipe"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+    <rdfs:label xml:lang="en">Cold water main entry</rdfs:label>
+    <rdfs:label xml:lang="fr">Arrivée d'eau froide</rdfs:label>
+    <rdfs:comment xml:lang="en">Entry pipe for cold water.</rdfs:comment>
+    <s4watr:isDesignedFor rdf:resource="https://saref.etsi.org/saref4watr/DrinkingWater"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/obsFlowMainInlet20260627T020617">
+    <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+    <rdfs:comment xml:lang="en">Measurement of flow rate at the main inlet.</rdfs:comment>
+    <sosa:madeBySensor rdf:resource="https://w3id.org/eautonome/flowmeterMainInlet"/>
+    <sosa:observedProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
+    <sosa:hasFeatureOfInterest rdf:resource="https://w3id.org/eautonome/mpMainInlet"/>
+    <sosa:hasUltimateFeatureOfInterest rdf:resource="https://w3id.org/eautonome/domesticGreywater"/>
+    <sosa:usedProcedure rdf:resource="https://w3id.org/eautonome/eautonomeObservingProcedure"/>
+    <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-06-27T02:06:17+02:00</sosa:resultTime>
+    <sosa:hasSimpleResult rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.71</sosa:hasSimpleResult>
+    <sosa:hasResult rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b29"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/roomBasement">
+    <rdf:type rdf:resource="https://w3id.org/eautonome/DomesticRoom"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+    <rdfs:label xml:lang="en">Basement</rdfs:label>
+    <rdfs:label xml:lang="fr">Cave</rdfs:label>
+    <rdfs:comment xml:lang="en">A domestic room holding the connection to the cold water supply.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/isMonitoredBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/eautonome/MeasurementPoint"/>
+    <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    <owl:inverseOf rdf:resource="https://w3id.org/eautonome/monitors"/>
+    <rdfs:label xml:lang="en">is monitored by</rdfs:label>
+    <rdfs:label xml:lang="fr">est surveillé par</rdfs:label>
+    <rdfs:comment xml:lang="en">Static topology link from a measurement point to the sensor that monitors it, independent of any observation.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/locatedIn">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/eautonome/MeasurementPoint"/>
+    <rdfs:range rdf:resource="https://w3id.org/eautonome/DomesticRoom"/>
+    <owl:inverseOf rdf:resource="https://w3id.org/eautonome/isLocationOf"/>
+    <rdfs:label xml:lang="en">located in</rdfs:label>
+    <rdfs:comment xml:lang="en">The room where the measurement point is located.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/flowmeterKitchenCold">
+    <rdf:type rdf:resource="https://w3id.org/eautonome/VortexFlowmeter"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+    <rdfs:label xml:lang="en">Kitchen cold water flowmeter</rdfs:label>
+    <rdfs:label xml:lang="fr">Débitmètre cuisine eau froide</rdfs:label>
+    <rdfs:comment xml:lang="en">Measures cold water flow to the kitchen circuit.</rdfs:comment>
+    <eau:hasOperationalStatus>active</eau:hasOperationalStatus>
+    <eau:hasFlowEquation>Q = 0.938 * (I - 4)</eau:hasFlowEquation>
+    <eau:hasAnalogInput>AN7</eau:hasAnalogInput>
+    <eau:monitors rdf:resource="https://w3id.org/eautonome/mpKitchenCold"/>
+    <sosa:observes rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
+    <sosa:forProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
+    <sosa:isHostedBy rdf:resource="https://w3id.org/eautonome/adcCard1"/>
+    <sosa:implements rdf:resource="https://w3id.org/eautonome/eautonomeObservingProcedure"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/EautonomeObservingProcedure">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/ObservingProcedure"/>
+    <rdfs:label xml:lang="en">Eautonome observing procedure</rdfs:label>
+    <rdfs:label xml:lang="fr">Procédure d'observation Eautonome</rdfs:label>
+    <rdfs:comment xml:lang="en">Data acquisition via ADC on the Raspberry Pi.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/hasSamplingPeriod">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/eautonome/EautonomeObservingProcedure"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label xml:lang="en">has sampling period</rdfs:label>
+    <rdfs:comment xml:lang="en">Interval between sensor samples, in seconds.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/hasOperationalStatus">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/System"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">has operational status</rdfs:label>
+    <rdfs:comment xml:lang="en">Current status of the system, can be active, inactive, or planned.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/eventEveningShower20260627">
+    <rdf:type rdf:resource="https://w3id.org/eautonome/ConsumptionEvent"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+    <rdfs:label xml:lang="en">Evening shower event</rdfs:label>
+    <rdfs:label xml:lang="fr">Événement de douche du soir</rdfs:label>
+    <rdfs:comment xml:lang="en">An evening water consumption event.</rdfs:comment>
+    <time:hasBeginning rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b25"/>
+    <time:hasEnd rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b26"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/TreatedGreywater">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://saref.etsi.org/saref4watr/WaterKind"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+    <rdfs:label xml:lang="en">Treated greywater</rdfs:label>
+    <rdfs:label xml:lang="fr">Eaux grises traitées</rdfs:label>
+    <rdfs:comment xml:lang="en">Greywater after treatment.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/hasConsumptionEvent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/ObservationCollection"/>
+    <rdfs:range rdf:resource="https://w3id.org/eautonome/ConsumptionEvent"/>
+    <owl:inverseOf rdf:resource="https://w3id.org/eautonome/isConsumptionEventOf"/>
+    <rdfs:label xml:lang="en">has consumption event</rdfs:label>
+    <rdfs:comment xml:lang="en">Links an observation collection to the domestic usage activity it represents.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/flowmeterToiletCold">
+    <rdf:type rdf:resource="https://w3id.org/eautonome/VortexFlowmeter"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+    <rdfs:label xml:lang="en">Toilet flowmeter</rdfs:label>
+    <rdfs:label xml:lang="fr">Débitmètre des toilettes</rdfs:label>
+    <rdfs:comment xml:lang="en">Measures flow to the toilet.</rdfs:comment>
+    <eau:hasOperationalStatus>inactive</eau:hasOperationalStatus>
+    <eau:hasFlowEquation>Q = 0.938 * (I - 4)</eau:hasFlowEquation>
+    <eau:hasCalibrationSlope rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.957</eau:hasCalibrationSlope>
+    <eau:hasCalibrationR2 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.9988</eau:hasCalibrationR2>
+    <eau:hasAnalogInput>AN1</eau:hasAnalogInput>
+    <eau:monitors rdf:resource="https://w3id.org/eautonome/mpToiletCold"/>
+    <sosa:observes rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
+    <sosa:forProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
+    <sosa:isHostedBy rdf:resource="https://w3id.org/eautonome/adcCard1"/>
+    <sosa:implements rdf:resource="https://w3id.org/eautonome/eautonomeObservingProcedure"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/flowmeterToiletSink">
+    <rdf:type rdf:resource="https://w3id.org/eautonome/VortexFlowmeter"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+    <rdfs:label xml:lang="en">WC sink flowmeter</rdfs:label>
+    <rdfs:label xml:lang="fr">Débitmètre lavabo WC</rdfs:label>
+    <rdfs:comment xml:lang="en">Measures flow to the toilet sink.</rdfs:comment>
+    <eau:hasOperationalStatus>active</eau:hasOperationalStatus>
+    <eau:hasFlowEquation>Q = 0.938 * (I - 4)</eau:hasFlowEquation>
+    <eau:hasAnalogInput>AN7</eau:hasAnalogInput>
+    <eau:monitors rdf:resource="https://w3id.org/eautonome/mpToiletSink"/>
+    <sosa:observes rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
+    <sosa:forProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
+    <sosa:isHostedBy rdf:resource="https://w3id.org/eautonome/adcCard2"/>
+    <sosa:implements rdf:resource="https://w3id.org/eautonome/eautonomeObservingProcedure"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/isPipeConfigurationOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/eautonome/PipeConfiguration"/>
+    <rdfs:range rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b10"/>
+    <owl:inverseOf rdf:resource="https://w3id.org/eautonome/hasPipeConfiguration"/>
+    <rdfs:label xml:lang="en">is pipe configuration of</rdfs:label>
+    <rdfs:label xml:lang="fr">est la configuration de tuyauterie de</rdfs:label>
+    <rdfs:comment xml:lang="en">Relates a pipe configuration to a deployment, observing procedure, or observation collection.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b17">
+    <rdf:first rdf:resource="https://w3id.org/eautonome/PipeConfiguration"/>
+    <rdf:rest rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b18"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/condHansaActivejetDigital">
+    <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservationCollection"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+    <rdfs:label xml:lang="en">Operating conditions for HANSA Activejet Digital</rdfs:label>
+    <rdfs:comment xml:lang="en">Nominal shower operation with Bluetooth communication and domestic water flow.</rdfs:comment>
+    <sosa:hasFeatureOfInterest rdf:resource="https://w3id.org/eautonome/hansaActivejetDigital"/>
+    <sosa:observedProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/eautonomeDeployment">
+    <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Deployment"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+    <rdfs:label xml:lang="en">Eautonome deployment</rdfs:label>
+    <rdfs:label xml:lang="fr">Déploiement Eautonome</rdfs:label>
+    <rdfs:comment xml:lang="en">The configuration of sensors and platforms within the system.</rdfs:comment>
+    <sosa:startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-07-15T07:30:00+02:00</sosa:startTime>
+    <sosa:deployedOnPlatform rdf:resource="https://w3id.org/eautonome/raspberryPi4"/>
+    <sosa:deployedSystem rdf:resource="https://w3id.org/eautonome/flowmeterHeaterOutput"/>
+    <sosa:deployedSystem rdf:resource="https://w3id.org/eautonome/flowmeterBathroomHot"/>
+    <sosa:deployedSystem rdf:resource="https://w3id.org/eautonome/flowmeterBathroomCold"/>
+    <sosa:deployedSystem rdf:resource="https://w3id.org/eautonome/flowmeterWashingMachine"/>
+    <sosa:deployedSystem rdf:resource="https://w3id.org/eautonome/flowmeterBasementCold"/>
+    <sosa:deployedSystem rdf:resource="https://w3id.org/eautonome/flowmeterToiletCold"/>
+    <sosa:deployedSystem rdf:resource="https://w3id.org/eautonome/flowmeterKitchenCold"/>
+    <sosa:deployedSystem rdf:resource="https://w3id.org/eautonome/flowmeterKitchenHot"/>
+    <sosa:deployedSystem rdf:resource="https://w3id.org/eautonome/flowmeterToiletSink"/>
+    <sosa:deployedSystem rdf:resource="https://w3id.org/eautonome/flowmeterMainInlet"/>
+    <sosa:deployedSystem rdf:resource="https://w3id.org/eautonome/tempSensorMainInlet"/>
+    <sosa:deployedSystem rdf:resource="https://w3id.org/eautonome/jumoDigiLineBoiler"/>
+    <sosa:deployedSystem rdf:resource="https://w3id.org/eautonome/jumoDigiLineShower"/>
+    <sosa:deployedSystem rdf:resource="https://w3id.org/eautonome/hansaActivejetDigital"/>
+    <sosa:hasFeatureOfInterest rdf:resource="https://w3id.org/eautonome/mpHeaterOutput"/>
+    <sosa:hasFeatureOfInterest rdf:resource="https://w3id.org/eautonome/mpBathroomHot"/>
+    <sosa:hasFeatureOfInterest rdf:resource="https://w3id.org/eautonome/mpBathroomCold"/>
+    <sosa:hasFeatureOfInterest rdf:resource="https://w3id.org/eautonome/mpWashingMachine"/>
+    <sosa:hasFeatureOfInterest rdf:resource="https://w3id.org/eautonome/mpBasementCold"/>
+    <sosa:hasFeatureOfInterest rdf:resource="https://w3id.org/eautonome/mpToiletCold"/>
+    <sosa:hasFeatureOfInterest rdf:resource="https://w3id.org/eautonome/mpKitchenCold"/>
+    <sosa:hasFeatureOfInterest rdf:resource="https://w3id.org/eautonome/mpKitchenHot"/>
+    <sosa:hasFeatureOfInterest rdf:resource="https://w3id.org/eautonome/mpToiletSink"/>
+    <sosa:hasFeatureOfInterest rdf:resource="https://w3id.org/eautonome/mpMainInlet"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/pipeKitchenHot">
+    <rdf:type rdf:resource="https://saref.etsi.org/saref4watr/Pipe"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
     <rdfs:label xml:lang="en">Kitchen hot water pipe</rdfs:label>
     <rdfs:label xml:lang="fr">Tuyauterie cuisine eau chaude</rdfs:label>
     <rdfs:comment xml:lang="en">Hot water pipe for the kitchen.</rdfs:comment>
     <s4watr:isDesignedFor rdf:resource="https://saref.etsi.org/saref4watr/DrinkingWater"/>
-  </s4watr:Pipe>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b2">
+    <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</xsd:minInclusive>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/eventAfternoonShower20260628">
+    <rdf:type rdf:resource="https://w3id.org/eautonome/ConsumptionEvent"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+    <rdfs:label xml:lang="en">Afternoon shower event</rdfs:label>
+    <rdfs:label xml:lang="fr">Événement de douche de l'après-midi</rdfs:label>
+    <rdfs:comment xml:lang="en">An afternoon water consumption event.</rdfs:comment>
+    <time:hasBeginning rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b27"/>
+    <time:hasEnd rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b28"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/domesticGreywater">
+    <rdf:type rdf:resource="https://saref.etsi.org/saref4watr/Water"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+    <rdfs:label xml:lang="en">Domestic greywater</rdfs:label>
+    <rdfs:label xml:lang="fr">Eaux grises domestiques</rdfs:label>
+    <rdfs:comment xml:lang="en">Greywater within the system, used as the feature of interest for observations.</rdfs:comment>
+    <sosa:hasProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
+    <sosa:hasProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowVolume"/>
+    <sosa:hasProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowTemperature"/>
+    <sosa:hasProperty rdf:resource="https://saref.etsi.org/saref4watr/Conductivity"/>
+    <sosa:hasProperty rdf:resource="https://saref.etsi.org/saref4watr/Temperature"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/hasDurationSeconds">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label xml:lang="en">has duration in seconds</rdfs:label>
+    <rdfs:comment xml:lang="en">Duration of the observation in seconds.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/pipeKitchenCold">
+    <rdf:type rdf:resource="https://saref.etsi.org/saref4watr/Pipe"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+    <rdfs:label xml:lang="en">Kitchen cold water pipe</rdfs:label>
+    <rdfs:label xml:lang="fr">Tuyauterie cuisine eau froide</rdfs:label>
+    <rdfs:comment xml:lang="en">Cold water pipe for the kitchen.</rdfs:comment>
+    <s4watr:isDesignedFor rdf:resource="https://saref.etsi.org/saref4watr/DrinkingWater"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/flowmeterBathroomHot">
+    <rdf:type rdf:resource="https://w3id.org/eautonome/VortexFlowmeter"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+    <rdfs:label xml:lang="en">Bathroom hot water flowmeter</rdfs:label>
+    <rdfs:label xml:lang="fr">Débitmètre d'eau chaude de la salle de bain</rdfs:label>
+    <rdfs:comment xml:lang="en">Measures hot water flow to the bathroom circuit.</rdfs:comment>
+    <eau:hasOperationalStatus>active</eau:hasOperationalStatus>
+    <eau:hasFlowEquation>Q = 0.938 * (I - 4)</eau:hasFlowEquation>
+    <eau:hasCalibrationSlope rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.957</eau:hasCalibrationSlope>
+    <eau:hasCalibrationR2 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.9988</eau:hasCalibrationR2>
+    <eau:hasAnalogInput>AN2</eau:hasAnalogInput>
+    <eau:monitors rdf:resource="https://w3id.org/eautonome/mpBathroomHot"/>
+    <sosa:observes rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
+    <sosa:forProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
+    <sosa:isHostedBy rdf:resource="https://w3id.org/eautonome/adcCard1"/>
+    <sosa:implements rdf:resource="https://w3id.org/eautonome/eautonomeObservingProcedure"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b1">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <owl:withRestrictions rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b4"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://saref.etsi.org/saref4watr/FlowVolume">
+    <sosa:isObservedBy rdf:resource="https://w3id.org/eautonome/hansaActivejetDigital"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/obsFlowHeaterOutput20260627T034633">
+    <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+    <rdfs:comment xml:lang="en">Measurement of flow rate at the heater output.</rdfs:comment>
+    <sosa:madeBySensor rdf:resource="https://w3id.org/eautonome/flowmeterHeaterOutput"/>
+    <sosa:observedProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
+    <sosa:hasFeatureOfInterest rdf:resource="https://w3id.org/eautonome/mpHeaterOutput"/>
+    <sosa:hasUltimateFeatureOfInterest rdf:resource="https://w3id.org/eautonome/domesticGreywater"/>
+    <sosa:usedProcedure rdf:resource="https://w3id.org/eautonome/eautonomeObservingProcedure"/>
+    <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-06-27T03:46:33+02:00</sosa:resultTime>
+    <sosa:hasSimpleResult rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.8</sosa:hasSimpleResult>
+    <sosa:hasResult rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b30"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/roomToilet">
+    <rdf:type rdf:resource="https://w3id.org/eautonome/DomesticRoom"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+    <rdfs:label xml:lang="en">Toilet</rdfs:label>
+    <rdfs:label xml:lang="fr">Toilettes</rdfs:label>
+    <rdfs:comment xml:lang="en">A domestic room where treated greywater is reused.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b32">
+    <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+    <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-06-27T16:52:25+02:00</time:inXSDDateTime>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/capFlowmeterHeaterOutput">
+    <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservationCollection"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+    <rdfs:label xml:lang="en">Capability profile for heater output flowmeter</rdfs:label>
+    <rdfs:comment xml:lang="en">System capability profile for the heater output flowmeter.</rdfs:comment>
+    <sosa:hasFeatureOfInterest rdf:resource="https://w3id.org/eautonome/flowmeterHeaterOutput"/>
+    <sosa:observedProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/measuresWaterKind">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/eautonome/MeasurementPoint"/>
+    <rdfs:range rdf:resource="https://saref.etsi.org/saref4watr/WaterKind"/>
+    <owl:inverseOf rdf:resource="https://w3id.org/eautonome/waterKindMeasuredAt"/>
+    <rdfs:label xml:lang="en">measures water kind</rdfs:label>
+    <rdfs:comment xml:lang="en">Specifies the type of water measured.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/hansaActivejetDigital">
+    <rdf:type rdf:resource="https://w3id.org/eautonome/ShowerSensor"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+    <rdfs:label xml:lang="en">HANSA Activejet Digital</rdfs:label>
+    <rdfs:comment xml:lang="en">A HANSA Activejet Digital Bluetooth hand shower.</rdfs:comment>
+    <eau:hasOperationalStatus>active</eau:hasOperationalStatus>
+    <eau:monitors rdf:resource="https://w3id.org/eautonome/mpBathroomHot"/>
+    <sosa:observes rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
+    <sosa:observes rdf:resource="https://saref.etsi.org/saref4watr/FlowVolume"/>
+    <sosa:observes rdf:resource="https://saref.etsi.org/saref4watr/FlowTemperature"/>
+    <sosa:hasSystemCapability rdf:resource="https://w3id.org/eautonome/capHansaActivejetDigital"/>
+    <sosa:hasOperatingConditions rdf:resource="https://w3id.org/eautonome/condHansaActivejetDigital"/>
+    <sosa:forProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
+    <sosa:forProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowVolume"/>
+    <sosa:forProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowTemperature"/>
+    <sosa:implements rdf:resource="https://w3id.org/eautonome/showerObservingProcedure"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/mpBathroomHot">
+    <rdf:type rdf:resource="https://w3id.org/eautonome/MeasurementPoint"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+    <rdfs:label xml:lang="en">Bathroom hot water measurement point</rdfs:label>
+    <rdfs:label xml:lang="fr">Point de mesure d'eau chaude de la salle de bain</rdfs:label>
+    <rdfs:comment xml:lang="en">Measurement point on the bathroom hot water circuit.</rdfs:comment>
+    <eau:measuresWaterKind rdf:resource="https://saref.etsi.org/saref4watr/DrinkingWater"/>
+    <eau:locatedIn rdf:resource="https://w3id.org/eautonome/roomBathroom"/>
+    <eau:measuresOnAsset rdf:resource="https://w3id.org/eautonome/pipeBathroomHot"/>
+    <eau:servesEndpoint rdf:resource="https://w3id.org/eautonome/roomBathroom"/>
+    <sosa:hasProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/pipeConfigurationStraight">
+    <rdf:type rdf:resource="https://w3id.org/eautonome/PipeConfiguration"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+    <rdfs:label xml:lang="en">Straight pipe configuration</rdfs:label>
+    <rdfs:label xml:lang="fr">Configuration tuyau droit</rdfs:label>
+    <rdfs:comment xml:lang="en">A pipe configuration with a straight section and no bends.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b36">
+    <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+    <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-06-28T16:03:38+02:00</time:inXSDDateTime>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b9">
+    <rdf:first rdf:resource="http://www.w3.org/ns/sosa/ObservationCollection"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b7">
+    <rdf:first rdf:resource="http://www.w3.org/ns/sosa/Deployment"/>
+    <rdf:rest rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b8"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/hasConductivityEquation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">has conductivity equation</rdfs:label>
+    <rdfs:comment xml:lang="en">Equation relating sensor current to measured conductivity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b24">
+    <rdf:first rdf:resource="https://w3id.org/eautonome/ShowerSensor"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/hasCalibrationR2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    <rdfs:range rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b1"/>
+    <rdfs:label xml:lang="en">has calibration R2</rdfs:label>
+    <rdfs:comment xml:lang="en">Coefficient of determination for the calibration.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b26">
+    <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+    <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-06-27T17:02:54+02:00</time:inXSDDateTime>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b10">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b11"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b14">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+    <owl:members rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b15"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/ADConverter">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/System"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
+    <rdfs:label xml:lang="en">Analog to digital converter</rdfs:label>
+    <rdfs:label xml:lang="fr">Carte ADC</rdfs:label>
+    <rdfs:comment xml:lang="en">A component for converting analog sensor signals into digital data.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/hasPipeConfiguration">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b6"/>
+    <rdfs:range rdf:resource="https://w3id.org/eautonome/PipeConfiguration"/>
+    <owl:inverseOf rdf:resource="https://w3id.org/eautonome/isPipeConfigurationOf"/>
+    <rdfs:label xml:lang="en">has pipe configuration</rdfs:label>
+    <rdfs:label xml:lang="fr">a pour configuration de tuyauterie</rdfs:label>
+    <rdfs:comment xml:lang="en">Relates a deployment, observing procedure, or observation collection to the pipe configuration.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b30">
+    <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+    <qudt:value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.8</qudt:value>
+    <qudt:hasUnit rdf:resource="http://qudt.org/vocab/unit/L-PER-MIN"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/PipeConfiguration">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+    <rdfs:label xml:lang="en">Pipe configuration</rdfs:label>
+    <rdfs:label xml:lang="fr">Configuration de tuyauterie</rdfs:label>
+    <rdfs:comment xml:lang="en">A pipe configuration, where geometry affects flow measurements.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/tempSensorMainInlet">
+    <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+    <rdfs:label xml:lang="en">Main inlet temperature sensor</rdfs:label>
+    <rdfs:label xml:lang="fr">Capteur température entrée principale</rdfs:label>
+    <rdfs:comment xml:lang="en">Temperature output of the main inlet ifm vortex meter.</rdfs:comment>
+    <eau:hasOperationalStatus>active</eau:hasOperationalStatus>
+    <eau:hasTemperatureEquation>T = 9.375 * (I - 4) - 25</eau:hasTemperatureEquation>
+    <eau:hasAnalogInput>AN4</eau:hasAnalogInput>
+    <eau:monitors rdf:resource="https://w3id.org/eautonome/mpMainInlet"/>
+    <sosa:observes rdf:resource="https://saref.etsi.org/saref4watr/FlowTemperature"/>
+    <sosa:forProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowTemperature"/>
+    <sosa:isHostedBy rdf:resource="https://w3id.org/eautonome/adcCard2"/>
+    <sosa:implements rdf:resource="https://w3id.org/eautonome/eautonomeObservingProcedure"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/obsColEveningShower20260627">
+    <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservationCollection"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+    <rdfs:label xml:lang="en">Evening shower consumption</rdfs:label>
+    <rdfs:label xml:lang="fr">Consommation douche du soir</rdfs:label>
+    <rdfs:comment xml:lang="en">Flow observations during the evening shower period.</rdfs:comment>
+    <sosa:madeBySensor rdf:resource="https://w3id.org/eautonome/hansaActivejetDigital"/>
+    <sosa:observedProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
+    <sosa:usedProcedure rdf:resource="https://w3id.org/eautonome/showerObservingProcedure"/>
+    <sosa:hasFeatureOfInterest rdf:resource="https://w3id.org/eautonome/mpBathroomHot"/>
+    <sosa:hasUltimateFeatureOfInterest rdf:resource="https://w3id.org/eautonome/domesticGreywater"/>
+    <sosa:phenomenonTime rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b31"/>
+    <eau:hasConsumptionEvent rdf:resource="https://w3id.org/eautonome/eventEveningShower20260627"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b18">
+    <rdf:first rdf:resource="https://w3id.org/eautonome/ConsumptionEvent"/>
+    <rdf:rest rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b19"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/servesEndpoint">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/eautonome/MeasurementPoint"/>
+    <rdfs:range rdf:resource="https://w3id.org/eautonome/DomesticRoom"/>
+    <owl:inverseOf rdf:resource="https://w3id.org/eautonome/isServedBy"/>
+    <rdfs:label xml:lang="en">serves endpoint</rdfs:label>
+    <rdfs:comment xml:lang="en">Connects a measurement point to the room where the water is used.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/hasAnalogInput">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">has analog input</rdfs:label>
+    <rdfs:comment xml:lang="en">Identifier of the analog input channel used on the ADC.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/roomGarden">
+    <rdf:type rdf:resource="https://w3id.org/eautonome/DomesticRoom"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+    <rdfs:label xml:lang="en">Garden</rdfs:label>
+    <rdfs:label xml:lang="fr">Jardin</rdfs:label>
+    <rdfs:comment xml:lang="en">An outdoor domestic area that can receive treated greywater for irrigation.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/obsColAfternoonShower20260628">
+    <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservationCollection"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+    <rdfs:label xml:lang="en">Afternoon shower consumption</rdfs:label>
+    <rdfs:label xml:lang="fr">Consommation douche de l'après-midi</rdfs:label>
+    <rdfs:comment xml:lang="en">Flow observations during the afternoon shower period.</rdfs:comment>
+    <sosa:madeBySensor rdf:resource="https://w3id.org/eautonome/hansaActivejetDigital"/>
+    <sosa:observedProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
+    <sosa:usedProcedure rdf:resource="https://w3id.org/eautonome/showerObservingProcedure"/>
+    <sosa:hasFeatureOfInterest rdf:resource="https://w3id.org/eautonome/mpBathroomHot"/>
+    <sosa:hasUltimateFeatureOfInterest rdf:resource="https://w3id.org/eautonome/domesticGreywater"/>
+    <sosa:phenomenonTime rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b34"/>
+    <eau:hasConsumptionEvent rdf:resource="https://w3id.org/eautonome/eventAfternoonShower20260628"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/raspberryPi4">
+    <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+    <rdfs:label xml:lang="en">Raspberry Pi 4</rdfs:label>
+    <rdfs:label xml:lang="fr">Raspberry Pi 4</rdfs:label>
+    <rdfs:comment xml:lang="en">The computing platform that executes the observing procedure and hosts the analog-to-digital converters.</rdfs:comment>
+    <eau:hasOperationalStatus>active</eau:hasOperationalStatus>
+    <sosa:hasDeployment rdf:resource="https://w3id.org/eautonome/eautonomeDeployment"/>
+    <sosa:hasSubSystem rdf:resource="https://w3id.org/eautonome/adcCard1"/>
+    <sosa:hasSubSystem rdf:resource="https://w3id.org/eautonome/adcCard2"/>
+    <sosa:inDeployment rdf:resource="https://w3id.org/eautonome/eautonomeDeployment"/>
+    <sosa:isHostedBy rdf:resource="https://w3id.org/eautonome/eautonomeSystem"/>
+    <sosa:hosts rdf:resource="https://w3id.org/eautonome/adcCard1"/>
+    <sosa:hosts rdf:resource="https://w3id.org/eautonome/adcCard2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/GreywaterRecyclingSystem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://saref.etsi.org/saref4watr/WaterInfrastructure"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
+    <rdfs:label xml:lang="en">Greywater recycling system</rdfs:label>
+    <rdfs:label xml:lang="fr">Système de recyclage des eaux grises</rdfs:label>
+    <rdfs:comment xml:lang="en">A system for collecting, treating, and redistributing domestic greywater.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/MeasurementPoint">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+    <rdfs:subClassOf rdf:resource="https://saref.etsi.org/saref4watr/WaterAsset"/>
+    <rdfs:label xml:lang="en">Measurement point</rdfs:label>
+    <rdfs:label xml:lang="fr">Point de mesure</rdfs:label>
+    <rdfs:comment xml:lang="en">A location within the water infrastructure at which observations are made.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b20">
+    <rdf:first rdf:resource="https://w3id.org/eautonome/ADConverter"/>
+    <rdf:rest rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b21"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/mpBasementCold">
+    <rdf:type rdf:resource="https://w3id.org/eautonome/MeasurementPoint"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+    <rdfs:label xml:lang="en">Basement measurement point</rdfs:label>
+    <rdfs:label xml:lang="fr">Point de mesure de la cave</rdfs:label>
+    <rdfs:comment xml:lang="en">Measurement point on the basement cold water supply.</rdfs:comment>
+    <eau:measuresWaterKind rdf:resource="https://saref.etsi.org/saref4watr/DrinkingWater"/>
+    <eau:locatedIn rdf:resource="https://w3id.org/eautonome/roomBasement"/>
+    <eau:measuresOnAsset rdf:resource="https://w3id.org/eautonome/pipeBasementCold"/>
+    <eau:servesEndpoint rdf:resource="https://w3id.org/eautonome/roomBasement"/>
+    <sosa:hasProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/hasCalibrationIntercept">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label xml:lang="en">has calibration intercept</rdfs:label>
+    <rdfs:comment xml:lang="en">Intercept for converting sensor readings to flow values.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/condFlowmeterHeaterOutput">
+    <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservationCollection"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+    <rdfs:label xml:lang="en">Operating conditions for heater output flowmeter</rdfs:label>
+    <rdfs:comment xml:lang="en">Nominal operation with domestic hot water flow.</rdfs:comment>
+    <sosa:hasFeatureOfInterest rdf:resource="https://w3id.org/eautonome/flowmeterHeaterOutput"/>
+    <sosa:observedProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowTemperature"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/pipeHeaterOutput">
+    <rdf:type rdf:resource="https://saref.etsi.org/saref4watr/Pipe"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+    <rdfs:label xml:lang="en">Hot water heater output pipe</rdfs:label>
+    <rdfs:label xml:lang="fr">Sortie d'eau chaude de la chaudière</rdfs:label>
+    <rdfs:comment xml:lang="en">Pipe delivering hot water from the heater.</rdfs:comment>
+    <s4watr:isDesignedFor rdf:resource="https://saref.etsi.org/saref4watr/DrinkingWater"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/hasTriggerThreshold">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/eautonome/EautonomeObservingProcedure"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label xml:lang="en">has trigger threshold</rdfs:label>
+    <rdfs:comment xml:lang="en">Minimum change in the measured quantity that triggers an observation.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/pipeConfigurationCurved">
+    <rdf:type rdf:resource="https://w3id.org/eautonome/PipeConfiguration"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+    <rdfs:label xml:lang="en">Curved pipe configuration</rdfs:label>
+    <rdfs:label xml:lang="fr">Configuration tuyau coudé</rdfs:label>
+    <rdfs:comment xml:lang="en">A pipe configuration that includes a bend or elbow.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://saref.etsi.org/saref4watr/FlowRate">
+    <sosa:isObservedBy rdf:resource="https://w3id.org/eautonome/flowmeterHeaterOutput"/>
+    <sosa:isObservedBy rdf:resource="https://w3id.org/eautonome/flowmeterBathroomHot"/>
+    <sosa:isObservedBy rdf:resource="https://w3id.org/eautonome/flowmeterBathroomCold"/>
+    <sosa:isObservedBy rdf:resource="https://w3id.org/eautonome/flowmeterWashingMachine"/>
+    <sosa:isObservedBy rdf:resource="https://w3id.org/eautonome/flowmeterBasementCold"/>
+    <sosa:isObservedBy rdf:resource="https://w3id.org/eautonome/flowmeterToiletCold"/>
+    <sosa:isObservedBy rdf:resource="https://w3id.org/eautonome/hansaActivejetDigital"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/roomBathroom">
+    <rdf:type rdf:resource="https://w3id.org/eautonome/DomesticRoom"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+    <rdfs:label xml:lang="en">Bathroom</rdfs:label>
+    <rdfs:label xml:lang="fr">Salle de bain</rdfs:label>
+    <rdfs:comment xml:lang="en">A domestic room primarily used for bathing, sink use, and laundry water consumption.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/measuresOnAsset">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/eautonome/MeasurementPoint"/>
+    <rdfs:range rdf:resource="https://saref.etsi.org/saref4watr/WaterAsset"/>
+    <owl:inverseOf rdf:resource="https://w3id.org/eautonome/isMeasuredAt"/>
+    <rdfs:label xml:lang="en">measures on asset</rdfs:label>
+    <rdfs:comment xml:lang="en">The pipe or water asset instrumented at this measurement point.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/isConsumptionEventOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/eautonome/ConsumptionEvent"/>
+    <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/ObservationCollection"/>
+    <owl:inverseOf rdf:resource="https://w3id.org/eautonome/hasConsumptionEvent"/>
+    <rdfs:label xml:lang="en">is consumption event of</rdfs:label>
+    <rdfs:comment xml:lang="en">Links a consumption event to the observation collection that represents it.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b28">
+    <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+    <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-06-28T16:03:38+02:00</time:inXSDDateTime>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/pipeBathroomHot">
+    <rdf:type rdf:resource="https://saref.etsi.org/saref4watr/Pipe"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+    <rdfs:label xml:lang="en">Bathroom hot water pipe</rdfs:label>
+    <rdfs:label xml:lang="fr">Tuyauterie SDB eau chaude</rdfs:label>
+    <rdfs:comment xml:lang="en">Hot water pipe for the bathroom.</rdfs:comment>
+    <s4watr:isDesignedFor rdf:resource="https://saref.etsi.org/saref4watr/DrinkingWater"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/DomesticReuse">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://saref.etsi.org/saref4watr/WaterUse"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+    <rdfs:label xml:lang="en">Domestic reuse</rdfs:label>
+    <rdfs:label xml:lang="fr">Réutilisation domestique</rdfs:label>
+    <rdfs:comment xml:lang="en">Water reused in the household.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/capHansaActivejetDigital">
+    <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservationCollection"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+    <rdfs:label xml:lang="en">Capability profile for HANSA Activejet Digital</rdfs:label>
+    <rdfs:comment xml:lang="en">System capability profile for the HANSA Activejet Digital hand shower.</rdfs:comment>
+    <sosa:hasFeatureOfInterest rdf:resource="https://w3id.org/eautonome/hansaActivejetDigital"/>
+    <sosa:observedProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowRate"/>
+    <sosa:observedProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowVolume"/>
+    <sosa:observedProperty rdf:resource="https://saref.etsi.org/saref4watr/FlowTemperature"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/Greywater">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://saref.etsi.org/saref4watr/WaterKind"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+    <rdfs:label xml:lang="en">Greywater</rdfs:label>
+    <rdfs:label xml:lang="fr">Eaux grises</rdfs:label>
+    <rdfs:comment xml:lang="en">Domestic wastewater excluding blackwater.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b27">
+    <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+    <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-06-28T15:49:48+02:00</time:inXSDDateTime>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://saref.etsi.org/core/Property">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b25">
+    <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+    <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-06-27T16:52:25+02:00</time:inXSDDateTime>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b12">
+    <rdf:first rdf:resource="http://www.w3.org/ns/sosa/ObservingProcedure"/>
+    <rdf:rest rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b13"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eautonome/pipeToiletSink">
+    <rdf:type rdf:resource="https://saref.etsi.org/saref4watr/Pipe"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eautonome/"/>
+    <rdfs:label xml:lang="en">Toilet sink pipe</rdfs:label>
+    <rdfs:label xml:lang="fr">Tuyauterie lavabo WC</rdfs:label>
+    <rdfs:comment xml:lang="en">Pipe supplying water to the toilet sink.</rdfs:comment>
+    <s4watr:isDesignedFor rdf:resource="https://saref.etsi.org/saref4watr/DrinkingWater"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b6">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b7"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://saref.etsi.org/saref4watr/WaterDevice">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/System"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b15">
+    <rdf:first rdf:resource="https://w3id.org/eautonome/DomesticRoom"/>
+    <rdf:rest rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b16"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b35">
+    <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+    <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-06-28T15:49:48+02:00</time:inXSDDateTime>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b34">
+    <rdf:type rdf:resource="http://www.w3.org/2006/time#Interval"/>
+    <time:hasBeginning rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b35"/>
+    <time:hasEnd rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b36"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b33">
+    <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+    <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-06-27T17:02:54+02:00</time:inXSDDateTime>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b4">
+    <rdf:first rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b2"/>
+    <rdf:rest rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b5"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b19">
+    <rdf:first rdf:resource="https://w3id.org/eautonome/GreywaterRecyclingSystem"/>
+    <rdf:rest rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b20"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b13">
+    <rdf:first rdf:resource="http://www.w3.org/ns/sosa/ObservationCollection"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b21">
+    <rdf:first rdf:resource="https://w3id.org/eautonome/EautonomeObservingProcedure"/>
+    <rdf:rest rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b22"/>
+  </rdf:Description>
   <rdf:Description rdf:about="https://saref.etsi.org/saref4watr/Conductivity">
     <sosa:isObservedBy rdf:resource="https://w3id.org/eautonome/jumoDigiLineBoiler"/>
     <sosa:isObservedBy rdf:resource="https://w3id.org/eautonome/jumoDigiLineShower"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b31">
+    <rdf:type rdf:resource="http://www.w3.org/2006/time#Interval"/>
+    <time:hasBeginning rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b32"/>
+    <time:hasEnd rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b33"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b23">
+    <rdf:first rdf:resource="https://w3id.org/eautonome/ConductivityTemperatureSensor"/>
+    <rdf:rest rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b24"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b3">
+    <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</xsd:maxInclusive>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b22">
+    <rdf:first rdf:resource="https://w3id.org/eautonome/VortexFlowmeter"/>
+    <rdf:rest rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b23"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b5">
+    <rdf:first rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b3"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b16">
+    <rdf:first rdf:resource="https://w3id.org/eautonome/MeasurementPoint"/>
+    <rdf:rest rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b17"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b8">
+    <rdf:first rdf:resource="http://www.w3.org/ns/sosa/ObservingProcedure"/>
+    <rdf:rest rdf:nodeID="nf895cf5aa47e40bc95762f63177892a0b9"/>
   </rdf:Description>
 </rdf:RDF>
