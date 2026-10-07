@@ -258,6 +258,23 @@ code{
 #legend table.entity {
     width: 25%;
 }
+
+figure.ontology-figure {
+    margin: 1.25em 0;
+    max-width: 1150px;
+}
+
+figure.ontology-figure img {
+    display: block;
+    width: 100%;
+    max-width: 1150px;
+    height: auto;
+}
+
+figure.ontology-figure figcaption {
+    margin-top: 0.5em;
+    font-size: 0.95em;
+}
 	</style>
 
     <script type="application/ld+json">
@@ -436,6 +453,14 @@ code{
       <h2>Overview</h2>
       <p>The Eautonome Ontology describes physical water infrastructure and monitoring devices in a residential observation system. These components generate observations related to domestic water use and water quality.</p>
       <p>The ontology represents the greywater recycling infrastructure, the sensor network, and the resulting observations. It supports queries over domestic water use events, sensor status, measurement locations, pipe configurations, and greywater reuse data.</p>
+
+      <figure class="ontology-figure">
+        <img
+          src="ontology/figures/eautonome-classes.svg"
+          alt="Overview of the Eautonome ontology class model"
+        />
+        <figcaption>Overview of the Eautonome ontology class model.</figcaption>
+      </figure>
     
       <h3>Competency Questions</h3>
       <h4>Queries</h4>
