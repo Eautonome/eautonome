@@ -82,11 +82,9 @@ python analysis/run_resource_analysis.py \
   queries
 ```
 
-### External reuse evaluation
+### External reuse checks
 
-The `analysis/external-hsb/` directory contains an external reuse evaluation using the independently published HSB Living Lab residential water dataset (DOI: https://doi.org/10.5281/zenodo.18971107). The HSB source data are not redistributed in this repository.
-
-After downloading the HSB dataset, run from the repository root:
+HSB Living Lab water data (DOI: https://doi.org/10.5281/zenodo.18971107). 
 
 ```bash
 python analysis/external-hsb/run_hsb_external_reuse.py \
@@ -94,12 +92,19 @@ python analysis/external-hsb/run_hsb_external_reuse.py \
   --output-dir analysis/external-hsb/results
 ```
 
-The directory contains a small RDF example, query results, and the applicable constraint checks.
+WEUSEDTO (DOI: https://doi.org/10.1016/j.softx.2022.101214, CC BY 4.0). 
 
-### LinkML compatibility evaluation
+```bash
+python analysis/external-weusedto/run_weusedto_external_reuse.py \
+  /path/to/WEUSEDTO/data \
+  --output-dir analysis/external-weusedto/results
+```
 
-The `analysis/linkml-compatibility/` directory contains an interoperability
-evaluation using a composed LinkML schema based on SOSA/SSN and SAREF4WATR.
+The external sources are not redistributed in this repository.
+
+### LinkML check
+
+`analysis/linkml-compatibility/` tests a composed LinkML schema against SOSA/SSN and SAREF4WATR.
 
 ## Citation
 

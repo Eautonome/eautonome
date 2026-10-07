@@ -1,0 +1,1610 @@
+{
+  "@context": {
+    "brick": "https://brickschema.org/schema/Brick#",
+    "csvw": "http://www.w3.org/ns/csvw#",
+    "dc": "http://purl.org/dc/elements/1.1/",
+    "dcam": "http://purl.org/dc/dcam/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dcmitype": "http://purl.org/dc/dcmitype/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "doap": "http://usefulinc.com/ns/doap#",
+    "eau": "https://w3id.org/eautonome/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "geo": "http://www.opengis.net/ont/geosparql#",
+    "odrl": "http://www.w3.org/ns/odrl/2/",
+    "org": "http://www.w3.org/ns/org#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "prof": "http://www.w3.org/ns/dx/prof/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "qb": "http://purl.org/linked-data/cube#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "s4watr": "https://saref.etsi.org/saref4watr/",
+    "schema": "https://schema.org/",
+    "schema1": "http://schema.org/",
+    "sh": "http://www.w3.org/ns/shacl#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "sosa": "http://www.w3.org/ns/sosa/",
+    "ssn": "http://www.w3.org/ns/ssn/",
+    "time": "http://www.w3.org/2006/time#",
+    "vann": "http://purl.org/vocab/vann/",
+    "void": "http://rdfs.org/ns/void#",
+    "wgs": "https://www.w3.org/2003/01/geo/wgs84_pos#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "https://w3id.org/eautonome/weusedtoEventToilet000003/begin",
+      "@type": "time:Instant",
+      "time:inXSDDateTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2019-02-26T06:41:59+00:00"
+      }
+    },
+    {
+      "@id": "eau:weusedtoObsKitchenfaucet000003",
+      "@type": "sosa:Observation",
+      "sosa:hasFeatureOfInterest": {
+        "@id": "eau:weusedtoMeasurementPointKitchenfaucet"
+      },
+      "sosa:hasSimpleResult": {
+        "@type": "xsd:decimal",
+        "@value": "0.0"
+      },
+      "sosa:madeBySensor": {
+        "@id": "eau:weusedtoSensorKitchenfaucet"
+      },
+      "sosa:observedProperty": {
+        "@id": "s4watr:FlowRate"
+      },
+      "sosa:resultTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2019-03-01T08:57:43+00:00"
+      }
+    },
+    {
+      "@id": "https://w3id.org/eautonome/weusedtoObsDishwasher30000001/phenomenonTime",
+      "@type": "time:Interval",
+      "time:hasBeginning": {
+        "@id": "https://w3id.org/eautonome/weusedtoObsDishwasher30000001/phenomenonTime/begin"
+      },
+      "time:hasEnd": {
+        "@id": "https://w3id.org/eautonome/weusedtoObsDishwasher30000001/phenomenonTime/end"
+      }
+    },
+    {
+      "@id": "eau:weusedtoSensorWholeHouse",
+      "@type": "sosa:Sensor",
+      "dcterms:source": {
+        "@id": "eau:weusedtoDataset"
+      },
+      "eau:monitors": {
+        "@id": "eau:weusedtoMeasurementPointWholeHouse"
+      },
+      "rdfs:label": "WEUSEDTO WholeHouse sensor",
+      "sosa:observes": {
+        "@id": "s4watr:FlowRate"
+      }
+    },
+    {
+      "@id": "https://w3id.org/eautonome/weusedtoCollectionDishwasher30000001/phenomenonTime/begin",
+      "@type": "time:Instant",
+      "time:inXSDDateTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2019-04-09T18:17:29+00:00"
+      }
+    },
+    {
+      "@id": "https://w3id.org/eautonome/weusedtoEventDishwasher30000001/end",
+      "@type": "time:Instant",
+      "time:inXSDDateTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2019-04-09T18:47:29+00:00"
+      }
+    },
+    {
+      "@id": "eau:weusedtoMeasurementPointBidet",
+      "@type": "eau:MeasurementPoint",
+      "dcterms:source": {
+        "@id": "eau:weusedtoDataset"
+      },
+      "rdfs:label": "WEUSEDTO Bidet measurement point"
+    },
+    {
+      "@id": "https://w3id.org/eautonome/weusedtoCollectionDishwasher30000002/phenomenonTime/end",
+      "@type": "time:Instant",
+      "time:inXSDDateTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2019-04-13T20:53:08+00:00"
+      }
+    },
+    {
+      "@id": "eau:weusedtoObsWashbasin000005",
+      "@type": "sosa:Observation",
+      "sosa:hasFeatureOfInterest": {
+        "@id": "eau:weusedtoMeasurementPointWashbasin"
+      },
+      "sosa:hasSimpleResult": {
+        "@type": "xsd:decimal",
+        "@value": "11.0"
+      },
+      "sosa:madeBySensor": {
+        "@id": "eau:weusedtoSensorWashbasin"
+      },
+      "sosa:observedProperty": {
+        "@id": "s4watr:FlowRate"
+      },
+      "sosa:resultTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2019-02-16T16:55:27+00:00"
+      }
+    },
+    {
+      "@id": "eau:weusedtoObsToilet000001",
+      "@type": "sosa:Observation",
+      "eau:hasDurationSeconds": {
+        "@type": "xsd:decimal",
+        "@value": "360.0"
+      },
+      "sosa:hasFeatureOfInterest": {
+        "@id": "eau:weusedtoMeasurementPointToilet"
+      },
+      "sosa:hasSimpleResult": {
+        "@type": "xsd:decimal",
+        "@value": "12.0"
+      },
+      "sosa:madeBySensor": {
+        "@id": "eau:weusedtoSensorToilet"
+      },
+      "sosa:observedProperty": {
+        "@id": "s4watr:FlowRate"
+      },
+      "sosa:phenomenonTime": {
+        "@id": "https://w3id.org/eautonome/weusedtoObsToilet000001/phenomenonTime"
+      }
+    },
+    {
+      "@id": "eau:weusedtoEventToilet000003",
+      "@type": "eau:ConsumptionEvent",
+      "rdfs:label": "WEUSEDTO Toilet usage 3",
+      "time:hasBeginning": {
+        "@id": "https://w3id.org/eautonome/weusedtoEventToilet000003/begin"
+      },
+      "time:hasEnd": {
+        "@id": "https://w3id.org/eautonome/weusedtoEventToilet000003/end"
+      }
+    },
+    {
+      "@id": "eau:weusedtoCollectionDishwasher30000001",
+      "@type": "sosa:ObservationCollection",
+      "eau:hasConsumptionEvent": {
+        "@id": "eau:weusedtoEventDishwasher30000001"
+      },
+      "rdfs:label": "WEUSEDTO Dishwasher30 collection 1",
+      "sosa:hasFeatureOfInterest": {
+        "@id": "eau:weusedtoMeasurementPointDishwasher30"
+      },
+      "sosa:hasMember": {
+        "@id": "eau:weusedtoObsDishwasher30000001"
+      },
+      "sosa:madeBySensor": {
+        "@id": "eau:weusedtoSensorDishwasher30"
+      },
+      "sosa:observedProperty": {
+        "@id": "s4watr:FlowRate"
+      },
+      "sosa:phenomenonTime": {
+        "@id": "https://w3id.org/eautonome/weusedtoCollectionDishwasher30000001/phenomenonTime"
+      }
+    },
+    {
+      "@id": "https://w3id.org/eautonome/weusedtoEventToilet000001/begin",
+      "@type": "time:Instant",
+      "time:inXSDDateTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2019-02-25T16:40:05+00:00"
+      }
+    },
+    {
+      "@id": "eau:weusedtoObsWashbasin000002",
+      "@type": "sosa:Observation",
+      "sosa:hasFeatureOfInterest": {
+        "@id": "eau:weusedtoMeasurementPointWashbasin"
+      },
+      "sosa:hasSimpleResult": {
+        "@type": "xsd:decimal",
+        "@value": "123.0"
+      },
+      "sosa:madeBySensor": {
+        "@id": "eau:weusedtoSensorWashbasin"
+      },
+      "sosa:observedProperty": {
+        "@id": "s4watr:FlowRate"
+      },
+      "sosa:resultTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2019-02-13T08:58:31+00:00"
+      }
+    },
+    {
+      "@id": "eau:weusedtoDataset",
+      "@type": "schema1:Dataset",
+      "dcterms:identifier": "https://doi.org/10.1016/j.softx.2022.101214",
+      "dcterms:source": {
+        "@id": "https://github.com/Water-End-Use-Dataset-Tools/WEUSEDTO"
+      },
+      "dcterms:title": "WEUSEDTO Water End USE Dataset and TOols",
+      "rdfs:comment": "Mapped WEUSEDTO subset (CC BY 4.0). Full CSVs stay upstream.",
+      "rdfs:label": "WEUSEDTO water end-use dataset"
+    },
+    {
+      "@id": "https://w3id.org/eautonome/weusedtoObsToilet000003/phenomenonTime/end",
+      "@type": "time:Instant",
+      "time:inXSDDateTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2019-02-26T06:47:59+00:00"
+      }
+    },
+    {
+      "@id": "https://w3id.org/eautonome/weusedtoObsToilet000002/phenomenonTime",
+      "@type": "time:Interval",
+      "time:hasBeginning": {
+        "@id": "https://w3id.org/eautonome/weusedtoObsToilet000002/phenomenonTime/begin"
+      },
+      "time:hasEnd": {
+        "@id": "https://w3id.org/eautonome/weusedtoObsToilet000002/phenomenonTime/end"
+      }
+    },
+    {
+      "@id": "eau:weusedtoObsWashingmachine000001",
+      "@type": "sosa:Observation",
+      "sosa:hasFeatureOfInterest": {
+        "@id": "eau:weusedtoMeasurementPointWashingmachine"
+      },
+      "sosa:hasSimpleResult": {
+        "@type": "xsd:decimal",
+        "@value": "0.0"
+      },
+      "sosa:madeBySensor": {
+        "@id": "eau:weusedtoSensorWashingmachine"
+      },
+      "sosa:observedProperty": {
+        "@id": "s4watr:FlowRate"
+      },
+      "sosa:resultTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2019-09-17T10:13:27+00:00"
+      }
+    },
+    {
+      "@id": "eau:weusedtoObsDishwasher30000001",
+      "@type": "sosa:Observation",
+      "eau:hasDurationSeconds": {
+        "@type": "xsd:decimal",
+        "@value": "1800.0"
+      },
+      "sosa:hasFeatureOfInterest": {
+        "@id": "eau:weusedtoMeasurementPointDishwasher30"
+      },
+      "sosa:hasSimpleResult": {
+        "@type": "xsd:decimal",
+        "@value": "10.199999809265137"
+      },
+      "sosa:madeBySensor": {
+        "@id": "eau:weusedtoSensorDishwasher30"
+      },
+      "sosa:observedProperty": {
+        "@id": "s4watr:FlowRate"
+      },
+      "sosa:phenomenonTime": {
+        "@id": "https://w3id.org/eautonome/weusedtoObsDishwasher30000001/phenomenonTime"
+      }
+    },
+    {
+      "@id": "https://w3id.org/eautonome/weusedtoCollectionToilet000001/phenomenonTime/end",
+      "@type": "time:Instant",
+      "time:inXSDDateTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2019-02-25T16:46:05+00:00"
+      }
+    },
+    {
+      "@id": "eau:weusedtoMeasurementPointKitchenfaucet",
+      "@type": "eau:MeasurementPoint",
+      "dcterms:source": {
+        "@id": "eau:weusedtoDataset"
+      },
+      "rdfs:label": "WEUSEDTO Kitchenfaucet measurement point"
+    },
+    {
+      "@id": "eau:weusedtoCollectionToilet000003",
+      "@type": "sosa:ObservationCollection",
+      "eau:hasConsumptionEvent": {
+        "@id": "eau:weusedtoEventToilet000003"
+      },
+      "rdfs:label": "WEUSEDTO Toilet collection 3",
+      "sosa:hasFeatureOfInterest": {
+        "@id": "eau:weusedtoMeasurementPointToilet"
+      },
+      "sosa:hasMember": {
+        "@id": "eau:weusedtoObsToilet000003"
+      },
+      "sosa:madeBySensor": {
+        "@id": "eau:weusedtoSensorToilet"
+      },
+      "sosa:observedProperty": {
+        "@id": "s4watr:FlowRate"
+      },
+      "sosa:phenomenonTime": {
+        "@id": "https://w3id.org/eautonome/weusedtoCollectionToilet000003/phenomenonTime"
+      }
+    },
+    {
+      "@id": "https://w3id.org/eautonome/weusedtoEventDishwasher30000002/end",
+      "@type": "time:Instant",
+      "time:inXSDDateTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2019-04-13T20:53:08+00:00"
+      }
+    },
+    {
+      "@id": "eau:weusedtoObsWashbasin000001",
+      "@type": "sosa:Observation",
+      "sosa:hasFeatureOfInterest": {
+        "@id": "eau:weusedtoMeasurementPointWashbasin"
+      },
+      "sosa:hasSimpleResult": {
+        "@type": "xsd:decimal",
+        "@value": "0.0"
+      },
+      "sosa:madeBySensor": {
+        "@id": "eau:weusedtoSensorWashbasin"
+      },
+      "sosa:observedProperty": {
+        "@id": "s4watr:FlowRate"
+      },
+      "sosa:resultTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2019-02-13T08:56:09+00:00"
+      }
+    },
+    {
+      "@id": "https://w3id.org/eautonome/weusedtoCollectionToilet000002/phenomenonTime/end",
+      "@type": "time:Instant",
+      "time:inXSDDateTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2019-02-25T23:23:42+00:00"
+      }
+    },
+    {
+      "@id": "eau:weusedtoMeasurementPointWholeHouse",
+      "@type": "eau:MeasurementPoint",
+      "dcterms:source": {
+        "@id": "eau:weusedtoDataset"
+      },
+      "rdfs:label": "WEUSEDTO WholeHouse measurement point"
+    },
+    {
+      "@id": "eau:weusedtoObsShower000003",
+      "@type": "sosa:Observation",
+      "sosa:hasFeatureOfInterest": {
+        "@id": "eau:weusedtoMeasurementPointShower"
+      },
+      "sosa:hasSimpleResult": {
+        "@type": "xsd:decimal",
+        "@value": "65.0"
+      },
+      "sosa:madeBySensor": {
+        "@id": "eau:weusedtoSensorShower"
+      },
+      "sosa:observedProperty": {
+        "@id": "s4watr:FlowRate"
+      },
+      "sosa:resultTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2019-02-13T11:18:17+00:00"
+      }
+    },
+    {
+      "@id": "eau:weusedtoSensorDishwasher30",
+      "@type": "sosa:Sensor",
+      "dcterms:source": {
+        "@id": "eau:weusedtoDataset"
+      },
+      "eau:monitors": {
+        "@id": "eau:weusedtoMeasurementPointDishwasher30"
+      },
+      "rdfs:label": "WEUSEDTO Dishwasher30 sensor",
+      "sosa:observes": {
+        "@id": "s4watr:FlowRate"
+      }
+    },
+    {
+      "@id": "https://w3id.org/eautonome/weusedtoEventToilet000003/end",
+      "@type": "time:Instant",
+      "time:inXSDDateTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2019-02-26T06:47:59+00:00"
+      }
+    },
+    {
+      "@id": "https://w3id.org/eautonome/weusedtoObsDishwasher30000002/phenomenonTime/begin",
+      "@type": "time:Instant",
+      "time:inXSDDateTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2019-04-13T20:23:08+00:00"
+      }
+    },
+    {
+      "@id": "eau:weusedtoObsWashingmachine000004",
+      "@type": "sosa:Observation",
+      "sosa:hasFeatureOfInterest": {
+        "@id": "eau:weusedtoMeasurementPointWashingmachine"
+      },
+      "sosa:hasSimpleResult": {
+        "@type": "xsd:decimal",
+        "@value": "112.0"
+      },
+      "sosa:madeBySensor": {
+        "@id": "eau:weusedtoSensorWashingmachine"
+      },
+      "sosa:observedProperty": {
+        "@id": "s4watr:FlowRate"
+      },
+      "sosa:resultTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2019-09-18T08:56:48+00:00"
+      }
+    },
+    {
+      "@id": "https://w3id.org/eautonome/weusedtoEventDishwasher30000003/end",
+      "@type": "time:Instant",
+      "time:inXSDDateTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2019-04-19T16:35:29+00:00"
+      }
+    },
+    {
+      "@id": "eau:weusedtoEventDishwasher30000003",
+      "@type": "eau:ConsumptionEvent",
+      "rdfs:label": "WEUSEDTO Dishwasher30 usage 3",
+      "time:hasBeginning": {
+        "@id": "https://w3id.org/eautonome/weusedtoEventDishwasher30000003/begin"
+      },
+      "time:hasEnd": {
+        "@id": "https://w3id.org/eautonome/weusedtoEventDishwasher30000003/end"
+      }
+    },
+    {
+      "@id": "eau:weusedtoObsKitchenfaucet000004",
+      "@type": "sosa:Observation",
+      "sosa:hasFeatureOfInterest": {
+        "@id": "eau:weusedtoMeasurementPointKitchenfaucet"
+      },
+      "sosa:hasSimpleResult": {
+        "@type": "xsd:decimal",
+        "@value": "0.0"
+      },
+      "sosa:madeBySensor": {
+        "@id": "eau:weusedtoSensorKitchenfaucet"
+      },
+      "sosa:observedProperty": {
+        "@id": "s4watr:FlowRate"
+      },
+      "sosa:resultTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2019-03-01T09:02:44+00:00"
+      }
+    },
+    {
+      "@id": "https://w3id.org/eautonome/weusedtoCollectionDishwasher30000003/phenomenonTime/begin",
+      "@type": "time:Instant",
+      "time:inXSDDateTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2019-04-19T16:05:29+00:00"
+      }
+    },
+    {
+      "@id": "https://w3id.org/eautonome/weusedtoObsToilet000002/phenomenonTime/begin",
+      "@type": "time:Instant",
+      "time:inXSDDateTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2019-02-25T23:17:42+00:00"
+      }
+    },
+    {
+      "@id": "https://w3id.org/eautonome/weusedtoObsToilet000003/phenomenonTime",
+      "@type": "time:Interval",
+      "time:hasBeginning": {
+        "@id": "https://w3id.org/eautonome/weusedtoObsToilet000003/phenomenonTime/begin"
+      },
+      "time:hasEnd": {
+        "@id": "https://w3id.org/eautonome/weusedtoObsToilet000003/phenomenonTime/end"
+      }
+    },
+    {
+      "@id": "eau:weusedtoMeasurementPointWashbasin",
+      "@type": "eau:MeasurementPoint",
+      "dcterms:source": {
+        "@id": "eau:weusedtoDataset"
+      },
+      "rdfs:label": "WEUSEDTO Washbasin measurement point"
+    },
+    {
+      "@id": "eau:weusedtoObsDishwasher30000002",
+      "@type": "sosa:Observation",
+      "eau:hasDurationSeconds": {
+        "@type": "xsd:decimal",
+        "@value": "1800.0"
+      },
+      "sosa:hasFeatureOfInterest": {
+        "@id": "eau:weusedtoMeasurementPointDishwasher30"
+      },
+      "sosa:hasSimpleResult": {
+        "@type": "xsd:decimal",
+        "@value": "10.199999809265137"
+      },
+      "sosa:madeBySensor": {
+        "@id": "eau:weusedtoSensorDishwasher30"
+      },
+      "sosa:observedProperty": {
+        "@id": "s4watr:FlowRate"
+      },
+      "sosa:phenomenonTime": {
+        "@id": "https://w3id.org/eautonome/weusedtoObsDishwasher30000002/phenomenonTime"
+      }
+    },
+    {
+      "@id": "https://w3id.org/eautonome/weusedtoObsDishwasher30000001/phenomenonTime/begin",
+      "@type": "time:Instant",
+      "time:inXSDDateTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2019-04-09T18:17:29+00:00"
+      }
+    },
+    {
+      "@id": "eau:weusedtoObsWashbasin000003",
+      "@type": "sosa:Observation",
+      "sosa:hasFeatureOfInterest": {
+        "@id": "eau:weusedtoMeasurementPointWashbasin"
+      },
+      "sosa:hasSimpleResult": {
+        "@type": "xsd:decimal",
+        "@value": "54.0"
+      },
+      "sosa:madeBySensor": {
+        "@id": "eau:weusedtoSensorWashbasin"
+      },
+      "sosa:observedProperty": {
+        "@id": "s4watr:FlowRate"
+      },
+      "sosa:resultTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2019-02-13T08:58:32+00:00"
+      }
+    },
+    {
+      "@id": "eau:weusedtoObsWashingmachine000005",
+      "@type": "sosa:Observation",
+      "sosa:hasFeatureOfInterest": {
+        "@id": "eau:weusedtoMeasurementPointWashingmachine"
+      },
+      "sosa:hasSimpleResult": {
+        "@type": "xsd:decimal",
+        "@value": "29.0"
+      },
+      "sosa:madeBySensor": {
+        "@id": "eau:weusedtoSensorWashingmachine"
+      },
+      "sosa:observedProperty": {
+        "@id": "s4watr:FlowRate"
+      },
+      "sosa:resultTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2019-09-18T08:56:49+00:00"
+      }
+    },
+    {
+      "@id": "https://w3id.org/eautonome/weusedtoCollectionDishwasher30000001/phenomenonTime/end",
+      "@type": "time:Instant",
+      "time:inXSDDateTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2019-04-09T18:47:29+00:00"
+      }
+    },
+    {
+      "@id": "eau:weusedtoEventDishwasher30000001",
+      "@type": "eau:ConsumptionEvent",
+      "rdfs:label": "WEUSEDTO Dishwasher30 usage 1",
+      "time:hasBeginning": {
+        "@id": "https://w3id.org/eautonome/weusedtoEventDishwasher30000001/begin"
+      },
+      "time:hasEnd": {
+        "@id": "https://w3id.org/eautonome/weusedtoEventDishwasher30000001/end"
+      }
+    },
+    {
+      "@id": "eau:weusedtoObsWholeHouse000001",
+      "@type": "sosa:Observation",
+      "sosa:hasFeatureOfInterest": {
+        "@id": "eau:weusedtoMeasurementPointWholeHouse"
+      },
+      "sosa:hasSimpleResult": {
+        "@type": "xsd:decimal",
+        "@value": "0.0"
+      },
+      "sosa:madeBySensor": {
+        "@id": "eau:weusedtoSensorWholeHouse"
+      },
+      "sosa:observedProperty": {
+        "@id": "s4watr:FlowRate"
+      },
+      "sosa:resultTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2020-08-04T01:13:13+00:00"
+      }
+    },
+    {
+      "@id": "https://w3id.org/eautonome/weusedtoCollectionDishwasher30000003/phenomenonTime/end",
+      "@type": "time:Instant",
+      "time:inXSDDateTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2019-04-19T16:35:29+00:00"
+      }
+    },
+    {
+      "@id": "eau:weusedtoObsBidet000004",
+      "@type": "sosa:Observation",
+      "sosa:hasFeatureOfInterest": {
+        "@id": "eau:weusedtoMeasurementPointBidet"
+      },
+      "sosa:hasSimpleResult": {
+        "@type": "xsd:decimal",
+        "@value": "58.0"
+      },
+      "sosa:madeBySensor": {
+        "@id": "eau:weusedtoSensorBidet"
+      },
+      "sosa:observedProperty": {
+        "@id": "s4watr:FlowRate"
+      },
+      "sosa:resultTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2019-02-16T16:51:54+00:00"
+      }
+    },
+    {
+      "@id": "eau:weusedtoEventToilet000002",
+      "@type": "eau:ConsumptionEvent",
+      "rdfs:label": "WEUSEDTO Toilet usage 2",
+      "time:hasBeginning": {
+        "@id": "https://w3id.org/eautonome/weusedtoEventToilet000002/begin"
+      },
+      "time:hasEnd": {
+        "@id": "https://w3id.org/eautonome/weusedtoEventToilet000002/end"
+      }
+    },
+    {
+      "@id": "https://w3id.org/eautonome/weusedtoCollectionToilet000003/phenomenonTime/begin",
+      "@type": "time:Instant",
+      "time:inXSDDateTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2019-02-26T06:41:59+00:00"
+      }
+    },
+    {
+      "@id": "eau:weusedtoObsShower000005",
+      "@type": "sosa:Observation",
+      "sosa:hasFeatureOfInterest": {
+        "@id": "eau:weusedtoMeasurementPointShower"
+      },
+      "sosa:hasSimpleResult": {
+        "@type": "xsd:decimal",
+        "@value": "2.0"
+      },
+      "sosa:madeBySensor": {
+        "@id": "eau:weusedtoSensorShower"
+      },
+      "sosa:observedProperty": {
+        "@id": "s4watr:FlowRate"
+      },
+      "sosa:resultTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2019-02-13T11:18:20+00:00"
+      }
+    },
+    {
+      "@id": "eau:weusedtoSensorWashingmachine",
+      "@type": "sosa:Sensor",
+      "dcterms:source": {
+        "@id": "eau:weusedtoDataset"
+      },
+      "eau:monitors": {
+        "@id": "eau:weusedtoMeasurementPointWashingmachine"
+      },
+      "rdfs:label": "WEUSEDTO Washingmachine sensor",
+      "sosa:observes": {
+        "@id": "s4watr:FlowRate"
+      }
+    },
+    {
+      "@id": "eau:weusedtoObsWholeHouse000004",
+      "@type": "sosa:Observation",
+      "sosa:hasFeatureOfInterest": {
+        "@id": "eau:weusedtoMeasurementPointWholeHouse"
+      },
+      "sosa:hasSimpleResult": {
+        "@type": "xsd:decimal",
+        "@value": "0.0"
+      },
+      "sosa:madeBySensor": {
+        "@id": "eau:weusedtoSensorWholeHouse"
+      },
+      "sosa:observedProperty": {
+        "@id": "s4watr:FlowRate"
+      },
+      "sosa:resultTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2020-08-04T01:13:44+00:00"
+      }
+    },
+    {
+      "@id": "https://w3id.org/eautonome/weusedtoObsDishwasher30000003/phenomenonTime/begin",
+      "@type": "time:Instant",
+      "time:inXSDDateTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2019-04-19T16:05:29+00:00"
+      }
+    },
+    {
+      "@id": "https://w3id.org/eautonome/weusedtoCollectionToilet000002/phenomenonTime",
+      "@type": "time:Interval",
+      "time:hasBeginning": {
+        "@id": "https://w3id.org/eautonome/weusedtoCollectionToilet000002/phenomenonTime/begin"
+      },
+      "time:hasEnd": {
+        "@id": "https://w3id.org/eautonome/weusedtoCollectionToilet000002/phenomenonTime/end"
+      }
+    },
+    {
+      "@id": "https://w3id.org/eautonome/weusedtoEventDishwasher30000003/begin",
+      "@type": "time:Instant",
+      "time:inXSDDateTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2019-04-19T16:05:29+00:00"
+      }
+    },
+    {
+      "@id": "https://w3id.org/eautonome/weusedtoObsToilet000002/phenomenonTime/end",
+      "@type": "time:Instant",
+      "time:inXSDDateTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2019-02-25T23:23:42+00:00"
+      }
+    },
+    {
+      "@id": "https://w3id.org/eautonome/weusedtoCollectionToilet000003/phenomenonTime/end",
+      "@type": "time:Instant",
+      "time:inXSDDateTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2019-02-26T06:47:59+00:00"
+      }
+    },
+    {
+      "@id": "eau:weusedtoObsWashingmachine000002",
+      "@type": "sosa:Observation",
+      "sosa:hasFeatureOfInterest": {
+        "@id": "eau:weusedtoMeasurementPointWashingmachine"
+      },
+      "sosa:hasSimpleResult": {
+        "@type": "xsd:decimal",
+        "@value": "0.0"
+      },
+      "sosa:madeBySensor": {
+        "@id": "eau:weusedtoSensorWashingmachine"
+      },
+      "sosa:observedProperty": {
+        "@id": "s4watr:FlowRate"
+      },
+      "sosa:resultTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2019-09-17T10:18:29+00:00"
+      }
+    },
+    {
+      "@id": "https://w3id.org/eautonome/weusedtoCollectionToilet000002/phenomenonTime/begin",
+      "@type": "time:Instant",
+      "time:inXSDDateTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2019-02-25T23:17:42+00:00"
+      }
+    },
+    {
+      "@id": "eau:weusedtoObsBidet000003",
+      "@type": "sosa:Observation",
+      "sosa:hasFeatureOfInterest": {
+        "@id": "eau:weusedtoMeasurementPointBidet"
+      },
+      "sosa:hasSimpleResult": {
+        "@type": "xsd:decimal",
+        "@value": "38.0"
+      },
+      "sosa:madeBySensor": {
+        "@id": "eau:weusedtoSensorBidet"
+      },
+      "sosa:observedProperty": {
+        "@id": "s4watr:FlowRate"
+      },
+      "sosa:resultTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2019-02-16T16:51:52+00:00"
+      }
+    },
+    {
+      "@id": "eau:weusedtoSensorWashbasin",
+      "@type": "sosa:Sensor",
+      "dcterms:source": {
+        "@id": "eau:weusedtoDataset"
+      },
+      "eau:monitors": {
+        "@id": "eau:weusedtoMeasurementPointWashbasin"
+      },
+      "rdfs:label": "WEUSEDTO Washbasin sensor",
+      "sosa:observes": {
+        "@id": "s4watr:FlowRate"
+      }
+    },
+    {
+      "@id": "https://w3id.org/eautonome/weusedtoObsDishwasher30000001/phenomenonTime/end",
+      "@type": "time:Instant",
+      "time:inXSDDateTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2019-04-09T18:47:29+00:00"
+      }
+    },
+    {
+      "@id": "eau:weusedtoObsWholeHouse000005",
+      "@type": "sosa:Observation",
+      "sosa:hasFeatureOfInterest": {
+        "@id": "eau:weusedtoMeasurementPointWholeHouse"
+      },
+      "sosa:hasSimpleResult": {
+        "@type": "xsd:decimal",
+        "@value": "0.0"
+      },
+      "sosa:madeBySensor": {
+        "@id": "eau:weusedtoSensorWholeHouse"
+      },
+      "sosa:observedProperty": {
+        "@id": "s4watr:FlowRate"
+      },
+      "sosa:resultTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2020-08-04T01:13:55+00:00"
+      }
+    },
+    {
+      "@id": "eau:weusedtoSensorKitchenfaucet",
+      "@type": "sosa:Sensor",
+      "dcterms:source": {
+        "@id": "eau:weusedtoDataset"
+      },
+      "eau:monitors": {
+        "@id": "eau:weusedtoMeasurementPointKitchenfaucet"
+      },
+      "rdfs:label": "WEUSEDTO Kitchenfaucet sensor",
+      "sosa:observes": {
+        "@id": "s4watr:FlowRate"
+      }
+    },
+    {
+      "@id": "eau:weusedtoCollectionToilet000001",
+      "@type": "sosa:ObservationCollection",
+      "eau:hasConsumptionEvent": {
+        "@id": "eau:weusedtoEventToilet000001"
+      },
+      "rdfs:label": "WEUSEDTO Toilet collection 1",
+      "sosa:hasFeatureOfInterest": {
+        "@id": "eau:weusedtoMeasurementPointToilet"
+      },
+      "sosa:hasMember": {
+        "@id": "eau:weusedtoObsToilet000001"
+      },
+      "sosa:madeBySensor": {
+        "@id": "eau:weusedtoSensorToilet"
+      },
+      "sosa:observedProperty": {
+        "@id": "s4watr:FlowRate"
+      },
+      "sosa:phenomenonTime": {
+        "@id": "https://w3id.org/eautonome/weusedtoCollectionToilet000001/phenomenonTime"
+      }
+    },
+    {
+      "@id": "eau:weusedtoObsShower000001",
+      "@type": "sosa:Observation",
+      "sosa:hasFeatureOfInterest": {
+        "@id": "eau:weusedtoMeasurementPointShower"
+      },
+      "sosa:hasSimpleResult": {
+        "@type": "xsd:decimal",
+        "@value": "90.0"
+      },
+      "sosa:madeBySensor": {
+        "@id": "eau:weusedtoSensorShower"
+      },
+      "sosa:observedProperty": {
+        "@id": "s4watr:FlowRate"
+      },
+      "sosa:resultTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2019-02-13T11:18:14+00:00"
+      }
+    },
+    {
+      "@id": "eau:weusedtoObsShower000002",
+      "@type": "sosa:Observation",
+      "sosa:hasFeatureOfInterest": {
+        "@id": "eau:weusedtoMeasurementPointShower"
+      },
+      "sosa:hasSimpleResult": {
+        "@type": "xsd:decimal",
+        "@value": "139.0"
+      },
+      "sosa:madeBySensor": {
+        "@id": "eau:weusedtoSensorShower"
+      },
+      "sosa:observedProperty": {
+        "@id": "s4watr:FlowRate"
+      },
+      "sosa:resultTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2019-02-13T11:18:15+00:00"
+      }
+    },
+    {
+      "@id": "eau:weusedtoCollectionDishwasher30000003",
+      "@type": "sosa:ObservationCollection",
+      "eau:hasConsumptionEvent": {
+        "@id": "eau:weusedtoEventDishwasher30000003"
+      },
+      "rdfs:label": "WEUSEDTO Dishwasher30 collection 3",
+      "sosa:hasFeatureOfInterest": {
+        "@id": "eau:weusedtoMeasurementPointDishwasher30"
+      },
+      "sosa:hasMember": {
+        "@id": "eau:weusedtoObsDishwasher30000003"
+      },
+      "sosa:madeBySensor": {
+        "@id": "eau:weusedtoSensorDishwasher30"
+      },
+      "sosa:observedProperty": {
+        "@id": "s4watr:FlowRate"
+      },
+      "sosa:phenomenonTime": {
+        "@id": "https://w3id.org/eautonome/weusedtoCollectionDishwasher30000003/phenomenonTime"
+      }
+    },
+    {
+      "@id": "https://w3id.org/eautonome/weusedtoCollectionToilet000003/phenomenonTime",
+      "@type": "time:Interval",
+      "time:hasBeginning": {
+        "@id": "https://w3id.org/eautonome/weusedtoCollectionToilet000003/phenomenonTime/begin"
+      },
+      "time:hasEnd": {
+        "@id": "https://w3id.org/eautonome/weusedtoCollectionToilet000003/phenomenonTime/end"
+      }
+    },
+    {
+      "@id": "eau:weusedtoCollectionToilet000002",
+      "@type": "sosa:ObservationCollection",
+      "eau:hasConsumptionEvent": {
+        "@id": "eau:weusedtoEventToilet000002"
+      },
+      "rdfs:label": "WEUSEDTO Toilet collection 2",
+      "sosa:hasFeatureOfInterest": {
+        "@id": "eau:weusedtoMeasurementPointToilet"
+      },
+      "sosa:hasMember": {
+        "@id": "eau:weusedtoObsToilet000002"
+      },
+      "sosa:madeBySensor": {
+        "@id": "eau:weusedtoSensorToilet"
+      },
+      "sosa:observedProperty": {
+        "@id": "s4watr:FlowRate"
+      },
+      "sosa:phenomenonTime": {
+        "@id": "https://w3id.org/eautonome/weusedtoCollectionToilet000002/phenomenonTime"
+      }
+    },
+    {
+      "@id": "https://w3id.org/eautonome/weusedtoObsDishwasher30000002/phenomenonTime/end",
+      "@type": "time:Instant",
+      "time:inXSDDateTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2019-04-13T20:53:08+00:00"
+      }
+    },
+    {
+      "@id": "eau:weusedtoObsKitchenfaucet000002",
+      "@type": "sosa:Observation",
+      "sosa:hasFeatureOfInterest": {
+        "@id": "eau:weusedtoMeasurementPointKitchenfaucet"
+      },
+      "sosa:hasSimpleResult": {
+        "@type": "xsd:decimal",
+        "@value": "0.0"
+      },
+      "sosa:madeBySensor": {
+        "@id": "eau:weusedtoSensorKitchenfaucet"
+      },
+      "sosa:observedProperty": {
+        "@id": "s4watr:FlowRate"
+      },
+      "sosa:resultTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2019-03-01T08:52:42+00:00"
+      }
+    },
+    {
+      "@id": "eau:weusedtoObsShower000004",
+      "@type": "sosa:Observation",
+      "sosa:hasFeatureOfInterest": {
+        "@id": "eau:weusedtoMeasurementPointShower"
+      },
+      "sosa:hasSimpleResult": {
+        "@type": "xsd:decimal",
+        "@value": "2.0"
+      },
+      "sosa:madeBySensor": {
+        "@id": "eau:weusedtoSensorShower"
+      },
+      "sosa:observedProperty": {
+        "@id": "s4watr:FlowRate"
+      },
+      "sosa:resultTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2019-02-13T11:18:18+00:00"
+      }
+    },
+    {
+      "@id": "https://w3id.org/eautonome/weusedtoCollectionDishwasher30000003/phenomenonTime",
+      "@type": "time:Interval",
+      "time:hasBeginning": {
+        "@id": "https://w3id.org/eautonome/weusedtoCollectionDishwasher30000003/phenomenonTime/begin"
+      },
+      "time:hasEnd": {
+        "@id": "https://w3id.org/eautonome/weusedtoCollectionDishwasher30000003/phenomenonTime/end"
+      }
+    },
+    {
+      "@id": "eau:weusedtoSensorBidet",
+      "@type": "sosa:Sensor",
+      "dcterms:source": {
+        "@id": "eau:weusedtoDataset"
+      },
+      "eau:monitors": {
+        "@id": "eau:weusedtoMeasurementPointBidet"
+      },
+      "rdfs:label": "WEUSEDTO Bidet sensor",
+      "sosa:observes": {
+        "@id": "s4watr:FlowRate"
+      }
+    },
+    {
+      "@id": "eau:weusedtoObsToilet000003",
+      "@type": "sosa:Observation",
+      "eau:hasDurationSeconds": {
+        "@type": "xsd:decimal",
+        "@value": "360.0"
+      },
+      "sosa:hasFeatureOfInterest": {
+        "@id": "eau:weusedtoMeasurementPointToilet"
+      },
+      "sosa:hasSimpleResult": {
+        "@type": "xsd:decimal",
+        "@value": "12.0"
+      },
+      "sosa:madeBySensor": {
+        "@id": "eau:weusedtoSensorToilet"
+      },
+      "sosa:observedProperty": {
+        "@id": "s4watr:FlowRate"
+      },
+      "sosa:phenomenonTime": {
+        "@id": "https://w3id.org/eautonome/weusedtoObsToilet000003/phenomenonTime"
+      }
+    },
+    {
+      "@id": "eau:weusedtoObsToilet000002",
+      "@type": "sosa:Observation",
+      "eau:hasDurationSeconds": {
+        "@type": "xsd:decimal",
+        "@value": "360.0"
+      },
+      "sosa:hasFeatureOfInterest": {
+        "@id": "eau:weusedtoMeasurementPointToilet"
+      },
+      "sosa:hasSimpleResult": {
+        "@type": "xsd:decimal",
+        "@value": "12.0"
+      },
+      "sosa:madeBySensor": {
+        "@id": "eau:weusedtoSensorToilet"
+      },
+      "sosa:observedProperty": {
+        "@id": "s4watr:FlowRate"
+      },
+      "sosa:phenomenonTime": {
+        "@id": "https://w3id.org/eautonome/weusedtoObsToilet000002/phenomenonTime"
+      }
+    },
+    {
+      "@id": "https://w3id.org/eautonome/weusedtoObsToilet000001/phenomenonTime/end",
+      "@type": "time:Instant",
+      "time:inXSDDateTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2019-02-25T16:46:05+00:00"
+      }
+    },
+    {
+      "@id": "eau:weusedtoObsBidet000001",
+      "@type": "sosa:Observation",
+      "sosa:hasFeatureOfInterest": {
+        "@id": "eau:weusedtoMeasurementPointBidet"
+      },
+      "sosa:hasSimpleResult": {
+        "@type": "xsd:decimal",
+        "@value": "92.0"
+      },
+      "sosa:madeBySensor": {
+        "@id": "eau:weusedtoSensorBidet"
+      },
+      "sosa:observedProperty": {
+        "@id": "s4watr:FlowRate"
+      },
+      "sosa:resultTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2019-02-16T16:36:19+00:00"
+      }
+    },
+    {
+      "@id": "eau:weusedtoEventDishwasher30000002",
+      "@type": "eau:ConsumptionEvent",
+      "rdfs:label": "WEUSEDTO Dishwasher30 usage 2",
+      "time:hasBeginning": {
+        "@id": "https://w3id.org/eautonome/weusedtoEventDishwasher30000002/begin"
+      },
+      "time:hasEnd": {
+        "@id": "https://w3id.org/eautonome/weusedtoEventDishwasher30000002/end"
+      }
+    },
+    {
+      "@id": "eau:weusedtoSensorToilet",
+      "@type": "sosa:Sensor",
+      "dcterms:source": {
+        "@id": "eau:weusedtoDataset"
+      },
+      "eau:monitors": {
+        "@id": "eau:weusedtoMeasurementPointToilet"
+      },
+      "rdfs:label": "WEUSEDTO Toilet sensor",
+      "sosa:observes": {
+        "@id": "s4watr:FlowRate"
+      }
+    },
+    {
+      "@id": "https://w3id.org/eautonome/weusedtoEventToilet000002/begin",
+      "@type": "time:Instant",
+      "time:inXSDDateTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2019-02-25T23:17:42+00:00"
+      }
+    },
+    {
+      "@id": "https://w3id.org/eautonome/weusedtoEventToilet000001/end",
+      "@type": "time:Instant",
+      "time:inXSDDateTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2019-02-25T16:46:05+00:00"
+      }
+    },
+    {
+      "@id": "eau:weusedtoObsWholeHouse000003",
+      "@type": "sosa:Observation",
+      "sosa:hasFeatureOfInterest": {
+        "@id": "eau:weusedtoMeasurementPointWholeHouse"
+      },
+      "sosa:hasSimpleResult": {
+        "@type": "xsd:decimal",
+        "@value": "0.0"
+      },
+      "sosa:madeBySensor": {
+        "@id": "eau:weusedtoSensorWholeHouse"
+      },
+      "sosa:observedProperty": {
+        "@id": "s4watr:FlowRate"
+      },
+      "sosa:resultTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2020-08-04T01:13:33+00:00"
+      }
+    },
+    {
+      "@id": "https://w3id.org/eautonome/weusedtoEventDishwasher30000002/begin",
+      "@type": "time:Instant",
+      "time:inXSDDateTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2019-04-13T20:23:08+00:00"
+      }
+    },
+    {
+      "@id": "eau:weusedtoSensorShower",
+      "@type": "sosa:Sensor",
+      "dcterms:source": {
+        "@id": "eau:weusedtoDataset"
+      },
+      "eau:monitors": {
+        "@id": "eau:weusedtoMeasurementPointShower"
+      },
+      "rdfs:label": "WEUSEDTO Shower sensor",
+      "sosa:observes": {
+        "@id": "s4watr:FlowRate"
+      }
+    },
+    {
+      "@id": "eau:weusedtoObsWholeHouse000002",
+      "@type": "sosa:Observation",
+      "sosa:hasFeatureOfInterest": {
+        "@id": "eau:weusedtoMeasurementPointWholeHouse"
+      },
+      "sosa:hasSimpleResult": {
+        "@type": "xsd:decimal",
+        "@value": "0.0"
+      },
+      "sosa:madeBySensor": {
+        "@id": "eau:weusedtoSensorWholeHouse"
+      },
+      "sosa:observedProperty": {
+        "@id": "s4watr:FlowRate"
+      },
+      "sosa:resultTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2020-08-04T01:13:24+00:00"
+      }
+    },
+    {
+      "@id": "eau:weusedtoMeasurementPointShower",
+      "@type": "eau:MeasurementPoint",
+      "dcterms:source": {
+        "@id": "eau:weusedtoDataset"
+      },
+      "rdfs:label": "WEUSEDTO Shower measurement point"
+    },
+    {
+      "@id": "eau:weusedtoMeasurementPointDishwasher30",
+      "@type": "eau:MeasurementPoint",
+      "dcterms:source": {
+        "@id": "eau:weusedtoDataset"
+      },
+      "rdfs:label": "WEUSEDTO Dishwasher30 measurement point"
+    },
+    {
+      "@id": "https://w3id.org/eautonome/weusedtoObsToilet000001/phenomenonTime/begin",
+      "@type": "time:Instant",
+      "time:inXSDDateTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2019-02-25T16:40:05+00:00"
+      }
+    },
+    {
+      "@id": "eau:weusedtoObsDishwasher30000003",
+      "@type": "sosa:Observation",
+      "eau:hasDurationSeconds": {
+        "@type": "xsd:decimal",
+        "@value": "1800.0"
+      },
+      "sosa:hasFeatureOfInterest": {
+        "@id": "eau:weusedtoMeasurementPointDishwasher30"
+      },
+      "sosa:hasSimpleResult": {
+        "@type": "xsd:decimal",
+        "@value": "10.199999809265137"
+      },
+      "sosa:madeBySensor": {
+        "@id": "eau:weusedtoSensorDishwasher30"
+      },
+      "sosa:observedProperty": {
+        "@id": "s4watr:FlowRate"
+      },
+      "sosa:phenomenonTime": {
+        "@id": "https://w3id.org/eautonome/weusedtoObsDishwasher30000003/phenomenonTime"
+      }
+    },
+    {
+      "@id": "https://w3id.org/eautonome/weusedtoObsDishwasher30000002/phenomenonTime",
+      "@type": "time:Interval",
+      "time:hasBeginning": {
+        "@id": "https://w3id.org/eautonome/weusedtoObsDishwasher30000002/phenomenonTime/begin"
+      },
+      "time:hasEnd": {
+        "@id": "https://w3id.org/eautonome/weusedtoObsDishwasher30000002/phenomenonTime/end"
+      }
+    },
+    {
+      "@id": "eau:weusedtoObsWashingmachine000003",
+      "@type": "sosa:Observation",
+      "sosa:hasFeatureOfInterest": {
+        "@id": "eau:weusedtoMeasurementPointWashingmachine"
+      },
+      "sosa:hasSimpleResult": {
+        "@type": "xsd:decimal",
+        "@value": "47.0"
+      },
+      "sosa:madeBySensor": {
+        "@id": "eau:weusedtoSensorWashingmachine"
+      },
+      "sosa:observedProperty": {
+        "@id": "s4watr:FlowRate"
+      },
+      "sosa:resultTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2019-09-18T08:56:47+00:00"
+      }
+    },
+    {
+      "@id": "eau:weusedtoCollectionDishwasher30000002",
+      "@type": "sosa:ObservationCollection",
+      "eau:hasConsumptionEvent": {
+        "@id": "eau:weusedtoEventDishwasher30000002"
+      },
+      "rdfs:label": "WEUSEDTO Dishwasher30 collection 2",
+      "sosa:hasFeatureOfInterest": {
+        "@id": "eau:weusedtoMeasurementPointDishwasher30"
+      },
+      "sosa:hasMember": {
+        "@id": "eau:weusedtoObsDishwasher30000002"
+      },
+      "sosa:madeBySensor": {
+        "@id": "eau:weusedtoSensorDishwasher30"
+      },
+      "sosa:observedProperty": {
+        "@id": "s4watr:FlowRate"
+      },
+      "sosa:phenomenonTime": {
+        "@id": "https://w3id.org/eautonome/weusedtoCollectionDishwasher30000002/phenomenonTime"
+      }
+    },
+    {
+      "@id": "https://w3id.org/eautonome/weusedtoEventDishwasher30000001/begin",
+      "@type": "time:Instant",
+      "time:inXSDDateTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2019-04-09T18:17:29+00:00"
+      }
+    },
+    {
+      "@id": "https://w3id.org/eautonome/weusedtoCollectionDishwasher30000002/phenomenonTime",
+      "@type": "time:Interval",
+      "time:hasBeginning": {
+        "@id": "https://w3id.org/eautonome/weusedtoCollectionDishwasher30000002/phenomenonTime/begin"
+      },
+      "time:hasEnd": {
+        "@id": "https://w3id.org/eautonome/weusedtoCollectionDishwasher30000002/phenomenonTime/end"
+      }
+    },
+    {
+      "@id": "eau:weusedtoEventToilet000001",
+      "@type": "eau:ConsumptionEvent",
+      "rdfs:label": "WEUSEDTO Toilet usage 1",
+      "time:hasBeginning": {
+        "@id": "https://w3id.org/eautonome/weusedtoEventToilet000001/begin"
+      },
+      "time:hasEnd": {
+        "@id": "https://w3id.org/eautonome/weusedtoEventToilet000001/end"
+      }
+    },
+    {
+      "@id": "eau:weusedtoObsBidet000005",
+      "@type": "sosa:Observation",
+      "sosa:hasFeatureOfInterest": {
+        "@id": "eau:weusedtoMeasurementPointBidet"
+      },
+      "sosa:hasSimpleResult": {
+        "@type": "xsd:decimal",
+        "@value": "56.0"
+      },
+      "sosa:madeBySensor": {
+        "@id": "eau:weusedtoSensorBidet"
+      },
+      "sosa:observedProperty": {
+        "@id": "s4watr:FlowRate"
+      },
+      "sosa:resultTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2019-02-16T16:51:55+00:00"
+      }
+    },
+    {
+      "@id": "https://w3id.org/eautonome/weusedtoCollectionDishwasher30000002/phenomenonTime/begin",
+      "@type": "time:Instant",
+      "time:inXSDDateTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2019-04-13T20:23:08+00:00"
+      }
+    },
+    {
+      "@id": "https://w3id.org/eautonome/weusedtoObsToilet000003/phenomenonTime/begin",
+      "@type": "time:Instant",
+      "time:inXSDDateTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2019-02-26T06:41:59+00:00"
+      }
+    },
+    {
+      "@id": "https://w3id.org/eautonome/weusedtoCollectionDishwasher30000001/phenomenonTime",
+      "@type": "time:Interval",
+      "time:hasBeginning": {
+        "@id": "https://w3id.org/eautonome/weusedtoCollectionDishwasher30000001/phenomenonTime/begin"
+      },
+      "time:hasEnd": {
+        "@id": "https://w3id.org/eautonome/weusedtoCollectionDishwasher30000001/phenomenonTime/end"
+      }
+    },
+    {
+      "@id": "eau:weusedtoObsBidet000002",
+      "@type": "sosa:Observation",
+      "sosa:hasFeatureOfInterest": {
+        "@id": "eau:weusedtoMeasurementPointBidet"
+      },
+      "sosa:hasSimpleResult": {
+        "@type": "xsd:decimal",
+        "@value": "6.0"
+      },
+      "sosa:madeBySensor": {
+        "@id": "eau:weusedtoSensorBidet"
+      },
+      "sosa:observedProperty": {
+        "@id": "s4watr:FlowRate"
+      },
+      "sosa:resultTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2019-02-16T16:36:20+00:00"
+      }
+    },
+    {
+      "@id": "https://w3id.org/eautonome/weusedtoCollectionToilet000001/phenomenonTime/begin",
+      "@type": "time:Instant",
+      "time:inXSDDateTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2019-02-25T16:40:05+00:00"
+      }
+    },
+    {
+      "@id": "eau:weusedtoMeasurementPointWashingmachine",
+      "@type": "eau:MeasurementPoint",
+      "dcterms:source": {
+        "@id": "eau:weusedtoDataset"
+      },
+      "rdfs:label": "WEUSEDTO Washingmachine measurement point"
+    },
+    {
+      "@id": "eau:weusedtoObsKitchenfaucet000005",
+      "@type": "sosa:Observation",
+      "sosa:hasFeatureOfInterest": {
+        "@id": "eau:weusedtoMeasurementPointKitchenfaucet"
+      },
+      "sosa:hasSimpleResult": {
+        "@type": "xsd:decimal",
+        "@value": "0.0"
+      },
+      "sosa:madeBySensor": {
+        "@id": "eau:weusedtoSensorKitchenfaucet"
+      },
+      "sosa:observedProperty": {
+        "@id": "s4watr:FlowRate"
+      },
+      "sosa:resultTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2019-03-01T09:07:45+00:00"
+      }
+    },
+    {
+      "@id": "https://w3id.org/eautonome/weusedtoObsDishwasher30000003/phenomenonTime/end",
+      "@type": "time:Instant",
+      "time:inXSDDateTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2019-04-19T16:35:29+00:00"
+      }
+    },
+    {
+      "@id": "eau:weusedtoObsWashbasin000004",
+      "@type": "sosa:Observation",
+      "sosa:hasFeatureOfInterest": {
+        "@id": "eau:weusedtoMeasurementPointWashbasin"
+      },
+      "sosa:hasSimpleResult": {
+        "@type": "xsd:decimal",
+        "@value": "135.0"
+      },
+      "sosa:madeBySensor": {
+        "@id": "eau:weusedtoSensorWashbasin"
+      },
+      "sosa:observedProperty": {
+        "@id": "s4watr:FlowRate"
+      },
+      "sosa:resultTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2019-02-16T16:55:26+00:00"
+      }
+    },
+    {
+      "@id": "https://w3id.org/eautonome/weusedtoEventToilet000002/end",
+      "@type": "time:Instant",
+      "time:inXSDDateTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2019-02-25T23:23:42+00:00"
+      }
+    },
+    {
+      "@id": "https://w3id.org/eautonome/weusedtoCollectionToilet000001/phenomenonTime",
+      "@type": "time:Interval",
+      "time:hasBeginning": {
+        "@id": "https://w3id.org/eautonome/weusedtoCollectionToilet000001/phenomenonTime/begin"
+      },
+      "time:hasEnd": {
+        "@id": "https://w3id.org/eautonome/weusedtoCollectionToilet000001/phenomenonTime/end"
+      }
+    },
+    {
+      "@id": "https://w3id.org/eautonome/weusedtoObsToilet000001/phenomenonTime",
+      "@type": "time:Interval",
+      "time:hasBeginning": {
+        "@id": "https://w3id.org/eautonome/weusedtoObsToilet000001/phenomenonTime/begin"
+      },
+      "time:hasEnd": {
+        "@id": "https://w3id.org/eautonome/weusedtoObsToilet000001/phenomenonTime/end"
+      }
+    },
+    {
+      "@id": "https://w3id.org/eautonome/weusedtoObsDishwasher30000003/phenomenonTime",
+      "@type": "time:Interval",
+      "time:hasBeginning": {
+        "@id": "https://w3id.org/eautonome/weusedtoObsDishwasher30000003/phenomenonTime/begin"
+      },
+      "time:hasEnd": {
+        "@id": "https://w3id.org/eautonome/weusedtoObsDishwasher30000003/phenomenonTime/end"
+      }
+    },
+    {
+      "@id": "eau:weusedtoMeasurementPointToilet",
+      "@type": "eau:MeasurementPoint",
+      "dcterms:source": {
+        "@id": "eau:weusedtoDataset"
+      },
+      "rdfs:label": "WEUSEDTO Toilet measurement point"
+    },
+    {
+      "@id": "eau:weusedtoObsKitchenfaucet000001",
+      "@type": "sosa:Observation",
+      "sosa:hasFeatureOfInterest": {
+        "@id": "eau:weusedtoMeasurementPointKitchenfaucet"
+      },
+      "sosa:hasSimpleResult": {
+        "@type": "xsd:decimal",
+        "@value": "0.0"
+      },
+      "sosa:madeBySensor": {
+        "@id": "eau:weusedtoSensorKitchenfaucet"
+      },
+      "sosa:observedProperty": {
+        "@id": "s4watr:FlowRate"
+      },
+      "sosa:resultTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2019-02-22T14:45:55+00:00"
+      }
+    }
+  ]
+}

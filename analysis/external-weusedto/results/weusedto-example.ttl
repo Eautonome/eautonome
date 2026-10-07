@@ -1,0 +1,594 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix eau: <https://w3id.org/eautonome/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix s4watr: <https://saref.etsi.org/saref4watr/> .
+@prefix schema1: <http://schema.org/> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+eau:weusedtoCollectionDishwasher30000001 a sosa:ObservationCollection ;
+    rdfs:label "WEUSEDTO Dishwasher30 collection 1" ;
+    sosa:hasFeatureOfInterest eau:weusedtoMeasurementPointDishwasher30 ;
+    sosa:hasMember eau:weusedtoObsDishwasher30000001 ;
+    sosa:madeBySensor eau:weusedtoSensorDishwasher30 ;
+    sosa:observedProperty s4watr:FlowRate ;
+    sosa:phenomenonTime <https://w3id.org/eautonome/weusedtoCollectionDishwasher30000001/phenomenonTime> ;
+    eau:hasConsumptionEvent eau:weusedtoEventDishwasher30000001 .
+
+eau:weusedtoCollectionDishwasher30000002 a sosa:ObservationCollection ;
+    rdfs:label "WEUSEDTO Dishwasher30 collection 2" ;
+    sosa:hasFeatureOfInterest eau:weusedtoMeasurementPointDishwasher30 ;
+    sosa:hasMember eau:weusedtoObsDishwasher30000002 ;
+    sosa:madeBySensor eau:weusedtoSensorDishwasher30 ;
+    sosa:observedProperty s4watr:FlowRate ;
+    sosa:phenomenonTime <https://w3id.org/eautonome/weusedtoCollectionDishwasher30000002/phenomenonTime> ;
+    eau:hasConsumptionEvent eau:weusedtoEventDishwasher30000002 .
+
+eau:weusedtoCollectionDishwasher30000003 a sosa:ObservationCollection ;
+    rdfs:label "WEUSEDTO Dishwasher30 collection 3" ;
+    sosa:hasFeatureOfInterest eau:weusedtoMeasurementPointDishwasher30 ;
+    sosa:hasMember eau:weusedtoObsDishwasher30000003 ;
+    sosa:madeBySensor eau:weusedtoSensorDishwasher30 ;
+    sosa:observedProperty s4watr:FlowRate ;
+    sosa:phenomenonTime <https://w3id.org/eautonome/weusedtoCollectionDishwasher30000003/phenomenonTime> ;
+    eau:hasConsumptionEvent eau:weusedtoEventDishwasher30000003 .
+
+eau:weusedtoCollectionToilet000001 a sosa:ObservationCollection ;
+    rdfs:label "WEUSEDTO Toilet collection 1" ;
+    sosa:hasFeatureOfInterest eau:weusedtoMeasurementPointToilet ;
+    sosa:hasMember eau:weusedtoObsToilet000001 ;
+    sosa:madeBySensor eau:weusedtoSensorToilet ;
+    sosa:observedProperty s4watr:FlowRate ;
+    sosa:phenomenonTime <https://w3id.org/eautonome/weusedtoCollectionToilet000001/phenomenonTime> ;
+    eau:hasConsumptionEvent eau:weusedtoEventToilet000001 .
+
+eau:weusedtoCollectionToilet000002 a sosa:ObservationCollection ;
+    rdfs:label "WEUSEDTO Toilet collection 2" ;
+    sosa:hasFeatureOfInterest eau:weusedtoMeasurementPointToilet ;
+    sosa:hasMember eau:weusedtoObsToilet000002 ;
+    sosa:madeBySensor eau:weusedtoSensorToilet ;
+    sosa:observedProperty s4watr:FlowRate ;
+    sosa:phenomenonTime <https://w3id.org/eautonome/weusedtoCollectionToilet000002/phenomenonTime> ;
+    eau:hasConsumptionEvent eau:weusedtoEventToilet000002 .
+
+eau:weusedtoCollectionToilet000003 a sosa:ObservationCollection ;
+    rdfs:label "WEUSEDTO Toilet collection 3" ;
+    sosa:hasFeatureOfInterest eau:weusedtoMeasurementPointToilet ;
+    sosa:hasMember eau:weusedtoObsToilet000003 ;
+    sosa:madeBySensor eau:weusedtoSensorToilet ;
+    sosa:observedProperty s4watr:FlowRate ;
+    sosa:phenomenonTime <https://w3id.org/eautonome/weusedtoCollectionToilet000003/phenomenonTime> ;
+    eau:hasConsumptionEvent eau:weusedtoEventToilet000003 .
+
+eau:weusedtoObsBidet000001 a sosa:Observation ;
+    sosa:hasFeatureOfInterest eau:weusedtoMeasurementPointBidet ;
+    sosa:hasSimpleResult 92.0 ;
+    sosa:madeBySensor eau:weusedtoSensorBidet ;
+    sosa:observedProperty s4watr:FlowRate ;
+    sosa:resultTime "2019-02-16T16:36:19+00:00"^^xsd:dateTime .
+
+eau:weusedtoObsBidet000002 a sosa:Observation ;
+    sosa:hasFeatureOfInterest eau:weusedtoMeasurementPointBidet ;
+    sosa:hasSimpleResult 6.0 ;
+    sosa:madeBySensor eau:weusedtoSensorBidet ;
+    sosa:observedProperty s4watr:FlowRate ;
+    sosa:resultTime "2019-02-16T16:36:20+00:00"^^xsd:dateTime .
+
+eau:weusedtoObsBidet000003 a sosa:Observation ;
+    sosa:hasFeatureOfInterest eau:weusedtoMeasurementPointBidet ;
+    sosa:hasSimpleResult 38.0 ;
+    sosa:madeBySensor eau:weusedtoSensorBidet ;
+    sosa:observedProperty s4watr:FlowRate ;
+    sosa:resultTime "2019-02-16T16:51:52+00:00"^^xsd:dateTime .
+
+eau:weusedtoObsBidet000004 a sosa:Observation ;
+    sosa:hasFeatureOfInterest eau:weusedtoMeasurementPointBidet ;
+    sosa:hasSimpleResult 58.0 ;
+    sosa:madeBySensor eau:weusedtoSensorBidet ;
+    sosa:observedProperty s4watr:FlowRate ;
+    sosa:resultTime "2019-02-16T16:51:54+00:00"^^xsd:dateTime .
+
+eau:weusedtoObsBidet000005 a sosa:Observation ;
+    sosa:hasFeatureOfInterest eau:weusedtoMeasurementPointBidet ;
+    sosa:hasSimpleResult 56.0 ;
+    sosa:madeBySensor eau:weusedtoSensorBidet ;
+    sosa:observedProperty s4watr:FlowRate ;
+    sosa:resultTime "2019-02-16T16:51:55+00:00"^^xsd:dateTime .
+
+eau:weusedtoObsKitchenfaucet000001 a sosa:Observation ;
+    sosa:hasFeatureOfInterest eau:weusedtoMeasurementPointKitchenfaucet ;
+    sosa:hasSimpleResult 0.0 ;
+    sosa:madeBySensor eau:weusedtoSensorKitchenfaucet ;
+    sosa:observedProperty s4watr:FlowRate ;
+    sosa:resultTime "2019-02-22T14:45:55+00:00"^^xsd:dateTime .
+
+eau:weusedtoObsKitchenfaucet000002 a sosa:Observation ;
+    sosa:hasFeatureOfInterest eau:weusedtoMeasurementPointKitchenfaucet ;
+    sosa:hasSimpleResult 0.0 ;
+    sosa:madeBySensor eau:weusedtoSensorKitchenfaucet ;
+    sosa:observedProperty s4watr:FlowRate ;
+    sosa:resultTime "2019-03-01T08:52:42+00:00"^^xsd:dateTime .
+
+eau:weusedtoObsKitchenfaucet000003 a sosa:Observation ;
+    sosa:hasFeatureOfInterest eau:weusedtoMeasurementPointKitchenfaucet ;
+    sosa:hasSimpleResult 0.0 ;
+    sosa:madeBySensor eau:weusedtoSensorKitchenfaucet ;
+    sosa:observedProperty s4watr:FlowRate ;
+    sosa:resultTime "2019-03-01T08:57:43+00:00"^^xsd:dateTime .
+
+eau:weusedtoObsKitchenfaucet000004 a sosa:Observation ;
+    sosa:hasFeatureOfInterest eau:weusedtoMeasurementPointKitchenfaucet ;
+    sosa:hasSimpleResult 0.0 ;
+    sosa:madeBySensor eau:weusedtoSensorKitchenfaucet ;
+    sosa:observedProperty s4watr:FlowRate ;
+    sosa:resultTime "2019-03-01T09:02:44+00:00"^^xsd:dateTime .
+
+eau:weusedtoObsKitchenfaucet000005 a sosa:Observation ;
+    sosa:hasFeatureOfInterest eau:weusedtoMeasurementPointKitchenfaucet ;
+    sosa:hasSimpleResult 0.0 ;
+    sosa:madeBySensor eau:weusedtoSensorKitchenfaucet ;
+    sosa:observedProperty s4watr:FlowRate ;
+    sosa:resultTime "2019-03-01T09:07:45+00:00"^^xsd:dateTime .
+
+eau:weusedtoObsShower000001 a sosa:Observation ;
+    sosa:hasFeatureOfInterest eau:weusedtoMeasurementPointShower ;
+    sosa:hasSimpleResult 90.0 ;
+    sosa:madeBySensor eau:weusedtoSensorShower ;
+    sosa:observedProperty s4watr:FlowRate ;
+    sosa:resultTime "2019-02-13T11:18:14+00:00"^^xsd:dateTime .
+
+eau:weusedtoObsShower000002 a sosa:Observation ;
+    sosa:hasFeatureOfInterest eau:weusedtoMeasurementPointShower ;
+    sosa:hasSimpleResult 139.0 ;
+    sosa:madeBySensor eau:weusedtoSensorShower ;
+    sosa:observedProperty s4watr:FlowRate ;
+    sosa:resultTime "2019-02-13T11:18:15+00:00"^^xsd:dateTime .
+
+eau:weusedtoObsShower000003 a sosa:Observation ;
+    sosa:hasFeatureOfInterest eau:weusedtoMeasurementPointShower ;
+    sosa:hasSimpleResult 65.0 ;
+    sosa:madeBySensor eau:weusedtoSensorShower ;
+    sosa:observedProperty s4watr:FlowRate ;
+    sosa:resultTime "2019-02-13T11:18:17+00:00"^^xsd:dateTime .
+
+eau:weusedtoObsShower000004 a sosa:Observation ;
+    sosa:hasFeatureOfInterest eau:weusedtoMeasurementPointShower ;
+    sosa:hasSimpleResult 2.0 ;
+    sosa:madeBySensor eau:weusedtoSensorShower ;
+    sosa:observedProperty s4watr:FlowRate ;
+    sosa:resultTime "2019-02-13T11:18:18+00:00"^^xsd:dateTime .
+
+eau:weusedtoObsShower000005 a sosa:Observation ;
+    sosa:hasFeatureOfInterest eau:weusedtoMeasurementPointShower ;
+    sosa:hasSimpleResult 2.0 ;
+    sosa:madeBySensor eau:weusedtoSensorShower ;
+    sosa:observedProperty s4watr:FlowRate ;
+    sosa:resultTime "2019-02-13T11:18:20+00:00"^^xsd:dateTime .
+
+eau:weusedtoObsWashbasin000001 a sosa:Observation ;
+    sosa:hasFeatureOfInterest eau:weusedtoMeasurementPointWashbasin ;
+    sosa:hasSimpleResult 0.0 ;
+    sosa:madeBySensor eau:weusedtoSensorWashbasin ;
+    sosa:observedProperty s4watr:FlowRate ;
+    sosa:resultTime "2019-02-13T08:56:09+00:00"^^xsd:dateTime .
+
+eau:weusedtoObsWashbasin000002 a sosa:Observation ;
+    sosa:hasFeatureOfInterest eau:weusedtoMeasurementPointWashbasin ;
+    sosa:hasSimpleResult 123.0 ;
+    sosa:madeBySensor eau:weusedtoSensorWashbasin ;
+    sosa:observedProperty s4watr:FlowRate ;
+    sosa:resultTime "2019-02-13T08:58:31+00:00"^^xsd:dateTime .
+
+eau:weusedtoObsWashbasin000003 a sosa:Observation ;
+    sosa:hasFeatureOfInterest eau:weusedtoMeasurementPointWashbasin ;
+    sosa:hasSimpleResult 54.0 ;
+    sosa:madeBySensor eau:weusedtoSensorWashbasin ;
+    sosa:observedProperty s4watr:FlowRate ;
+    sosa:resultTime "2019-02-13T08:58:32+00:00"^^xsd:dateTime .
+
+eau:weusedtoObsWashbasin000004 a sosa:Observation ;
+    sosa:hasFeatureOfInterest eau:weusedtoMeasurementPointWashbasin ;
+    sosa:hasSimpleResult 135.0 ;
+    sosa:madeBySensor eau:weusedtoSensorWashbasin ;
+    sosa:observedProperty s4watr:FlowRate ;
+    sosa:resultTime "2019-02-16T16:55:26+00:00"^^xsd:dateTime .
+
+eau:weusedtoObsWashbasin000005 a sosa:Observation ;
+    sosa:hasFeatureOfInterest eau:weusedtoMeasurementPointWashbasin ;
+    sosa:hasSimpleResult 11.0 ;
+    sosa:madeBySensor eau:weusedtoSensorWashbasin ;
+    sosa:observedProperty s4watr:FlowRate ;
+    sosa:resultTime "2019-02-16T16:55:27+00:00"^^xsd:dateTime .
+
+eau:weusedtoObsWashingmachine000001 a sosa:Observation ;
+    sosa:hasFeatureOfInterest eau:weusedtoMeasurementPointWashingmachine ;
+    sosa:hasSimpleResult 0.0 ;
+    sosa:madeBySensor eau:weusedtoSensorWashingmachine ;
+    sosa:observedProperty s4watr:FlowRate ;
+    sosa:resultTime "2019-09-17T10:13:27+00:00"^^xsd:dateTime .
+
+eau:weusedtoObsWashingmachine000002 a sosa:Observation ;
+    sosa:hasFeatureOfInterest eau:weusedtoMeasurementPointWashingmachine ;
+    sosa:hasSimpleResult 0.0 ;
+    sosa:madeBySensor eau:weusedtoSensorWashingmachine ;
+    sosa:observedProperty s4watr:FlowRate ;
+    sosa:resultTime "2019-09-17T10:18:29+00:00"^^xsd:dateTime .
+
+eau:weusedtoObsWashingmachine000003 a sosa:Observation ;
+    sosa:hasFeatureOfInterest eau:weusedtoMeasurementPointWashingmachine ;
+    sosa:hasSimpleResult 47.0 ;
+    sosa:madeBySensor eau:weusedtoSensorWashingmachine ;
+    sosa:observedProperty s4watr:FlowRate ;
+    sosa:resultTime "2019-09-18T08:56:47+00:00"^^xsd:dateTime .
+
+eau:weusedtoObsWashingmachine000004 a sosa:Observation ;
+    sosa:hasFeatureOfInterest eau:weusedtoMeasurementPointWashingmachine ;
+    sosa:hasSimpleResult 112.0 ;
+    sosa:madeBySensor eau:weusedtoSensorWashingmachine ;
+    sosa:observedProperty s4watr:FlowRate ;
+    sosa:resultTime "2019-09-18T08:56:48+00:00"^^xsd:dateTime .
+
+eau:weusedtoObsWashingmachine000005 a sosa:Observation ;
+    sosa:hasFeatureOfInterest eau:weusedtoMeasurementPointWashingmachine ;
+    sosa:hasSimpleResult 29.0 ;
+    sosa:madeBySensor eau:weusedtoSensorWashingmachine ;
+    sosa:observedProperty s4watr:FlowRate ;
+    sosa:resultTime "2019-09-18T08:56:49+00:00"^^xsd:dateTime .
+
+eau:weusedtoObsWholeHouse000001 a sosa:Observation ;
+    sosa:hasFeatureOfInterest eau:weusedtoMeasurementPointWholeHouse ;
+    sosa:hasSimpleResult 0.0 ;
+    sosa:madeBySensor eau:weusedtoSensorWholeHouse ;
+    sosa:observedProperty s4watr:FlowRate ;
+    sosa:resultTime "2020-08-04T01:13:13+00:00"^^xsd:dateTime .
+
+eau:weusedtoObsWholeHouse000002 a sosa:Observation ;
+    sosa:hasFeatureOfInterest eau:weusedtoMeasurementPointWholeHouse ;
+    sosa:hasSimpleResult 0.0 ;
+    sosa:madeBySensor eau:weusedtoSensorWholeHouse ;
+    sosa:observedProperty s4watr:FlowRate ;
+    sosa:resultTime "2020-08-04T01:13:24+00:00"^^xsd:dateTime .
+
+eau:weusedtoObsWholeHouse000003 a sosa:Observation ;
+    sosa:hasFeatureOfInterest eau:weusedtoMeasurementPointWholeHouse ;
+    sosa:hasSimpleResult 0.0 ;
+    sosa:madeBySensor eau:weusedtoSensorWholeHouse ;
+    sosa:observedProperty s4watr:FlowRate ;
+    sosa:resultTime "2020-08-04T01:13:33+00:00"^^xsd:dateTime .
+
+eau:weusedtoObsWholeHouse000004 a sosa:Observation ;
+    sosa:hasFeatureOfInterest eau:weusedtoMeasurementPointWholeHouse ;
+    sosa:hasSimpleResult 0.0 ;
+    sosa:madeBySensor eau:weusedtoSensorWholeHouse ;
+    sosa:observedProperty s4watr:FlowRate ;
+    sosa:resultTime "2020-08-04T01:13:44+00:00"^^xsd:dateTime .
+
+eau:weusedtoObsWholeHouse000005 a sosa:Observation ;
+    sosa:hasFeatureOfInterest eau:weusedtoMeasurementPointWholeHouse ;
+    sosa:hasSimpleResult 0.0 ;
+    sosa:madeBySensor eau:weusedtoSensorWholeHouse ;
+    sosa:observedProperty s4watr:FlowRate ;
+    sosa:resultTime "2020-08-04T01:13:55+00:00"^^xsd:dateTime .
+
+<https://w3id.org/eautonome/weusedtoCollectionDishwasher30000001/phenomenonTime> a time:Interval ;
+    time:hasBeginning <https://w3id.org/eautonome/weusedtoCollectionDishwasher30000001/phenomenonTime/begin> ;
+    time:hasEnd <https://w3id.org/eautonome/weusedtoCollectionDishwasher30000001/phenomenonTime/end> .
+
+<https://w3id.org/eautonome/weusedtoCollectionDishwasher30000001/phenomenonTime/begin> a time:Instant ;
+    time:inXSDDateTime "2019-04-09T18:17:29+00:00"^^xsd:dateTime .
+
+<https://w3id.org/eautonome/weusedtoCollectionDishwasher30000001/phenomenonTime/end> a time:Instant ;
+    time:inXSDDateTime "2019-04-09T18:47:29+00:00"^^xsd:dateTime .
+
+<https://w3id.org/eautonome/weusedtoCollectionDishwasher30000002/phenomenonTime> a time:Interval ;
+    time:hasBeginning <https://w3id.org/eautonome/weusedtoCollectionDishwasher30000002/phenomenonTime/begin> ;
+    time:hasEnd <https://w3id.org/eautonome/weusedtoCollectionDishwasher30000002/phenomenonTime/end> .
+
+<https://w3id.org/eautonome/weusedtoCollectionDishwasher30000002/phenomenonTime/begin> a time:Instant ;
+    time:inXSDDateTime "2019-04-13T20:23:08+00:00"^^xsd:dateTime .
+
+<https://w3id.org/eautonome/weusedtoCollectionDishwasher30000002/phenomenonTime/end> a time:Instant ;
+    time:inXSDDateTime "2019-04-13T20:53:08+00:00"^^xsd:dateTime .
+
+<https://w3id.org/eautonome/weusedtoCollectionDishwasher30000003/phenomenonTime> a time:Interval ;
+    time:hasBeginning <https://w3id.org/eautonome/weusedtoCollectionDishwasher30000003/phenomenonTime/begin> ;
+    time:hasEnd <https://w3id.org/eautonome/weusedtoCollectionDishwasher30000003/phenomenonTime/end> .
+
+<https://w3id.org/eautonome/weusedtoCollectionDishwasher30000003/phenomenonTime/begin> a time:Instant ;
+    time:inXSDDateTime "2019-04-19T16:05:29+00:00"^^xsd:dateTime .
+
+<https://w3id.org/eautonome/weusedtoCollectionDishwasher30000003/phenomenonTime/end> a time:Instant ;
+    time:inXSDDateTime "2019-04-19T16:35:29+00:00"^^xsd:dateTime .
+
+<https://w3id.org/eautonome/weusedtoCollectionToilet000001/phenomenonTime> a time:Interval ;
+    time:hasBeginning <https://w3id.org/eautonome/weusedtoCollectionToilet000001/phenomenonTime/begin> ;
+    time:hasEnd <https://w3id.org/eautonome/weusedtoCollectionToilet000001/phenomenonTime/end> .
+
+<https://w3id.org/eautonome/weusedtoCollectionToilet000001/phenomenonTime/begin> a time:Instant ;
+    time:inXSDDateTime "2019-02-25T16:40:05+00:00"^^xsd:dateTime .
+
+<https://w3id.org/eautonome/weusedtoCollectionToilet000001/phenomenonTime/end> a time:Instant ;
+    time:inXSDDateTime "2019-02-25T16:46:05+00:00"^^xsd:dateTime .
+
+<https://w3id.org/eautonome/weusedtoCollectionToilet000002/phenomenonTime> a time:Interval ;
+    time:hasBeginning <https://w3id.org/eautonome/weusedtoCollectionToilet000002/phenomenonTime/begin> ;
+    time:hasEnd <https://w3id.org/eautonome/weusedtoCollectionToilet000002/phenomenonTime/end> .
+
+<https://w3id.org/eautonome/weusedtoCollectionToilet000002/phenomenonTime/begin> a time:Instant ;
+    time:inXSDDateTime "2019-02-25T23:17:42+00:00"^^xsd:dateTime .
+
+<https://w3id.org/eautonome/weusedtoCollectionToilet000002/phenomenonTime/end> a time:Instant ;
+    time:inXSDDateTime "2019-02-25T23:23:42+00:00"^^xsd:dateTime .
+
+<https://w3id.org/eautonome/weusedtoCollectionToilet000003/phenomenonTime> a time:Interval ;
+    time:hasBeginning <https://w3id.org/eautonome/weusedtoCollectionToilet000003/phenomenonTime/begin> ;
+    time:hasEnd <https://w3id.org/eautonome/weusedtoCollectionToilet000003/phenomenonTime/end> .
+
+<https://w3id.org/eautonome/weusedtoCollectionToilet000003/phenomenonTime/begin> a time:Instant ;
+    time:inXSDDateTime "2019-02-26T06:41:59+00:00"^^xsd:dateTime .
+
+<https://w3id.org/eautonome/weusedtoCollectionToilet000003/phenomenonTime/end> a time:Instant ;
+    time:inXSDDateTime "2019-02-26T06:47:59+00:00"^^xsd:dateTime .
+
+eau:weusedtoEventDishwasher30000001 a eau:ConsumptionEvent ;
+    rdfs:label "WEUSEDTO Dishwasher30 usage 1" ;
+    time:hasBeginning <https://w3id.org/eautonome/weusedtoEventDishwasher30000001/begin> ;
+    time:hasEnd <https://w3id.org/eautonome/weusedtoEventDishwasher30000001/end> .
+
+<https://w3id.org/eautonome/weusedtoEventDishwasher30000001/begin> a time:Instant ;
+    time:inXSDDateTime "2019-04-09T18:17:29+00:00"^^xsd:dateTime .
+
+<https://w3id.org/eautonome/weusedtoEventDishwasher30000001/end> a time:Instant ;
+    time:inXSDDateTime "2019-04-09T18:47:29+00:00"^^xsd:dateTime .
+
+eau:weusedtoEventDishwasher30000002 a eau:ConsumptionEvent ;
+    rdfs:label "WEUSEDTO Dishwasher30 usage 2" ;
+    time:hasBeginning <https://w3id.org/eautonome/weusedtoEventDishwasher30000002/begin> ;
+    time:hasEnd <https://w3id.org/eautonome/weusedtoEventDishwasher30000002/end> .
+
+<https://w3id.org/eautonome/weusedtoEventDishwasher30000002/begin> a time:Instant ;
+    time:inXSDDateTime "2019-04-13T20:23:08+00:00"^^xsd:dateTime .
+
+<https://w3id.org/eautonome/weusedtoEventDishwasher30000002/end> a time:Instant ;
+    time:inXSDDateTime "2019-04-13T20:53:08+00:00"^^xsd:dateTime .
+
+eau:weusedtoEventDishwasher30000003 a eau:ConsumptionEvent ;
+    rdfs:label "WEUSEDTO Dishwasher30 usage 3" ;
+    time:hasBeginning <https://w3id.org/eautonome/weusedtoEventDishwasher30000003/begin> ;
+    time:hasEnd <https://w3id.org/eautonome/weusedtoEventDishwasher30000003/end> .
+
+<https://w3id.org/eautonome/weusedtoEventDishwasher30000003/begin> a time:Instant ;
+    time:inXSDDateTime "2019-04-19T16:05:29+00:00"^^xsd:dateTime .
+
+<https://w3id.org/eautonome/weusedtoEventDishwasher30000003/end> a time:Instant ;
+    time:inXSDDateTime "2019-04-19T16:35:29+00:00"^^xsd:dateTime .
+
+eau:weusedtoEventToilet000001 a eau:ConsumptionEvent ;
+    rdfs:label "WEUSEDTO Toilet usage 1" ;
+    time:hasBeginning <https://w3id.org/eautonome/weusedtoEventToilet000001/begin> ;
+    time:hasEnd <https://w3id.org/eautonome/weusedtoEventToilet000001/end> .
+
+<https://w3id.org/eautonome/weusedtoEventToilet000001/begin> a time:Instant ;
+    time:inXSDDateTime "2019-02-25T16:40:05+00:00"^^xsd:dateTime .
+
+<https://w3id.org/eautonome/weusedtoEventToilet000001/end> a time:Instant ;
+    time:inXSDDateTime "2019-02-25T16:46:05+00:00"^^xsd:dateTime .
+
+eau:weusedtoEventToilet000002 a eau:ConsumptionEvent ;
+    rdfs:label "WEUSEDTO Toilet usage 2" ;
+    time:hasBeginning <https://w3id.org/eautonome/weusedtoEventToilet000002/begin> ;
+    time:hasEnd <https://w3id.org/eautonome/weusedtoEventToilet000002/end> .
+
+<https://w3id.org/eautonome/weusedtoEventToilet000002/begin> a time:Instant ;
+    time:inXSDDateTime "2019-02-25T23:17:42+00:00"^^xsd:dateTime .
+
+<https://w3id.org/eautonome/weusedtoEventToilet000002/end> a time:Instant ;
+    time:inXSDDateTime "2019-02-25T23:23:42+00:00"^^xsd:dateTime .
+
+eau:weusedtoEventToilet000003 a eau:ConsumptionEvent ;
+    rdfs:label "WEUSEDTO Toilet usage 3" ;
+    time:hasBeginning <https://w3id.org/eautonome/weusedtoEventToilet000003/begin> ;
+    time:hasEnd <https://w3id.org/eautonome/weusedtoEventToilet000003/end> .
+
+<https://w3id.org/eautonome/weusedtoEventToilet000003/begin> a time:Instant ;
+    time:inXSDDateTime "2019-02-26T06:41:59+00:00"^^xsd:dateTime .
+
+<https://w3id.org/eautonome/weusedtoEventToilet000003/end> a time:Instant ;
+    time:inXSDDateTime "2019-02-26T06:47:59+00:00"^^xsd:dateTime .
+
+eau:weusedtoObsDishwasher30000001 a sosa:Observation ;
+    sosa:hasFeatureOfInterest eau:weusedtoMeasurementPointDishwasher30 ;
+    sosa:hasSimpleResult 10.199999809265137 ;
+    sosa:madeBySensor eau:weusedtoSensorDishwasher30 ;
+    sosa:observedProperty s4watr:FlowRate ;
+    sosa:phenomenonTime <https://w3id.org/eautonome/weusedtoObsDishwasher30000001/phenomenonTime> ;
+    eau:hasDurationSeconds 1800.0 .
+
+<https://w3id.org/eautonome/weusedtoObsDishwasher30000001/phenomenonTime> a time:Interval ;
+    time:hasBeginning <https://w3id.org/eautonome/weusedtoObsDishwasher30000001/phenomenonTime/begin> ;
+    time:hasEnd <https://w3id.org/eautonome/weusedtoObsDishwasher30000001/phenomenonTime/end> .
+
+<https://w3id.org/eautonome/weusedtoObsDishwasher30000001/phenomenonTime/begin> a time:Instant ;
+    time:inXSDDateTime "2019-04-09T18:17:29+00:00"^^xsd:dateTime .
+
+<https://w3id.org/eautonome/weusedtoObsDishwasher30000001/phenomenonTime/end> a time:Instant ;
+    time:inXSDDateTime "2019-04-09T18:47:29+00:00"^^xsd:dateTime .
+
+eau:weusedtoObsDishwasher30000002 a sosa:Observation ;
+    sosa:hasFeatureOfInterest eau:weusedtoMeasurementPointDishwasher30 ;
+    sosa:hasSimpleResult 10.199999809265137 ;
+    sosa:madeBySensor eau:weusedtoSensorDishwasher30 ;
+    sosa:observedProperty s4watr:FlowRate ;
+    sosa:phenomenonTime <https://w3id.org/eautonome/weusedtoObsDishwasher30000002/phenomenonTime> ;
+    eau:hasDurationSeconds 1800.0 .
+
+<https://w3id.org/eautonome/weusedtoObsDishwasher30000002/phenomenonTime> a time:Interval ;
+    time:hasBeginning <https://w3id.org/eautonome/weusedtoObsDishwasher30000002/phenomenonTime/begin> ;
+    time:hasEnd <https://w3id.org/eautonome/weusedtoObsDishwasher30000002/phenomenonTime/end> .
+
+<https://w3id.org/eautonome/weusedtoObsDishwasher30000002/phenomenonTime/begin> a time:Instant ;
+    time:inXSDDateTime "2019-04-13T20:23:08+00:00"^^xsd:dateTime .
+
+<https://w3id.org/eautonome/weusedtoObsDishwasher30000002/phenomenonTime/end> a time:Instant ;
+    time:inXSDDateTime "2019-04-13T20:53:08+00:00"^^xsd:dateTime .
+
+eau:weusedtoObsDishwasher30000003 a sosa:Observation ;
+    sosa:hasFeatureOfInterest eau:weusedtoMeasurementPointDishwasher30 ;
+    sosa:hasSimpleResult 10.199999809265137 ;
+    sosa:madeBySensor eau:weusedtoSensorDishwasher30 ;
+    sosa:observedProperty s4watr:FlowRate ;
+    sosa:phenomenonTime <https://w3id.org/eautonome/weusedtoObsDishwasher30000003/phenomenonTime> ;
+    eau:hasDurationSeconds 1800.0 .
+
+<https://w3id.org/eautonome/weusedtoObsDishwasher30000003/phenomenonTime> a time:Interval ;
+    time:hasBeginning <https://w3id.org/eautonome/weusedtoObsDishwasher30000003/phenomenonTime/begin> ;
+    time:hasEnd <https://w3id.org/eautonome/weusedtoObsDishwasher30000003/phenomenonTime/end> .
+
+<https://w3id.org/eautonome/weusedtoObsDishwasher30000003/phenomenonTime/begin> a time:Instant ;
+    time:inXSDDateTime "2019-04-19T16:05:29+00:00"^^xsd:dateTime .
+
+<https://w3id.org/eautonome/weusedtoObsDishwasher30000003/phenomenonTime/end> a time:Instant ;
+    time:inXSDDateTime "2019-04-19T16:35:29+00:00"^^xsd:dateTime .
+
+eau:weusedtoObsToilet000001 a sosa:Observation ;
+    sosa:hasFeatureOfInterest eau:weusedtoMeasurementPointToilet ;
+    sosa:hasSimpleResult 12.0 ;
+    sosa:madeBySensor eau:weusedtoSensorToilet ;
+    sosa:observedProperty s4watr:FlowRate ;
+    sosa:phenomenonTime <https://w3id.org/eautonome/weusedtoObsToilet000001/phenomenonTime> ;
+    eau:hasDurationSeconds 360.0 .
+
+<https://w3id.org/eautonome/weusedtoObsToilet000001/phenomenonTime> a time:Interval ;
+    time:hasBeginning <https://w3id.org/eautonome/weusedtoObsToilet000001/phenomenonTime/begin> ;
+    time:hasEnd <https://w3id.org/eautonome/weusedtoObsToilet000001/phenomenonTime/end> .
+
+<https://w3id.org/eautonome/weusedtoObsToilet000001/phenomenonTime/begin> a time:Instant ;
+    time:inXSDDateTime "2019-02-25T16:40:05+00:00"^^xsd:dateTime .
+
+<https://w3id.org/eautonome/weusedtoObsToilet000001/phenomenonTime/end> a time:Instant ;
+    time:inXSDDateTime "2019-02-25T16:46:05+00:00"^^xsd:dateTime .
+
+eau:weusedtoObsToilet000002 a sosa:Observation ;
+    sosa:hasFeatureOfInterest eau:weusedtoMeasurementPointToilet ;
+    sosa:hasSimpleResult 12.0 ;
+    sosa:madeBySensor eau:weusedtoSensorToilet ;
+    sosa:observedProperty s4watr:FlowRate ;
+    sosa:phenomenonTime <https://w3id.org/eautonome/weusedtoObsToilet000002/phenomenonTime> ;
+    eau:hasDurationSeconds 360.0 .
+
+<https://w3id.org/eautonome/weusedtoObsToilet000002/phenomenonTime> a time:Interval ;
+    time:hasBeginning <https://w3id.org/eautonome/weusedtoObsToilet000002/phenomenonTime/begin> ;
+    time:hasEnd <https://w3id.org/eautonome/weusedtoObsToilet000002/phenomenonTime/end> .
+
+<https://w3id.org/eautonome/weusedtoObsToilet000002/phenomenonTime/begin> a time:Instant ;
+    time:inXSDDateTime "2019-02-25T23:17:42+00:00"^^xsd:dateTime .
+
+<https://w3id.org/eautonome/weusedtoObsToilet000002/phenomenonTime/end> a time:Instant ;
+    time:inXSDDateTime "2019-02-25T23:23:42+00:00"^^xsd:dateTime .
+
+eau:weusedtoObsToilet000003 a sosa:Observation ;
+    sosa:hasFeatureOfInterest eau:weusedtoMeasurementPointToilet ;
+    sosa:hasSimpleResult 12.0 ;
+    sosa:madeBySensor eau:weusedtoSensorToilet ;
+    sosa:observedProperty s4watr:FlowRate ;
+    sosa:phenomenonTime <https://w3id.org/eautonome/weusedtoObsToilet000003/phenomenonTime> ;
+    eau:hasDurationSeconds 360.0 .
+
+<https://w3id.org/eautonome/weusedtoObsToilet000003/phenomenonTime> a time:Interval ;
+    time:hasBeginning <https://w3id.org/eautonome/weusedtoObsToilet000003/phenomenonTime/begin> ;
+    time:hasEnd <https://w3id.org/eautonome/weusedtoObsToilet000003/phenomenonTime/end> .
+
+<https://w3id.org/eautonome/weusedtoObsToilet000003/phenomenonTime/begin> a time:Instant ;
+    time:inXSDDateTime "2019-02-26T06:41:59+00:00"^^xsd:dateTime .
+
+<https://w3id.org/eautonome/weusedtoObsToilet000003/phenomenonTime/end> a time:Instant ;
+    time:inXSDDateTime "2019-02-26T06:47:59+00:00"^^xsd:dateTime .
+
+eau:weusedtoSensorBidet a sosa:Sensor ;
+    rdfs:label "WEUSEDTO Bidet sensor" ;
+    dcterms:source eau:weusedtoDataset ;
+    sosa:observes s4watr:FlowRate ;
+    eau:monitors eau:weusedtoMeasurementPointBidet .
+
+eau:weusedtoSensorKitchenfaucet a sosa:Sensor ;
+    rdfs:label "WEUSEDTO Kitchenfaucet sensor" ;
+    dcterms:source eau:weusedtoDataset ;
+    sosa:observes s4watr:FlowRate ;
+    eau:monitors eau:weusedtoMeasurementPointKitchenfaucet .
+
+eau:weusedtoSensorShower a sosa:Sensor ;
+    rdfs:label "WEUSEDTO Shower sensor" ;
+    dcterms:source eau:weusedtoDataset ;
+    sosa:observes s4watr:FlowRate ;
+    eau:monitors eau:weusedtoMeasurementPointShower .
+
+eau:weusedtoSensorWashbasin a sosa:Sensor ;
+    rdfs:label "WEUSEDTO Washbasin sensor" ;
+    dcterms:source eau:weusedtoDataset ;
+    sosa:observes s4watr:FlowRate ;
+    eau:monitors eau:weusedtoMeasurementPointWashbasin .
+
+eau:weusedtoSensorWashingmachine a sosa:Sensor ;
+    rdfs:label "WEUSEDTO Washingmachine sensor" ;
+    dcterms:source eau:weusedtoDataset ;
+    sosa:observes s4watr:FlowRate ;
+    eau:monitors eau:weusedtoMeasurementPointWashingmachine .
+
+eau:weusedtoSensorWholeHouse a sosa:Sensor ;
+    rdfs:label "WEUSEDTO WholeHouse sensor" ;
+    dcterms:source eau:weusedtoDataset ;
+    sosa:observes s4watr:FlowRate ;
+    eau:monitors eau:weusedtoMeasurementPointWholeHouse .
+
+eau:weusedtoMeasurementPointBidet a eau:MeasurementPoint ;
+    rdfs:label "WEUSEDTO Bidet measurement point" ;
+    dcterms:source eau:weusedtoDataset .
+
+eau:weusedtoMeasurementPointKitchenfaucet a eau:MeasurementPoint ;
+    rdfs:label "WEUSEDTO Kitchenfaucet measurement point" ;
+    dcterms:source eau:weusedtoDataset .
+
+eau:weusedtoMeasurementPointShower a eau:MeasurementPoint ;
+    rdfs:label "WEUSEDTO Shower measurement point" ;
+    dcterms:source eau:weusedtoDataset .
+
+eau:weusedtoMeasurementPointWashbasin a eau:MeasurementPoint ;
+    rdfs:label "WEUSEDTO Washbasin measurement point" ;
+    dcterms:source eau:weusedtoDataset .
+
+eau:weusedtoMeasurementPointWashingmachine a eau:MeasurementPoint ;
+    rdfs:label "WEUSEDTO Washingmachine measurement point" ;
+    dcterms:source eau:weusedtoDataset .
+
+eau:weusedtoMeasurementPointWholeHouse a eau:MeasurementPoint ;
+    rdfs:label "WEUSEDTO WholeHouse measurement point" ;
+    dcterms:source eau:weusedtoDataset .
+
+eau:weusedtoSensorDishwasher30 a sosa:Sensor ;
+    rdfs:label "WEUSEDTO Dishwasher30 sensor" ;
+    dcterms:source eau:weusedtoDataset ;
+    sosa:observes s4watr:FlowRate ;
+    eau:monitors eau:weusedtoMeasurementPointDishwasher30 .
+
+eau:weusedtoSensorToilet a sosa:Sensor ;
+    rdfs:label "WEUSEDTO Toilet sensor" ;
+    dcterms:source eau:weusedtoDataset ;
+    sosa:observes s4watr:FlowRate ;
+    eau:monitors eau:weusedtoMeasurementPointToilet .
+
+eau:weusedtoMeasurementPointDishwasher30 a eau:MeasurementPoint ;
+    rdfs:label "WEUSEDTO Dishwasher30 measurement point" ;
+    dcterms:source eau:weusedtoDataset .
+
+eau:weusedtoMeasurementPointToilet a eau:MeasurementPoint ;
+    rdfs:label "WEUSEDTO Toilet measurement point" ;
+    dcterms:source eau:weusedtoDataset .
+
+eau:weusedtoDataset a schema1:Dataset ;
+    rdfs:label "WEUSEDTO water end-use dataset" ;
+    dcterms:identifier "https://doi.org/10.1016/j.softx.2022.101214" ;
+    dcterms:source <https://github.com/Water-End-Use-Dataset-Tools/WEUSEDTO> ;
+    dcterms:title "WEUSEDTO Water End USE Dataset and TOols" ;
+    rdfs:comment "Mapped WEUSEDTO subset (CC BY 4.0). Full CSVs stay upstream." .
+

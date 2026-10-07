@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Map the HSB Living Lab dataset for the Eautonome external reuse evaluation."""
+"""Map HSB Living Lab water CSV rows to Eautonome instance data."""
 from __future__ import annotations
 
 import argparse
